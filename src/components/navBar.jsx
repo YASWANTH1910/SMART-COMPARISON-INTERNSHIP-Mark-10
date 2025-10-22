@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import './navbar.css';
+import React, { useState } from "react";
+import "./navbar.css";
+import SearchBar from "./searchBar"; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,16 @@ const Navbar = () => {
           <span className="logo-icon">⚡</span>
           QuickShop
         </div>
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+
+        {/* console.log("✅ Rendering Navbar component..."); */}
+        {/* <h2 style={{ color: "red" }}>TEST NAVBAR</h2> */}
+
+
+        {/* ✅ Move SearchBar here temporarily to test visibility */}
+        <SearchBar />
+
+        {/* Navigation Menu */}
+        <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="nav-item">
             <a href="#home" className="nav-link">Home</a>
           </li>
@@ -28,10 +38,9 @@ const Navbar = () => {
             <a href="#contact" className="nav-link">Contact</a>
           </li>
         </ul>
+
+        {/* ✅ Keep icons section for testing layout */}
         <div className="nav-icons">
-          <button className="icon-btn" aria-label="search">
-            <span className="icon">🔍</span>
-          </button>
           <button className="icon-btn" aria-label="favorites">
             <span className="icon">❤️</span>
           </button>
@@ -40,6 +49,8 @@ const Navbar = () => {
             <span className="cart-count">0</span>
           </button>
         </div>
+
+        {/* Mobile menu toggle */}
         <button
           className="mobile-menu-btn"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
