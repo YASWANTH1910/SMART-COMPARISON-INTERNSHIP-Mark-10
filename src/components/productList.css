@@ -1,0 +1,103 @@
+/* Product List Styles */
+.product-list-header {
+  padding: 20px 0;
+  min-height: 60vh;
+}
+
+.productlist-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.productlist-infos h2 {
+  color: #000000;
+  font-size: 24px;
+}
+
+.counts {
+  background: #51b0ef;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* 🎯 FIXED: Horizontal product layout */
+.product-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+    
+}
+
+/* 🎯 FIXED: Product cards in horizontal row */
+.product-cards {
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgb(255, 3, 3);
+  transition: transform 0.3s;
+  width: 280px; /* Fixed width for consistent cards */
+  flex-shrink: 0; /* Don't shrink cards */
+}
+
+.product-cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.names {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.product-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.product-category {
+  color: #7f8c8d;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.product-price {
+  color: #27ae60;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Not Found State */
+.not-found-container {
+  text-align: center;
+  padding: 60px 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 50px 0;
+}
+
+.not-found-content h4 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
