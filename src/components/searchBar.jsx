@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
 
-  // ✅ Fetch data from products.json
+  //  Fetch data from products.json
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -23,7 +23,7 @@ const SearchBar = () => {
       .catch((err) => console.error("Error loading products:", err));
   }, []);
 
-  // ✅ Filter suggestions based on user input
+  // Filter suggestions based on user input
   useEffect(() => {
     if (query.length > 1) {
       const filtered = allProducts.filter((p) =>

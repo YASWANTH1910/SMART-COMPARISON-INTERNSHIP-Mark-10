@@ -59,7 +59,7 @@
     "Laptops": [
       {
         "id": "l1",
-        "name": "Apple MacBook Pro M3 Max (16-inch)",
+        "name": "Apple MacBook Pro M3 Max",
         "category": "Laptop",
         "price": 349900,
         "rating": 4.9,
