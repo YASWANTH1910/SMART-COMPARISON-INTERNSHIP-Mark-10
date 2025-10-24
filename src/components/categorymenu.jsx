@@ -28,7 +28,7 @@ const CategoryFilterMenu = ({onCategorySelect}) => {
             { id: 10, name: 'Mobiles' },
             { id: 11, name: 'Laptops' },
             { id: 12, name: 'Headphones' },
-            { id: 13, name: 'Smart watches'},
+            { id: 13, name: 'Watches'},
             
         ],
     },
