@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useRef , useEffect } from 'react';
 import './category.css';
 
 const CategoryFilterMenu = ({onCategorySelect}) => {
     const [menuVisible, setMenuVisible] = useState(false);
+    const dropdownRef = useRef(null);
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+        if (menuVisible &&
+            dropdownRef.current && 
+            !dropdownRef.current.contains(event.target)) {
+                setMenuVisible(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+  
    {/*  HERE ALSO USED DATA IN DIRECT METHOD LIKE I SAID IN APP.JSX*/}
    const categories = [
     {

@@ -1,13 +1,14 @@
 .searchbar-container {
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: center;
-  background-color: rgba(0, 255, 0, 0.2); /* ✅ light green box */
-  border: 2px solid red;
+  background-color: rgba(151, 0, 151, 0.685); /* ✅ light green box */
+  border-radius: 8px;
   height: 45px;
   width: 250px;
   z-index: 9999;
-  position: relative;
+  
 }
 
 .searchbar-input {
@@ -19,4 +20,17 @@
   border: 1px solid #000;
   border-radius: 5px;
   width: 100%;
+}
+.searchbar-input::placeholder {
+  color: #888;
+}
+.sug-main {
+  position: absolute;
+  top: 50px;
+  width: 250px;
+  z-index: 10000;
+  overflow-y: visible;
+  color: black;
+  background-color: rgb(102, 223, 253);
+  border-radius: 5px;
 }

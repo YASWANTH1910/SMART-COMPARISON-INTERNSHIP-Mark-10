@@ -1,0 +1,39 @@
+1-category dropdown changes
+.category-dropdown {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: #d6f0ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(77, 210, 219);
+  width: 350px;
+  max-height: 400px;
+  overflow-y: hidden;
+  max-height: none;
+ overflow-x: hidden;
+2, hovering effects for dropdopwn buttons
+.sub-category-options:hover {
+  background: #00ccff;
+  color: white;
+ transform: translateX(3px)
+  
+}
+3,app.jsx changes
+.appjsx-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(190, 186, 127);
+  padding-top: 5px;
+  padding-bottom: 0px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 900;
+}
+Align navbar and fiter into one
+<header className="appjsx-header">  {/* ✅ Navbar added here */}
+      <Navbar />
+      <CategoryFilterMenu onCategorySelect={handleCategorySelect} />
+       
+</header>
+4.
