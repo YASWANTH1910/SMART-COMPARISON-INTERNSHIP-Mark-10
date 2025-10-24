@@ -63,8 +63,8 @@ function App() {
        
 </header>
     
->>>>>>> 259520d168e8ddb1af6810d65769ba6978bf986a
-      </header>
+
+     
       <main className="appjsx-main">
         <div className="productlist-box">
           <ProductList
