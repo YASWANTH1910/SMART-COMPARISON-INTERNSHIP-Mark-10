@@ -109,11 +109,11 @@
         "image": "https://images.expertreviews.co.uk/wp-content/uploads/2022/05/alienware_x17_r2_-_2.jpg"
       }
     ],
-    "Smartwatches": [
+    "Watches": [
       {
         "id": "s1",
         "name": "Apple Watch Ultra 2",
-        "category": "Smartwatch",
+        "category": "Watches",
         "price": 89900,
         "rating": 4.9,
         "features": {
@@ -130,7 +130,7 @@
       {
         "id": "s2",
         "name": "Samsung Galaxy Watch 6 Classic",
-        "category": "Smartwatch",
+        "category": "Watches",
         "price": 49999,
         "rating": 4.7,
         "features": {
@@ -147,7 +147,7 @@
       {
         "id": "s3",
         "name": "Garmin Epix Pro (Gen 2)",
-        "category": "Smartwatch",
+        "category": "Watches",
         "price": 119990,
         "rating": 4.8,
         "features": {

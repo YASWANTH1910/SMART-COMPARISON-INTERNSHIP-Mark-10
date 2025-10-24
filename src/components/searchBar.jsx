@@ -1,38 +1,45 @@
 import React, { useState, useEffect } from "react";
 import "./searchBar.css";
-console.log("✅ SearchBar component loaded!");
-
-const PRODUCTS = [
-  { id: 1, name: "iPhone 14", category: "Electronics" },
-  { id: 2, name: "MacBook Pro", category: "Electronics" },
-  { id: 3, name: "Wireless Headphones", category: "Electronics" },
-  { id: 4, name: "Men T-Shirt", category: "Fashion" },
-  { id: 5, name: "Running Shoes", category: "Fashion" },
-  { id: 6, name: "Coffee Maker", category: "Home" },
-];
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
 
+  // ✅ Fetch data from products.json
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((res) => res.json())
+      .then((data) => {
+        // Extract all product items from nested categories
+        const extractedProducts = [];
+        Object.keys(data).forEach((category) => {
+          Object.keys(data[category]).forEach((subcat) => {
+            data[category][subcat].forEach((item) => extractedProducts.push(item));
+          });
+        });
+        setAllProducts(extractedProducts);
+      })
+      .catch((err) => console.error("Error loading products:", err));
+  }, []);
+
+  // ✅ Filter suggestions based on user input
   useEffect(() => {
     if (query.length > 1) {
-      const filtered = PRODUCTS.filter((p) =>
+      const filtered = allProducts.filter((p) =>
         p.name.toLowerCase().includes(query.toLowerCase())
       );
       setSuggestions(filtered.slice(0, 5));
     } else {
       setSuggestions([]);
     }
-  }, [query]);
+  }, [query, allProducts]);
 
   const handleSelect = (item) => {
     alert(`Selected: ${item.name}`);
     setQuery("");
     setSuggestions([]);
   };
-  console.log("Rendering JSX for SearchBar...");
-
 
   return (
     <div className="searchbar-container">
