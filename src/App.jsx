@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
-import CategoryFilterMenu from "./components/categorymenu";
+// import CategoryFilterMenu from "./components/categorymenu";
 import ProductList from "./components/productList";
 import Navbar from "./components/navBar";
 import ComparisonPage from "./components/comparisonPage"; 
@@ -68,9 +68,9 @@ function App() {
           path="/"
           element={
             <div className="Appjsx">
-              <header className="appjsx-header">
+              {/* <header className="appjsx-header">
                 <CategoryFilterMenu onCategorySelect={handleCategorySelect} />
-              </header>
+              </header> */}
 
               <main className="appjsx-main">
                 <div className="productlist-box">

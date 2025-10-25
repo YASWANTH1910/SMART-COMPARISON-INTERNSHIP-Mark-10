@@ -8,10 +8,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #bfd1e9;
-  color: #333;
-  min-height: 100vh;
-  color: #f1f8ff;
+  background: #83878d;
+  /* color: #35e819; */
+  min-height: 60vh;
+  color: #242e38;
   line-height: 1.6;
   position: relative;
 }
@@ -23,45 +23,21 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 15% 50%, rgb(3, 20, 255) 0%, transparent 30%),
-    radial-gradient(circle at 85% 30%, rgb(217, 0, 251) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.963) 0%, transparent 30%);
-  z-index: -1;
 }
-
-
-
 
 /* App Layout - FIXED */
-.Appjsx {
-  min-height: 100vh;
+/* .Appjsx {
+  min-height: 8vh;
   display: flex;
   flex-direction: column;
-  padding-top: 80px; /* Space for fixed menu button */
-}
-
-.appjsx-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgb(190, 186, 127);
-  padding-top: 5px;
-  padding-bottom: 0px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 900;
-}
+} */
 
 .appjsx-main {
   flex: 1; /* This pushes footer down */
-  padding: 40px 20px;
+  padding: 20px 20px 40px 20px;
   appjsx-main {
   flex: 1;
-  padding: 40px 20px;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.02"><rect fill="%23667eea" width="100" height="100"/></svg>');
 }
-
 }
 
 .productlist-box {
@@ -72,7 +48,7 @@ body::before {
 
 /* Footer - FIXED to stay at bottom */
 .appjsx-footer {
-  background: #2c3e50;
+  background: #334659;
   color: white;
   text-align: center;
   padding: 20px;

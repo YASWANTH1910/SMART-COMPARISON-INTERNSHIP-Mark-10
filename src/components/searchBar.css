@@ -19,7 +19,6 @@ border-color: rgb(4, 61, 154);
 /* App Container */
 .searchbar-container {
   display: flex;
- 
   align-items: center;
   padding: 40px 20px;
 }
