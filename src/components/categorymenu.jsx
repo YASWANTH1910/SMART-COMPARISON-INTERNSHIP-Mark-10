@@ -17,9 +17,8 @@ const CategoryFilterMenu = ({onCategorySelect}) => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
-  
-   {/*  HERE ALSO USED DATA IN DIRECT METHOD LIKE I SAID IN APP.JSX*/}
+    }, [] );
+
    const categories = [
     {
         id: 1,
@@ -128,9 +127,10 @@ const CategoryFilterMenu = ({onCategorySelect}) => {
                             ))}
                             </div>
                             </div>
-            )}
-            </div>
+        )}
+        </div>
     );
 };
 
     export default CategoryFilterMenu;
+    

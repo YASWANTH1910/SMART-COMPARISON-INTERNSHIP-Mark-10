@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import "./productList.css";
 
 const ProductList = ({ products, currentFilter }) => {
-  // Keeps track of products selected for comparison
   const [selectedProducts, setSelectedProducts] = useState([]);
+  const navigate = useNavigate(); 
 
   // Handles selection toggle
   const handleCompareSelect = (product) => {
@@ -19,25 +20,22 @@ const ProductList = ({ products, currentFilter }) => {
     }
   };
 
-  // Opens a temporary alert comparison table
+  // ✅ Navigate to Comparison Page
   const openComparison = () => {
     if (selectedProducts.length < 2) {
       alert("Select at least 2 products to compare!");
       return;
     }
 
-    alert(
-      selectedProducts
-        .map((p) => `${p.name} - ₹${p.price}, ⭐${p.rating}`)
-        .join("\n")
-    );
+    // Send the selected products to the comparison page
+    navigate("/compare", { state: { selectedProducts } });
   };
 
   return (
     <div className="product-list">
       <h2>All Products</h2>
 
-      {/* Product cards grid */}
+      {/* ✅ Product cards grid */}
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-card">
@@ -61,7 +59,7 @@ const ProductList = ({ products, currentFilter }) => {
             <p>⭐ {product.rating}</p>
             <p className="price">₹{product.price}</p>
 
-            {/* Compare button */}
+            {/* ✅ Compare button */}
             <button
               onClick={() => handleCompareSelect(product)}
               className={`compare-btn ${
@@ -78,10 +76,10 @@ const ProductList = ({ products, currentFilter }) => {
         ))}
       </div>
 
-      {/* Compare Now button */}
+      {/* ✅ Compare Now button */}
       {selectedProducts.length > 1 && (
         <button className="compare-now-btn" onClick={openComparison}>
-          Compare ({selectedProducts.length})
+          Compare Now ({selectedProducts.length})
         </button>
       )}
     </div>
@@ -89,5 +87,3 @@ const ProductList = ({ products, currentFilter }) => {
 };
 
 export default ProductList;
-
-
