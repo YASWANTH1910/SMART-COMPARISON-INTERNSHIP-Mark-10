@@ -11,13 +11,13 @@
 
 /* === Individual Product Card === */
 .product-card {
-  background: #ffffff;
+  background: #d4f5f6;
   border-radius: 15px;
-  width: 250px;
+  width: 150px;
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgb(0, 247, 255);
+  box-shadow: 0 4px 12px rgb(151, 0, 61);
   transition: transform 0.3s;
   width: 280px; /* Fixed width for consistent cards */
   flex-shrink: 0; /* Don't shrink cards */
