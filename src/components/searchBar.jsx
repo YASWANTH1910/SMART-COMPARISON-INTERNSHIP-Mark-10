@@ -52,18 +52,23 @@ const SearchBar = () => {
       />
 
       {suggestions.length > 0 && (
-        <ul className="suggestion-box">
+       <div className="sug-main"> <ul className="suggestion-box">
           {suggestions.map((item) => (
-            <li
+           <h4
               key={item.id}
               onClick={() => handleSelect(item)}
               className="suggestion-item"
             >
-              {item.name}
-            </li>
+             {item.name}
+          
+             </h4>
           ))}
-        </ul>
+       </ul>
+       </div>
       )}
+          
+       
+      
     </div>
   );
 };

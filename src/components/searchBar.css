@@ -5,20 +5,30 @@ body {
   background: linear-gradient(to bottom right, lightblue, aliceblue);
   min-height: 100vh;
 }
+.searchbar-input{
+background-color: rgb(140, 255, 255) ;
+height: 30px;
+width: 350px;
+border: 10px;
+border-radius: 15px;
+border-color: rgb(4, 61, 154);
 
+
+
+}
 /* App Container */
-.app-container {
+.searchbar-container {
   display: flex;
-  flex-direction: column;
+ 
   align-items: center;
-  padding: 80px 60px;
+  padding: 40px 20px;
 }
 
 /* Page Heading */
 .heading {
   font-size: 2.5rem;
   font-weight: bold;
-  color: rgb(95, 202, 191);
+  color: royalblue;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -29,17 +39,17 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  width: 10%;
+  width: 100%;
 }
 
 /* Search Input Box */
 .search-input {
   width: 600px;
-  max-width: 100%;
+  max-width: 90%;
   padding: 18px 20px;
   font-size: 1.1rem;
   text-align: center;
-  border: 20px solid skyblue;
+  border: 2px solid skyblue;
   border-radius: 50px;
   background: white;
   box-shadow: 0 4px 10px rgba(70, 130, 180, 0.2);
@@ -48,8 +58,8 @@ body {
 
 .search-input:focus {
   outline: none;
-  border-color: dodgerblue;
-  box-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+  border-color: rgb(0, 149, 255);
+  box-shadow: 0 0 15px rgb(2, 129, 255);
 }
 
 /* Dropdown Suggestion Box */
@@ -178,4 +188,17 @@ body {
 
 .compare-btn:hover {
   background: mediumblue;
+}
+.searchbar-input::placeholder {
+  color: #888;
+}
+.sug-main {
+  position: absolute;
+  top: 50px;
+  width: 250px;
+  z-index: 10000;
+  overflow-y: visible;
+  color: black;
+  background-color: rgb(102, 223, 253);
+  border-radius: 5px;
 }

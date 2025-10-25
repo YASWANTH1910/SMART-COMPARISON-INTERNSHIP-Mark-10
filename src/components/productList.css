@@ -5,7 +5,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+
+    
 }
 
 /* === Individual Product Card === */
@@ -13,15 +14,18 @@
   background: #ffffff;
   border-radius: 15px;
   width: 250px;
+  justify-content: space-between;
+  gap: 20px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(255, 3, 3, 0.4);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgb(0, 247, 255);
+  transition: transform 0.3s;
+  width: 280px; /* Fixed width for consistent cards */
+  flex-shrink: 0; /* Don't shrink cards */
 }
 
-.product-card:hover {
+.product-cards:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(255, 3, 3, 0.6);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* === Product Image === */

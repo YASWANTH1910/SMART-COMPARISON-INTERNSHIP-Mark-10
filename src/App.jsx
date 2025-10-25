@@ -57,10 +57,14 @@ function App() {
 
   return (
     <div className="Appjsx">
+   <header className="appjsx-header">  {/* ✅ Navbar added here */}
       <Navbar />
-      <header className="appjsx-header">
-        <CategoryFilterMenu onCategorySelect={handleCategorySelect} />
-      </header>
+      <CategoryFilterMenu onCategorySelect={handleCategorySelect} />
+       
+</header>
+    
+
+     
       <main className="appjsx-main">
         <div className="productlist-box">
           <ProductList
