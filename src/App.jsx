@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
-// import CategoryFilterMenu from "./components/categorymenu";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductList from "./components/productList";
 import Navbar from "./components/navBar";
-import ComparisonPage from "./components/comparisonPage"; 
+import ComparisonPage from "./components/comparisonPage";
 import "./App.css";
 
 function App() {
-  const [products, setProducts] = useState([]); // full data
-  const [filteredProducts, setFilteredProducts] = useState([]); // filtered display
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]);
   const [currentFilter, setCurrentFilter] = useState({
     mainItems: "All",
     subItems: "All",
   });
 
-  // ✅ Load data from public/data/products.json
+  // ✅ Load product data
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -32,18 +32,14 @@ function App() {
             });
           }
         }
-        console.log("✅ Flattened Data:", flattened);
         setProducts(flattened);
         setFilteredProducts(flattened);
       })
-      .catch((err) =>
-        console.error("❌ Error loading product data:", err)
-      );
+      .catch((err) => console.error("Error loading product data:", err));
   }, []);
 
-  // ✅ Handle category filter
+  // ✅ Category filter
   const handleCategorySelect = (mainItems, subItems) => {
-    console.log(`Selected Category: ${mainItems} - ${subItems}`);
     setCurrentFilter({ mainItems, subItems });
 
     if (mainItems === "All") {
@@ -60,23 +56,24 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar
+        compareCount={selectedProducts.length}
+        onCategorySelect={handleCategorySelect}
+        selectedProducts={selectedProducts}
+      />
 
       <Routes>
-        {/* 🏠 Home Page */}
         <Route
           path="/"
           element={
             <div className="Appjsx">
-              {/* <header className="appjsx-header">
-                <CategoryFilterMenu onCategorySelect={handleCategorySelect} />
-              </header> */}
-
               <main className="appjsx-main">
                 <div className="productlist-box">
                   <ProductList
                     products={filteredProducts}
                     currentFilter={currentFilter}
+                    selectedProducts={selectedProducts}
+                    setSelectedProducts={setSelectedProducts}
                   />
                 </div>
               </main>
@@ -88,11 +85,14 @@ function App() {
           }
         />
 
-        {/*Comparison Page */}
-        <Route path="/compare" element={<ComparisonPage />} />
+        <Route
+          path="/compare"
+          element={<ComparisonPage selectedProducts={selectedProducts} />}
+        />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+

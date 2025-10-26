@@ -117,8 +117,7 @@ const CategoryFilterMenu = ({onCategorySelect}) => {
                                         <button 
                                             key={subItem.id} 
                                             className="sub-category-options"
-                                            onClick={() => handleCategorySelection(category.name, subItem.name)}
-                                        >
+                                            onClick={() => handleCategorySelection(category.name, subItem.name)}>
                                             {subItem.name}
                                         </button>
                                     ))}
@@ -127,10 +126,10 @@ const CategoryFilterMenu = ({onCategorySelect}) => {
                             ))}
                             </div>
                             </div>
-        )}
+         )}
         </div>
     );
 };
 
-    export default CategoryFilterMenu;
-    
+export default CategoryFilterMenu;
+

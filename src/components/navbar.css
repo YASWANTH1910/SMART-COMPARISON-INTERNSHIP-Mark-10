@@ -40,38 +40,36 @@
   max-width: 400px;
 }
 
-/* Right: Compare Button */
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-.compare-btn {
+.compare-btn-navbar {
   position: relative;
-  background: #007bff;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 8px;
-  font-weight: 500;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.compare-btn:hover {
-  background: #0056b3;
+.compare-btn-navbar:hover {
+  background-color: #0056b3;
 }
 
-/* Count on top-right corner */
 .compare-count {
   position: absolute;
   top: -6px;
-  right: -8px;
+  right: -6px;
   background: red;
   color: white;
-  font-size: 0.7rem;
-  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
   border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Menu items */
