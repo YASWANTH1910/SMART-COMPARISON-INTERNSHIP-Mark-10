@@ -4,27 +4,33 @@ import SearchBar from "./searchBar";
 import CategoryFilterMenu from "./categorymenu";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = ({ compareCount, onCategorySelect, selectedProducts }) => {
+const Navbar = ({ compareCount = 0, onCategorySelect = () => {}, selectedProducts = [] }) => {
   const navigate = useNavigate();
 
+  // 🧭 Compare Button Logic
   const handleCompareClick = () => {
-    if (selectedProducts.length < 2) {
-      alert("Select at least 2 products to compare!");
-      return;
-    }
-    navigate("/compare");
-  };
+  if (selectedProducts.length < 2) {
+    alert("Select at least 2 products to compare!");
+    return;
+  }
+  navigate("/compare");
+};
+
 
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Left: Category menu */}
+
+        {/* Left: Category Menu */}
         <div className="nav-left">
           <CategoryFilterMenu onCategorySelect={onCategorySelect} />
         </div>
 
         {/* Logo */}
-        <div className="nav-logo">
+        <div
+          className="nav-logo cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <span className="logo-icon">⚡</span> QuickShop
         </div>
 
@@ -35,9 +41,9 @@ const Navbar = ({ compareCount, onCategorySelect, selectedProducts }) => {
 
         {/* Menu Links */}
         <ul className="nav-menu">
-          <li><a href="#home" className="nav-link">Home</a></li>
-          <li><a href="#products" className="nav-link">Products</a></li>
-          <li><a href="#contact" className="nav-link">Contact</a></li>
+          <li><button onClick={() => navigate("/")} className="nav-link">Home</button></li>
+          <li><button onClick={() => navigate("/products")} className="nav-link">Products</button></li>
+          <li><button onClick={() => navigate("/contact")} className="nav-link">Contact</button></li>
         </ul>
 
         {/* Compare Button */}
@@ -48,6 +54,7 @@ const Navbar = ({ compareCount, onCategorySelect, selectedProducts }) => {
               <span className="compare-count">{compareCount}</span>
             )}
           </button>
+
         </div>
       </div>
     </nav>

@@ -3,22 +3,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-    
 }
 
 /* === Individual Product Card === */
 .product-card {
-  background: #d4f5f6;
-  border-radius: 15px;
+  background: #ffffff;
+  border-radius: 18px;
   width: 150px;
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgb(151, 0, 61);
+  box-shadow: 0 4px 12px rgb(0, 4, 255);
   transition: transform 0.3s;
-  width: 280px; /* Fixed width for consistent cards */
+  width: 250px; /* Fixed width for consistent cards */
   flex-shrink: 0; /* Don't shrink cards */
+  cursor: pointer;
+  
 }
 
 .product-cards:hover {

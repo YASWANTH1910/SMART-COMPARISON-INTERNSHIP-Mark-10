@@ -1,19 +1,19 @@
 import React from "react";
 import "./productList.css";
 
-const ProductList = ({ products, currentFilter, selectedProducts, setSelectedProducts }) => {
+const ProductList = ({ products = [], onSpecClick = () => {}, selectedProducts = [] }) => {
+  // safeguard: if products is not an array or empty, show friendly message
+  if (!Array.isArray(products) || products.length === 0) {
+    return (
+      <div className="product-list">
+        <h2>All Products</h2>
+        <p>No products available.</p>
+      </div>
+    );
+  }
 
-  // Handles selection toggle
-  const handleCompareSelect = (product) => {
-    const alreadySelected = selectedProducts.find((p) => p.id === product.id);
-    if (alreadySelected) {
-      setSelectedProducts(selectedProducts.filter((p) => p.id !== product.id));
-    } else if (selectedProducts.length < 3) {
-      setSelectedProducts([...selectedProducts, product]);
-    } else {
-      alert("You can compare up to 3 products only!");
-    }
-  };
+  // keep a single console sample for debugging (optional)
+  console.log("Product sample:", products[0]);
 
   return (
     <div className="product-list">
@@ -21,43 +21,52 @@ const ProductList = ({ products, currentFilter, selectedProducts, setSelectedPro
 
       {/* Product cards grid */}
       <div className="product-grid">
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            {/* Product Image */}
-            <div className="product-image-container">
-              {product.image ? (
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="product-image"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="no-image">No Image</div>
-              )}
-            </div>
+        {products.map((product) => {
+          const isSelected = Array.isArray(selectedProducts) && selectedProducts.some((p) => p.id === product.id);
 
-            {/* Product Info */}
-            <h3>{product.name}</h3>
-            <p className="description">{product.description}</p>
-            <p>⭐ {product.rating}</p>
-            <p className="price">₹{product.price}</p>
-
-            {/* Compare button */}
-            <button
-              onClick={() => handleCompareSelect(product)}
-              className={`compare-btn ${
-                selectedProducts.find((p) => p.id === product.id)
-                  ? "selected"
-                  : ""
-              }`}
+          return (
+            <div
+              key={product.id}
+              className="product-card"
+              onClick={() => {
+                // clicking the card uses the same handler (optional). If you want card click to do something else,
+                // change this in future. For now it toggles selection like the button.
+                if (typeof onSpecClick === "function") onSpecClick(product);
+              }}
             >
-              {selectedProducts.find((p) => p.id === product.id)
-                ? "✓ Selected"
-                : "Compare"}
-            </button>
-          </div>
-        ))}
+              {/* Product Image */}
+              <div className="product-image-container">
+                {product.image ? (
+                  <img
+                    src={product.image}
+                    alt={product.name || "Product"}
+                    className="product-image"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="no-image">No Image</div>
+                )}
+              </div>
+
+              {/* Product Info */}
+              <h3>{String(product.name ?? "Unnamed Product")}</h3>
+              <p className="description">{String(product.description ?? "No description")}</p>
+              <p>⭐ {String(product.rating ?? "N/A")}</p>
+              <p className="price">₹{String(product.price ?? "0")}</p>
+
+              {/* Compare button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // prevent triggering card click
+                  if (typeof onSpecClick === "function") onSpecClick(product);
+                }}
+                className={`compare-btn ${isSelected ? "selected" : ""}`}
+              >
+                {isSelected ? "✓ Selected" : "Compare"}
+              </button>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

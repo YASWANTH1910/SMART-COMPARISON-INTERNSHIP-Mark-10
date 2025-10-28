@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import ProductList from "./components/productList";
 import Navbar from "./components/navBar";
 import ComparisonPage from "./components/comparisonPage";
@@ -8,13 +8,13 @@ import "./App.css";
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]); // ✅ uncommented & added
   const [currentFilter, setCurrentFilter] = useState({
     mainItems: "All",
     subItems: "All",
   });
 
-  // ✅ Load product data
+  // ✅ Load data from public/data/products.json
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -37,8 +37,17 @@ function App() {
       })
       .catch((err) => console.error("Error loading product data:", err));
   }, []);
+    const location = useLocation();
 
-  // ✅ Category filter
+  // ✅ Reset compare selections when user returns to home
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setSelectedProducts([]); // clear selections
+    }
+  }, [location]);
+
+
+  // ✅ Category filter handler
   const handleCategorySelect = (mainItems, subItems) => {
     setCurrentFilter({ mainItems, subItems });
 
@@ -54,45 +63,60 @@ function App() {
     }
   };
 
+  // ✅ Compare toggle handler
+  const handleCompareToggle = (product) => {
+    setSelectedProducts((prev) => {
+      const exists = prev.find((p) => p.id === product.id);
+      if (exists) {
+        return prev.filter((p) => p.id !== product.id);
+      }
+      if (prev.length >= 3) {
+        alert("You can compare up to 3 products only!");
+        return prev;
+      }
+      return [...prev, product];
+    });
+  };
+
   return (
-    <Router>
-      <Navbar
-        compareCount={selectedProducts.length}
-        onCategorySelect={handleCategorySelect}
-        selectedProducts={selectedProducts}
-      />
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="Appjsx">
-              <main className="appjsx-main">
-                <div className="productlist-box">
-                  <ProductList
-                    products={filteredProducts}
-                    currentFilter={currentFilter}
-                    selectedProducts={selectedProducts}
-                    setSelectedProducts={setSelectedProducts}
-                  />
-                </div>
-              </main>
-
-              <footer className="appjsx-footer">
-                <p>© 2024 Smart Comparison. All rights reserved.</p>
-              </footer>
-            </div>
-          }
+    <div className="Appjsx">
+      <header className="appjsx-header">
+        <Navbar
+          onCategorySelect={handleCategorySelect}
+          compareCount={selectedProducts.length} // ✅ show compare count
+          selectedProducts={selectedProducts} // ✅ pass selected products
         />
+      </header>
 
-        <Route
-          path="/compare"
-          element={<ComparisonPage selectedProducts={selectedProducts} />}
-        />
-      </Routes>
-    </Router>
+      <main className="appjsx-main">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="productlist-box">
+                <ProductList
+                  products={filteredProducts}
+                  currentFilter={currentFilter}
+                  onSpecClick={handleCompareToggle} // ✅ toggle selection
+                  selectedProducts={selectedProducts} // ✅ track selection
+                />
+              </div>
+            }
+          />
+
+          {/* ✅ Compare page route */}
+          <Route
+            path="/compare"
+            element={<ComparisonPage selectedProducts={selectedProducts} />}
+          />
+        </Routes>
+      </main>
+
+      <footer className="appjsx-footer">
+        <p>© 2024 Smart Comparison. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
 
 export default App;
-
