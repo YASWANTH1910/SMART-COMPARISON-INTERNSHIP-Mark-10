@@ -12,10 +12,10 @@
 }
 
 .comparison-content {
-  background: #fff;
+  background: #bcdbdc;
   padding: 20px;
   border-radius: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 900px;
   max-height: 80vh;
   overflow-y: auto;

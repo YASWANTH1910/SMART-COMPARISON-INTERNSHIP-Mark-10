@@ -12,9 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   width: 100%;
-  height: 40px;
+  height: 50px;
 }
 
 /* Logo */
@@ -24,6 +23,7 @@
   display: flex;
   align-items: center;
   color: #333;
+  cursor: pointer;
 }
 
 .logo-icon {
@@ -34,12 +34,58 @@
 .nav-center {
   flex: 1;
   display: flex;
-  border: #333;
   justify-content: center;
   align-items: center;
   max-width: 400px;
 }
 
+/* Group that contains menu + right actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Menu buttons */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-menu button,
+.nav-login-btn,
+.compare-btn-navbar,
+.nav-link-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.nav-menu button:hover,
+.nav-login-btn:hover,
+.compare-btn-navbar:hover,
+.nav-link-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Right area (compare + user) — do not shift the whole container */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  margin-left: 14px; 
+}
+
+/* Move only the Compare button visually (no layout reflow) */
 .compare-btn-navbar {
   position: relative;
   background-color: #007bff;
@@ -49,13 +95,17 @@
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: transform 0.15s ease, background 0.15s ease;
+  font-size: 0.95rem;
+  transform: translateX(-12px); 
 }
 
 .compare-btn-navbar:hover {
+  transform: translateX(-12px) scale(1.02);
   background-color: #0056b3;
 }
 
+/* compare count badge */
 .compare-count {
   position: absolute;
   top: -6px;
@@ -72,61 +122,77 @@
   justify-content: center;
 }
 
-/* Menu items */
-.nav-menu {
+/* User icon */
+.user-icon-container {
+  position: relative;
   display: flex;
-  list-style: none;
-  gap: 18px;
-}
-
-.nav-item .nav-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.nav-item .nav-link:hover {
-  color: #007bff;
-}
-
-/* 🔽 Hamburger toggle button */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
-/* 📱 Responsive: Small screens */
-@media (max-width: 768px) {
-  .nav-center {
-    order: 3;
-    width: 100%;
-    margin-top: 10px;
-  }
+.user-icon {
+  font-size: 1.8rem;
+  color: #007bff;
+  transition: color 0.2s ease;
+}
 
-  .nav-menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 10px;
-    gap: 12px;
-  }
+.user-icon:hover {
+  color: #0056b3;
+}
 
-  .nav-menu.active {
-    display: flex;
-  }
+/* Simple hover text (no box) */
+.user-dropdown {
+  position: absolute;
+  top: 36px;
+  font-size: 0.9rem;
+  color: #007bff;
+  font-weight: 500;
+  white-space: nowrap;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+.login-container {
+  width: 350px;
+  margin: 100px auto;
+  padding: 25px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
 
-  .nav-right {
-    order: 4;
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-  }
+.login-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
 }

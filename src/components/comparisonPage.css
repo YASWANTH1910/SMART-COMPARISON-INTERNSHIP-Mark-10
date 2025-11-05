@@ -1,48 +1,140 @@
+/* === Page Layout === */
 .comparison-page {
   display: flex;
-  background: #f4f6fb;
-  min-height: 100vh;
+  background: #f0f3fb;
+  min-height: calc(100vh - 70px);
+  width: 100vw;
+  margin: 0 !important;
+  padding: 10px 0 10px 0 !important; 
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
 }
 
+/* === Sidebar === */
 .filter-sidebar {
   width: 240px;
   background: white;
-  padding: 20px;
+  padding: 15px;
   border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 0 !important;
+  gap: 10px;
+  margin: 0; /* ✅ Removes left space */
+  box-sizing: border-box;
+}
+.appjsx-main {
+  padding-left: 0 !important;
 }
 
-.filter-sidebar h3 {
+/* Header (Filters + Clear Filters link) */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filter-header h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin: 0;
 }
 
-.filter-sidebar label {
-  display: block;
-  margin-bottom: 10px;
+.clear-filters-text {
+  font-size: 14px;
+  color: #2563eb;
   cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.filter-sidebar button {
-  margin-top: 20px;
-  background-color: #007bff;
+.clear-filters-text:hover {
+  color: #1d4ed8;
+}
+
+/* === Filter Inputs === */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.filter-group label {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #007bff;
+}
+
+/* === Buttons === */
+.add-product-btn {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background 0.2s ease-in-out;
+}
+
+.add-product-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.back-btn {
+  background-color: #2563eb;
   color: white;
   border: none;
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.2s ease;
 }
 
+.back-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* === Comparison Table Area === */
 .comparison-content {
   flex: 1;
-  padding: 20px;
+  padding: 15px 20px;
+  margin: 0;
+  overflow-x: auto;
 }
 
 .comparison-content h2 {
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .comparison-table-wrapper {
   overflow-x: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .comparison-table {
@@ -50,7 +142,7 @@
   border-collapse: collapse;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .comparison-table th,
@@ -70,7 +162,7 @@
   object-fit: contain;
 }
 
-/* Responsive */
+/* === Responsive === */
 @media (max-width: 768px) {
   .comparison-page {
     flex-direction: column;
@@ -79,5 +171,10 @@
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #ddd;
+  }
+  .filter-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
 }

@@ -2,213 +2,255 @@
   "Electronics": {
     "Mobiles": [
       {
-  "id": "m1",
-  "name": "iPhone 16 Pro Max",
-  "category": "Smartphone",
-  "price": 159900,
-  "rating": 4.9,
-  "features": {
-    "Brand": "Apple",
-    "Display": "6.9 inch Super Retina XDR",
-    "Processor": "A18 Pro Chip",
-    "RAM": "8 GB",
-    "Storage": "256 GB / 512 GB / 1 TB",
-    "Battery": "4500 mAh",
-    "Camera": "48 MP + 12 MP + 12 MP",
-    "OS": "iOS 18"
-  },
-  "image": "https://avatars.mds.yandex.net/get-mpic/4525599/2a00000191e1854d43b0abe09e9dcaba9c19/orig"
-},
-      {
-        "id": "m2",
-        "name": "ASUS ROG Phone 8 Pro",
+        "id": "m1",
+        "name": "iPhone 16 Pro Max",
         "category": "Smartphone",
-        "price": 129999,
-        "rating": 4.8,
+        "price": 159900,
+        "rating": 4.9,
         "features": {
-          "Brand": "ASUS",
-          "Display": "6.78 inch AMOLED 165Hz",
-          "Processor": "Snapdragon 8 Gen 3",
-          "RAM": "16 GB",
-          "Storage": "512 GB",
-          "Battery": "5500 mAh",
-          "Camera": "50 MP + 13 MP + 32 MP",
-          "OS": "Android 14"
+          "Brand": "Apple",
+          "Display": "6.9 inch Super Retina XDR",
+          "Processor": "A18 Pro Chip",
+          "RAM": "8 GB",
+          "Storage": "256 GB / 512 GB / 1 TB",
+          "Battery": "4500 mAh",
+          "Camera": "48 MP + 12 MP + 12 MP",
+          "OS": "iOS 18"
         },
-        "image": "https://ardes.bg/uploads/original/asus-rog-phone-8-pro-525400.jpg"
+        "image": "https://avatars.mds.yandex.net/get-mpic/4525599/2a00000191e1854d43b0abe09e9dcaba9c19/orig"
       },
       {
-        "id": "m3",
+        "id": "m2",
         "name": "Samsung Galaxy S24 Ultra",
         "category": "Smartphone",
-        "price": 149999,
+        "price": 139999,
         "rating": 4.8,
         "features": {
           "Brand": "Samsung",
-          "Display": "6.8 inch QHD+ AMOLED 120Hz",
-          "Processor": "Snapdragon 8 Gen 3 for Galaxy",
+          "Display": "6.8 inch QHD+ AMOLED",
+          "Processor": "Snapdragon 8 Gen 3",
           "RAM": "12 GB",
-          "Storage": "256 GB / 512 GB",
+          "Storage": "256 GB / 512 GB / 1 TB",
           "Battery": "5000 mAh",
-          "Camera": "200 MP + 12 MP + 10 MP + 10 MP",
+          "Camera": "200 MP + 12 MP + 10 MP",
           "OS": "Android 14"
         },
         "image": "https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2024/01/pbi-samsung-galaxy-s24-ultra.png"
+      },
+      {
+        "id": "m3",
+        "name": "OnePlus 12",
+        "category": "Smartphone",
+        "price": 69999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "OnePlus",
+          "Display": "6.7 inch Fluid AMOLED",
+          "Processor": "Snapdragon 8 Gen 3",
+          "RAM": "16 GB",
+          "Storage": "512 GB",
+          "Battery": "5400 mAh",
+          "Camera": "50 MP + 48 MP + 64 MP",
+          "OS": "Android 14"
+        },
+        "image": "https://image01.oneplus.net/ebp/202401/10/1-m00-54-e1-cpgm7v5e1oyafxvlaam1cgqzkx8491.png"
       }
     ],
     "Laptops": [
       {
         "id": "l1",
-        "name": "Apple MacBook Pro M3 Max",
+        "name": "MacBook Air M3",
         "category": "Laptop",
-        "price": 349900,
+        "price": 124900,
         "rating": 4.9,
         "features": {
           "Brand": "Apple",
-          "Display": "16.2 inch Liquid Retina XDR",
-          "Processor": "Apple M3 Max Chip (16-core CPU, 40-core GPU)",
-          "RAM": "48 GB Unified",
-          "Storage": "1 TB SSD",
-          "Battery": "22 hours backup",
+          "Display": "13.6 inch Retina Display",
+          "Processor": "Apple M3 Chip",
+          "RAM": "8 GB / 16 GB",
+          "Storage": "256 GB / 512 GB SSD",
+          "Battery": "18 hours backup",
           "OS": "macOS Sequoia"
         },
-        "image": "https://i.ytimg.com/vi/hQ5CrCFFKK8/maxresdefault.jpg"
+        "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-m3"
       },
       {
         "id": "l2",
-        "name": "ASUS ROG Zephyrus G16",
+        "name": "Dell XPS 15",
         "category": "Laptop",
-        "price": 249990,
-        "rating": 4.8,
-        "features": {
-          "Brand": "ASUS",
-          "Display": "16 inch QHD+ 240Hz OLED",
-          "Processor": "Intel Core i9 14900H",
-          "RAM": "32 GB DDR5",
-          "Storage": "1 TB SSD",
-          "GPU": "NVIDIA RTX 4070 8GB",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6494/6494642cv1d.jpg"
-      },
-      {
-        "id": "l3",
-        "name": "Alienware x17 R2",
-        "category": "Laptop",
-        "price": 329990,
+        "price": 189999,
         "rating": 4.7,
         "features": {
           "Brand": "Dell",
-          "Display": "17.3 inch FHD 360Hz",
-          "Processor": "Intel Core i9 13900HK",
-          "RAM": "32 GB DDR5",
+          "Display": "15.6 inch OLED 3.5K",
+          "Processor": "Intel Core Ultra 7",
+          "RAM": "16 GB",
           "Storage": "1 TB SSD",
-          "GPU": "NVIDIA RTX 4080 12GB",
-          "OS": "Windows 11 Home"
+          "Battery": "86 Whr",
+          "OS": "Windows 11 Pro"
         },
-        "image": "https://images.expertreviews.co.uk/wp-content/uploads/2022/05/alienware_x17_r2_-_2.jpg"
-      }
-    ],
-    "Watches": [
-      {
-        "id": "s1",
-        "name": "Apple Watch Ultra 2",
-        "category": "Watches",
-        "price": 89900,
-        "rating": 4.9,
-        "features": {
-          "Brand": "Apple",
-          "Display": "1.92 inch Always-On Retina LTPO OLED",
-          "Processor": "S9 SiP",
-          "Battery": "36 hours",
-          "Water Resistance": "100 meters",
-          "Connectivity": "GPS + Cellular",
-          "OS": "watchOS 10"
-        },
-        "image": "https://m.media-amazon.com/images/I/71SKOyjXoUL._AC_SL1500_.jpg"
+        "image": "https://i.dell.com/sites/imagecontent/products/publishingimages/xps-15-9530"
       },
       {
-        "id": "s2",
-        "name": "Samsung Galaxy Watch 6 Classic",
-        "category": "Watches",
+        "id": "l3",
+        "name": "HP Spectre x360",
+        "category": "Laptop",
+        "price": 139999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "HP",
+          "Display": "14 inch 2.8K OLED Touch",
+          "Processor": "Intel Evo Core i7",
+          "RAM": "16 GB",
+          "Storage": "1 TB SSD",
+          "Battery": "17 hours",
+          "OS": "Windows 11 Home"
+        },
+        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08300067.png"
+      }
+    ]
+  },
+  "Home Appliances": {
+    "Refrigerators": [
+      {
+        "id": "r1",
+        "name": "LG 260L Frost Free Refrigerator",
+        "category": "Refrigerator",
+        "price": 28999,
+        "rating": 4.5,
+        "features": {
+          "Brand": "LG",
+          "Type": "Double Door",
+          "Capacity": "260 L",
+          "Compressor": "Smart Inverter",
+          "Energy Rating": "3 Star",
+          "Defrost System": "Frost Free"
+        },
+        "image": "https://www.lg.com/in/images/refrigerators/md07587902/gallery/Digi-Touch-Cool.jpg"
+      },
+      {
+        "id": "r2",
+        "name": "Samsung 324L Convertible Refrigerator",
+        "category": "Refrigerator",
+        "price": 34999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Samsung",
+          "Type": "Convertible 5-in-1",
+          "Capacity": "324 L",
+          "Energy Rating": "3 Star",
+          "Compressor": "Digital Inverter"
+        },
+        "image": "https://images.samsung.com/is/image/samsung/in-rt34a4533bx-tl-gallery"
+      },
+      {
+        "id": "r3",
+        "name": "Whirlpool 265L 3 Star Refrigerator",
+        "category": "Refrigerator",
+        "price": 27999,
+        "rating": 4.4,
+        "features": {
+          "Brand": "Whirlpool",
+          "Type": "Double Door",
+          "Capacity": "265 L",
+          "Compressor": "IntelliSense Inverter",
+          "Energy Rating": "3 Star"
+        },
+        "image": "https://www.whirlpoolindia.com/sites/default/files/2023-02/WPREFIG.jpg"
+      }
+    ],
+    "Washing Machines": [
+      {
+        "id": "w1",
+        "name": "LG 8kg Front Load Washing Machine",
+        "category": "Washing Machine",
         "price": 49999,
         "rating": 4.7,
         "features": {
+          "Brand": "LG",
+          "Type": "Front Load",
+          "Capacity": "8 kg",
+          "Motor": "AI Direct Drive",
+          "Energy Rating": "5 Star"
+        },
+        "image": "https://www.lg.com/in/images/washing-machines/md07589310/gallery/FHM1408BDL-Washing-Machine.jpg"
+      },
+      {
+        "id": "w2",
+        "name": "Samsung 7kg EcoBubble Washing Machine",
+        "category": "Washing Machine",
+        "price": 39999,
+        "rating": 4.5,
+        "features": {
           "Brand": "Samsung",
-          "Display": "1.5 inch Super AMOLED",
-          "Processor": "Exynos W930",
-          "Battery": "425 mAh",
-          "Water Resistance": "5 ATM + IP68",
-          "Connectivity": "Bluetooth + LTE",
-          "OS": "Wear OS 4"
+          "Type": "Front Load",
+          "Capacity": "7 kg",
+          "Technology": "EcoBubble",
+          "Motor": "Digital Inverter"
         },
-        "image": "https://www.phonelife.no/pub_images/original/680605374C-3_1000X1000.jpg"
+        "image": "https://images.samsung.com/is/image/samsung/in-wf70f5e0w2w"
       },
       {
-        "id": "s3",
-        "name": "Garmin Epix Pro (Gen 2)",
-        "category": "Watches",
-        "price": 119990,
-        "rating": 4.8,
+        "id": "w3",
+        "name": "Whirlpool 7.5kg Top Load Washing Machine",
+        "category": "Washing Machine",
+        "price": 23999,
+        "rating": 4.3,
         "features": {
-          "Brand": "Garmin",
-          "Display": "1.3 inch AMOLED Touchscreen",
-          "Battery": "31 days (Smartwatch mode)",
-          "Water Resistance": "10 ATM",
-          "Sensors": "Heart Rate, Pulse Ox, GPS",
-          "Connectivity": "Bluetooth, Wi-Fi, ANT+"
+          "Brand": "Whirlpool",
+          "Type": "Top Load",
+          "Capacity": "7.5 kg",
+          "Technology": "6th Sense Smart Sensors"
         },
-        "image": "https://www.hyjiyastore.com/images/products/garmin-epix-pro-gen-2-sapphire-edition-51-mm-carbon-grey-dlc-titanium-with-chestnut-leather-band-watch-01.jpg"
+        "image": "https://www.whirlpoolindia.com/sites/default/files/2023-02/whirlpool7kg.png"
       }
-    ],
-    "Headphones": [
+    ]
+  },
+  "Fashion": {
+    "Men": [
       {
-        "id": "h1",
-        "name": "Sony WH-1000XM5",
-        "category": "Headphones",
-        "price": 34990,
-        "rating": 4.8,
+        "id": "f1",
+        "name": "Levi’s 511 Slim Fit Jeans",
+        "category": "Clothing",
+        "price": 4499,
+        "rating": 4.5,
         "features": {
-          "Brand": "Sony",
-          "Type": "Over-Ear Wireless",
-          "Battery": "30 hours playback",
-          "Noise Cancellation": "Industry Leading ANC",
-          "Connectivity": "Bluetooth 5.2, USB-C",
-          "Voice Assistant": "Google & Alexa Support"
+          "Brand": "Levi’s",
+          "Material": "Cotton Stretch Denim",
+          "Fit": "Slim Fit",
+          "Color": "Indigo Blue",
+          "Wash": "Mid Wash"
         },
-        "image": "https://cdn.ecoustics.com/db0/wblob/17BA35E873D594/2B9B/4318D/6fnX8JRqvGWJWO4Ya8pLdTyqiqklo9-Y4MQaiHDjEMI/sony-wh-1000xm4-1000xm5-compared-black.jpg"
+        "image": "https://lsco.scene7.com/is/image/lsco/045111703-front-pdp"
       },
       {
-        "id": "h2",
-        "name": "Apple AirPods Max",
-        "category": "Headphones",
-        "price": 59900,
-        "rating": 4.9,
-        "features": {
-          "Brand": "Apple",
-          "Type": "Over-Ear Wireless",
-          "Battery": "20 hours playback",
-          "Noise Cancellation": "Active Noise Cancellation",
-          "Connectivity": "Bluetooth 5.0, Lightning Port",
-          "Audio Chip": "Apple H1 Chip"
-        },
-        "image": "https://www.apple.com/newsroom/images/product/airpods/standard/apple_airpods-max_smart-case-blue_12082020_big.jpg.large_2x.jpg"
-      },
-      {
-        "id": "h3",
-        "name": "Bose QuietComfort Ultra",
-        "category": "Headphones",
-        "price": 47999,
+        "id": "f2",
+        "name": "Nike Air Force 1 Sneakers",
+        "category": "Footwear",
+        "price": 8999,
         "rating": 4.8,
         "features": {
-          "Brand": "Bose",
-          "Type": "Over-Ear Wireless",
-          "Battery": "24 hours playback",
-          "Noise Cancellation": "Adjustable World-Class ANC",
-          "Connectivity": "Bluetooth 5.3, USB-C",
-          "Voice Assistant": "Google & Alexa"
+          "Brand": "Nike",
+          "Material": "Leather",
+          "Color": "White",
+          "Type": "Sneakers"
         },
-        "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/de2d6c30-fad7-458c-b40f-9b1980571c4f.jpg"
+        "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-force-1-07-white.jpg"
+      },
+      {
+        "id": "f3",
+        "name": "Puma Sports T-Shirt",
+        "category": "Clothing",
+        "price": 1999,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Puma",
+          "Material": "Polyester",
+          "Fit": "Regular Fit",
+          "Color": "Red",
+          "Type": "Activewear"
+        },
+        "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/523243/01/fnd/IND"
       }
     ]
   }

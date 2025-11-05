@@ -25,20 +25,13 @@ body::before {
   height: 100%;
 }
 
-/* App Layout - FIXED */
-/* .Appjsx {
-  min-height: 8vh;
-  display: flex;
-  flex-direction: column;
-} */
-
 .appjsx-main {
-  flex: 1; /* This pushes footer down */
-  padding: 20px 20px 40px 20px;
-  appjsx-main {
   flex: 1;
+  padding: 0 !important; 
+  margin: 0 !important;
+  background: #f4f6fb; /* match comparison page bg */
 }
-}
+
 
 .productlist-box {
   max-width: 1200px;
@@ -55,3 +48,55 @@ body::before {
   margin-top: auto; /* This makes it stick to bottom */
   width: 100%;
 }
+
+.category-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image Category Bar */
+.category-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 15px;
+  background: linear-gradient(to right, #e0f7fa, #f3e5f5);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.category-item {
+  text-align: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.category-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  object-fit: contain;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.category-item p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.subcategory-list button {
+  background: #f3e5f5;
+  border: none;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.subcategory-list button:hover {
+  background: #ce93d8;
+} 

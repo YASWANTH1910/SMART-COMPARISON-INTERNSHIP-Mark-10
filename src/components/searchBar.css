@@ -5,6 +5,7 @@ body {
   background: linear-gradient(to bottom right, lightblue, aliceblue);
   min-height: 100vh;
 }
+
 .searchbar-input{
 background-color: rgb(253, 234, 255) ;
 height: 30px;
@@ -12,15 +13,13 @@ width: 350px;
 border: 10px;
 border-radius: 15px;
 border-color: rgb(4, 61, 154);
-
-
-
 }
+
 /* App Container */
 .searchbar-container {
   display: flex;
   align-items: center;
-  padding: 40px 20px;
+  padding: 40px 25px;
 }
 
 /* Page Heading */
@@ -48,8 +47,8 @@ border-color: rgb(4, 61, 154);
   padding: 18px 20px;
   font-size: 1.1rem;
   text-align: center;
-  border: 2px solid skyblue;
-  border-radius: 50px;
+  border: 2px solid black;
+  border-radius: 30px;
   background: white;
   box-shadow: 0 4px 10px rgba(70, 130, 180, 0.2);
   transition: all 0.3s ease;
@@ -189,8 +188,9 @@ border-color: rgb(4, 61, 154);
   background: mediumblue;
 }
 .searchbar-input::placeholder {
-  color: #888;
+  color: #bd7676;
 }
+
 .sug-main {
   position: absolute;
   top: 50px;
@@ -200,4 +200,39 @@ border-color: rgb(4, 61, 154);
   color: black;
   background-color: rgb(102, 223, 253);
   border-radius: 5px;
+}
+
+.search-bar {
+  width: 45%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: flexi;
+  font-size: 16px;
+}
+
+/* Suggestions dropdown */
+.suggestions-box {
+  position: absolute;
+  top: 35px;
+  width: 46%;
+  background: white;
+  color:black;
+  border-radius: 8px;
+  box-shadow: 20px 10px rgba (199, 17, 17, 0.2);
+  max-height: 100px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 10px;
+  margin: 5px ;
+  z-index: 20;
+}
+
+.suggestions-box li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-box li:hover {
+  background-color: #ebe2e2;
 }
