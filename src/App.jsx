@@ -8,6 +8,7 @@ import TopProducts from "./components/topProducts";
 import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import "./App.css";
+import AllProductsPage from "./components/ProductsPage";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -160,6 +161,20 @@ function App() {
               </>
             }
           />
+          <Route
+  path="/products"
+  element={
+    <AllProductsPage
+      products={products}
+      filteredProducts={filteredProducts}
+      setFilteredProducts={setFilteredProducts}
+      currentFilter={currentFilter}
+      setCurrentFilter={setCurrentFilter}
+      onSpecClick={handleCompareToggle}
+      selectedProducts={selectedProducts}
+    />
+  }
+/>
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}
