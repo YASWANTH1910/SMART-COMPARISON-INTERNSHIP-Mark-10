@@ -9,6 +9,7 @@ import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import "./App.css";
 import AllProductsPage from "./components/ProductsPage";
+import ProductFilters from "./components/ProductPageFilter";
 
 function App() {
   const [products, setProducts] = useState([]);
