@@ -52,29 +52,37 @@ const AllProductsPage = ({
       <ProductFilters
         products={products}
         currentFilter={currentFilter}
-        onApplyFilters={(filters) => {
-          let filtered = products;
+       onApplyFilters={(filters) => {
+  let filtered = products;
 
-          if (filters.category !== "All") {
-            filtered = filtered.filter(p => p.category === filters.category);
-          }
-          if (filters.subcategory !== "All") {
-            filtered = filtered.filter(p => p.subcategory === filters.subcategory);
-          }
-          if (filters.brands.length > 0) {
-            filtered = filtered.filter(p => filters.brands.includes(p.features.Brand));
-          }
-          filtered = filtered.filter(p => p.price <= filters.priceRange[1]);
-          if (filters.minRating > 0) {
-            filtered = filtered.filter(p => p.rating >= filters.minRating);
-          }
+  if (filters.category !== "All") {
+    filtered = filtered.filter(p => p.category === filters.category);
+  }
+  if (filters.subcategory !== "All") {
+    filtered = filtered.filter(p => p.subcategory === filters.subcategory);
+  }
+  if (filters.brands.length > 0) {
+    filtered = filtered.filter(p => filters.brands.includes(p.features.Brand));
+  }
+  filtered = filtered.filter(p => p.price <= filters.priceRange[1]);
+  if (filters.minRating > 0) {
+    filtered = filtered.filter(p => p.rating >= filters.minRating);
+  }
 
-          setFilteredProducts(filtered);
-          setCurrentFilter({
-            mainItems: filters.category,
-            subItems: filters.subcategory
-          });
-        }}
+  // NEW: Sort by price
+  if (filters.sortOrder === "low-to-high") {
+    filtered = filtered.sort((a, b) => a.price - b.price);
+  } else if (filters.sortOrder === "high-to-low") {
+    filtered = filtered.sort((a, b) => b.price - a.price);
+  } 
+
+  setFilteredProducts(filtered);
+  setCurrentFilter({
+    mainItems: filters.category,
+    subItems: filters.subcategory
+  });
+}}
+        
         onClearFilters={() => {
           setFilteredProducts(products);
           setCurrentFilter({ mainItems: "All", subItems: "All" });
