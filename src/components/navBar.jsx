@@ -35,7 +35,7 @@ const Navbar = ({
   const handleLoginLogout = (e) => {
     e.stopPropagation();
     if (isLoggedIn) {
-      localStorage.removeItem("isLoggedIn"); // clear login on logout
+      localStorage.removeItem("isLoggedIn"); 
       setIsLoggedIn(false);
       alert("Logged out successfully!");
       navigate("/");

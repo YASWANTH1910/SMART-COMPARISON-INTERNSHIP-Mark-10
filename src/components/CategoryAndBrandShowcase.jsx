@@ -102,8 +102,7 @@ const CategoryAndBrandShowcase = () => {
             <div
               key={i}
               className="showcase-card"
-              onClick={() => handleNavigate(brand.category)}
-            >
+              onClick={() => handleNavigate(brand.category)}>
               <div className="image-wrapper">
                 <img src={brand.image} alt={brand.title} />
               </div>

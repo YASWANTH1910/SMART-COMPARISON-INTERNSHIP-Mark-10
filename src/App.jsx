@@ -9,7 +9,6 @@ import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import "./App.css";
 import AllProductsPage from "./components/ProductsPage";
-import ProductFilters from "./components/ProductPageFilter";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -132,9 +131,6 @@ function App() {
                 {/* ✅ Category Icon Row Section */}
                 <div className="category-wrapper">
                   <div className="category-header">
-                    {/* <span onClick={handleViewAll} className="view-all-link">
-                      View All
-                    </span> */}
                   </div>
                   <div className="category-menu">
                     {iconCategories.map((cat, i) => (
@@ -163,19 +159,18 @@ function App() {
             }
           />
           <Route
-  path="/products"
-  element={
-    <AllProductsPage
-      products={products}
-      filteredProducts={filteredProducts}
-      setFilteredProducts={setFilteredProducts}
-      currentFilter={currentFilter}
-      setCurrentFilter={setCurrentFilter}
-      onSpecClick={handleCompareToggle}
-      selectedProducts={selectedProducts}
-    />
-  }
-/>
+            path="/products"
+            element={
+              <AllProductsPage
+                products={products}
+                filteredProducts={filteredProducts}
+                setFilteredProducts={setFilteredProducts}
+                currentFilter={currentFilter}
+                setCurrentFilter={setCurrentFilter}
+                onSpecClick={handleCompareToggle}
+                selectedProducts={selectedProducts}
+              />
+            }/>
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}
