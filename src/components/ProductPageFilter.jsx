@@ -1,145 +1,133 @@
 import React, { useState, useEffect, useMemo } from "react";
 import "./ProductFilterPage.css";
 
-const ProductFilters = ({
+const MAIN_CATEGORIES = [
+  { value: "All", label: "All Products" },
+  { value: "Electronics", label: "Electronics" },
+  { value: "Home Appliances", label: "Home Appliances" },
+  { value: "Fashion", label: "Fashion" },
+];
+
+const SUBCATEGORIES = {
+  Electronics: [
+    { value: "All", label: "All Electronics" },
+    { value: "Mobiles", label: "Mobiles" },
+    { value: "Laptops", label: "Laptops" },
+  ],
+  "Home Appliances": [
+    { value: "All", label: "All Appliances" },
+    { value: "Refrigerators", label: "Refrigerators" },
+    { value: "Washing Machines", label: "Washing Machines" },
+  ],
+  Fashion: [
+    { value: "All", label: "All Fashion" },
+    { value: "Men", label: "Men" },
+  ],
+};
+
+function ProductFilters({
   products,
+  currentFilter,
   onApplyFilters,
   onClearFilters,
-  currentFilter,
-}) => {
-  const [openSections, setOpenSections] = useState({
-    category: true,
-    subcategory: false,
-    brand: false,
-    price: false,
-    rating: false,
-  });
+}) {
+  const [category, setCategory] = useState(currentFilter?.mainItems ?? "All");
+  const [subcategory, setSubcategory] = useState(currentFilter?.subItems ?? "All");
+  const [selectedBrand, setSelectedBrand] = useState("All");
+  const [priceRange, setPriceRange] = useState([0, Infinity]);
+  const [minRating, setMinRating] = useState("All");
+  const [sortOrder, setSortOrder] = useState("default");
 
-  const [selected, setSelected] = useState({
-    category: currentFilter.mainItems || "All",
-    subcategory: currentFilter.subItems || "All",
-    brands: [],
-    priceRange: [0, 200000],
-    minRating: 0,
-  });
+  // Extract brands & subcategories
+  const allBrands = [...new Set(products.map(p => p.features.Brand))].filter(Boolean);
+  const subcategories = selected.category === "All"
+    ? []
+    : [...new Set(products
+        .filter(p => p.category === selected.category)
+        .map(p => p.subcategory)
+      )];
 
-  // ✅ UseMemo for stable reference (prevents ESLint warning)
-  const allBrands = useMemo(() => {
-    return [
-      ...new Set(
-        products
-          .map(
-            (p) =>
-              p?.features?.Brand ||
-              p?.features?.brand ||
-              p?.Brand ||
-              p?.brand
-          )
-          .filter(Boolean)
-      ),
-    ];
-  }, [products]);
-
-  const subcategories = useMemo(() => {
-    if (selected.category === "All") return [];
-    return [
-      ...new Set(
-        products
-          .filter((p) => p?.category === selected.category)
-          .map((p) => p?.subcategory)
-          .filter(Boolean)
-      ),
-    ];
-  }, [products, selected.category]);
-
-  // ✅ Keep subcategory valid when category changes
   useEffect(() => {
-    setSelected((prev) => ({
+    setSelected(prev => ({
       ...prev,
-      subcategory: subcategories.includes(prev.subcategory)
-        ? prev.subcategory
-        : "All",
+      subcategory: subcategories.includes(prev.subcategory) ? prev.subcategory : "All"
     }));
   }, [selected.category, subcategories]);
 
   const toggleSection = (section) => {
-    setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
+    setOpenSections(prev => ({ ...prev, [section]: !prev[section] }));
   };
 
   const handleBrandToggle = (brand) => {
-    setSelected((prev) => ({
+    setSelected(prev => ({
       ...prev,
       brands: prev.brands.includes(brand)
-        ? prev.brands.filter((b) => b !== brand)
-        : [...prev.brands, brand],
+        ? prev.brands.filter(b => b !== brand)
+        : [...prev.brands, brand]
     }));
   };
 
   const handleApply = () => {
-    onApplyFilters(selected);
+    onApplyFilters({
+      category,
+      subcategory,
+      brands: selectedBrand === "All" ? [] : [selectedBrand],
+      priceRange,
+      minRating: minRating === "All" ? 0 : Number(minRating),
+      sortOrder,
+    });
   };
 
   const handleClear = () => {
-    const cleared = {
-      category: "All",
-      subcategory: "All",
-      brands: [],
-      priceRange: [0, 200000],
-      minRating: 0,
-    };
-    setSelected(cleared);
+    setCategory("All");
+    setSubcategory("All");
+    setSelectedBrand("All");
+    setPriceRange([0, Infinity]);
+    setMinRating("All");
+    setSortOrder("default");
     onClearFilters();
   };
+
+  const subOptions = SUBCATEGORIES[category] || [{ value: "All", label: "All" }];
 
   return (
     <div className="product-filters">
       <div className="filters-header">
-        <button className="back-arrow" onClick={() => window.history.back()}>
-          Back
-        </button>
+        <button className="back-arrow" onClick={() => window.history.back()}>Back</button>
         <h3>Filter</h3>
-        <button className="apply-btn" onClick={handleApply}>
-          Apply
-        </button>
+        <button className="apply-btn" onClick={handleApply}>Apply</button>
       </div>
 
-      <div className="sort-section">
-        <label>Sort By</label>
-        <select defaultValue="featured">
-          <option value="featured">Featured Items</option>
-          <option value="price-low">Price: Low to High</option>
-          <option value="price-high">Price: High to Low</option>
-          <option value="rating">Rating</option>
+      {/* Category */}
+      <div className="filter-group">
+        <label>Category</label>
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          {MAIN_CATEGORIES.map((c) => (
+            <option key={c.value} value={c.value}>{c.label}</option>
+          ))}
         </select>
       </div>
 
       <div className="filter-by">
         <span>Filter By</span>
-        <button className="clear-all" onClick={handleClear}>
-          Clear All
-        </button>
+        <button className="clear-all" onClick={handleClear}>Clear All</button>
       </div>
 
-      {/* Category */}
+      {/* Sort by Price */}
       <div className="filter-group">
-        <div
-          className="filter-title"
-          onClick={() => toggleSection("category")}
-        >
+        <div className="filter-title" onClick={() => toggleSection("category")}>
           <span>Category</span>
           <span>{openSections.category ? "−" : "+"}</span>
         </div>
         {openSections.category && (
           <div className="filter-options">
-            {["All", "Electronics", "Home Appliances", "Fashion"].map((cat) => (
+            {["All", "Electronics", "Home Appliances", "Fashion"].map(cat => (
               <label key={cat} className="checkbox-label">
                 <input
                   type="radio"
                   name="category"
                   checked={selected.category === cat}
-                  onChange={() =>
-                    setSelected((prev) => ({ ...prev, category: cat }))
-                  }
+                  onChange={() => setSelected(prev => ({ ...prev, category: cat }))}
                 />
                 <span>{cat}</span>
               </label>
@@ -151,24 +139,19 @@ const ProductFilters = ({
       {/* Subcategory */}
       {selected.category !== "All" && (
         <div className="filter-group">
-          <div
-            className="filter-title"
-            onClick={() => toggleSection("subcategory")}
-          >
+          <div className="filter-title" onClick={() => toggleSection("subcategory")}>
             <span>Subcategory</span>
             <span>{openSections.subcategory ? "−" : "+"}</span>
           </div>
           {openSections.subcategory && (
             <div className="filter-options">
-              {["All", ...subcategories].map((sub) => (
+              {["All", ...subcategories].map(sub => (
                 <label key={sub} className="checkbox-label">
                   <input
                     type="radio"
                     name="subcategory"
                     checked={selected.subcategory === sub}
-                    onChange={() =>
-                      setSelected((prev) => ({ ...prev, subcategory: sub }))
-                    }
+                    onChange={() => setSelected(prev => ({ ...prev, subcategory: sub }))}
                   />
                   <span>{sub}</span>
                 </label>
@@ -186,7 +169,7 @@ const ProductFilters = ({
         </div>
         {openSections.brand && (
           <div className="filter-options">
-            {allBrands.map((brand) => (
+            {allBrands.map(brand => (
               <label key={brand} className="checkbox-label">
                 <input
                   type="checkbox"
@@ -200,7 +183,7 @@ const ProductFilters = ({
         )}
       </div>
 
-      {/* Price Range */}
+      {/* Max Price */}
       <div className="filter-group">
         <div className="filter-title" onClick={() => toggleSection("price")}>
           <span>Price Range</span>
@@ -214,12 +197,10 @@ const ProductFilters = ({
               max="200000"
               step="1000"
               value={selected.priceRange[1]}
-              onChange={(e) =>
-                setSelected((prev) => ({
-                  ...prev,
-                  priceRange: [0, parseInt(e.target.value)],
-                }))
-              }
+              onChange={(e) => setSelected(prev => ({
+                ...prev,
+                priceRange: [0, parseInt(e.target.value)]
+              }))}
             />
             <div className="price-values">
               <span>₹0</span>
@@ -229,7 +210,7 @@ const ProductFilters = ({
         )}
       </div>
 
-      {/* Rating */}
+      {/* Min Rating */}
       <div className="filter-group">
         <div className="filter-title" onClick={() => toggleSection("rating")}>
           <span>Minimum Rating</span>
@@ -237,15 +218,13 @@ const ProductFilters = ({
         </div>
         {openSections.rating && (
           <div className="filter-options">
-            {[0, 3, 4].map((rating) => (
+            {[0, 3, 4].map(rating => (
               <label key={rating} className="checkbox-label">
                 <input
                   type="radio"
                   name="rating"
                   checked={selected.minRating === rating}
-                  onChange={() =>
-                    setSelected((prev) => ({ ...prev, minRating: rating }))
-                  }
+                  onChange={() => setSelected(prev => ({ ...prev, minRating: rating }))}
                 />
                 <span>{rating === 0 ? "Any" : `${rating}★ & up`}</span>
               </label>
@@ -253,8 +232,9 @@ const ProductFilters = ({
           </div>
         )}
       </div>
+
     </div>
   );
-};
+}
 
 export default ProductFilters;
