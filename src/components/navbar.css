@@ -1,6 +1,6 @@
 /* 🌐 Base Navbar */
 .navbar {
-  background-color: #ffffff;
+  background-color: skyblue;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
   position: sticky;
@@ -155,7 +155,7 @@
   width: 350px;
   margin: 100px auto;
   padding: 25px;
-  border: 2px solid lightgray;
+  border: 2px solid white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -177,7 +177,7 @@
 
 .login-input {
   padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid black;
   border-radius: 5px;
   font-size: 1rem;
 }

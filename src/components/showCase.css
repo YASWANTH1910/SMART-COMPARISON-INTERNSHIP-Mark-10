@@ -8,7 +8,7 @@
 
 .showcase-box {
   flex: 1;
-  background: #fff;
+  background: linear-gradient(pink,skyblue) ;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   padding: 20px;
@@ -46,7 +46,7 @@
 }
 
 .showcase-card {
-  background: #fff;
+  background: linear-gradient(white);
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   padding: 12px;
@@ -57,7 +57,7 @@
 
 .showcase-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px black(0, 0, 0, 0.12);
 }
 
 .image-wrapper {

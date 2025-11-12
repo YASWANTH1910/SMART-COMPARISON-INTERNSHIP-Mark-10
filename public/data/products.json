@@ -253,5 +253,245 @@
         "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/523243/01/fnd/IND"
       }
     ]
+  },
+  "Furniture" : {
+    "Tables": [
+    {
+      "Brand": "IKEA",
+      "Material": "Solid Pine Wood",
+      "Shape": "Rectangular",
+      "Color": "Natural Finish",
+      "Table Type": "Dining Table",
+      "Seating Capacity": "4 Seater",
+      "Finish Type": "Matte",
+      "Storage Included": "No",
+      "Dimensions": {
+        "Height": "750 mm",
+        "Width": "1200 mm",
+        "Depth": "750 mm"
+      },
+      "Weight": "25 kg",
+      "Care Instructions": "Wipe clean with a damp cloth, Avoid direct sunlight, Do not use harsh chemicals",
+      "Model Series Name": "NORRÅKER",
+      "Additional Features": "Sturdy build, easy to assemble, water-resistant coating"
+    },
+    {
+      "Brand": "Urban Ladder",
+      "Material": "Engineered Wood",
+      "Shape": "Round",
+      "Color": "Walnut Brown",
+      "Table Type": "Coffee Table",
+      "Seating Capacity": "N/A",
+      "Finish Type": "Glossy",
+      "Storage Included": "Yes",
+      "Storage Type": "Open Shelf",
+      "Dimensions": {
+        "Height": "450 mm",
+        "Width": "900 mm",
+        "Depth": "900 mm"
+      },
+      "Weight": "18 kg",
+      "Care Instructions": "Clean with dry cloth, avoid moisture, use coasters for hot items",
+      "Model Series Name": "Caspian",
+      "Additional Features": "Scratch-resistant surface, easy to move"
+    },
+    {
+      "Brand": "IKEA",
+      "Material": "Solid Pine Wood",
+      "Shape": "Rectangular",
+      "Color": "Natural Finish",
+      "Table Type": "Dining Table",
+      "Seating Capacity": "4 Seater",
+      "Finish Type": "Matte",
+      "Storage Included": "No",
+      "Dimensions": {
+        "Height": "750 mm",
+        "Width": "1200 mm",
+        "Depth": "750 mm"
+      },
+      "Weight": "25 kg",
+      "Care Instructions": "Wipe clean with a damp cloth, Avoid direct sunlight, Do not use harsh chemicals",
+      "Model Series Name": "NORRÅKER",
+      "Additional Features": "Sturdy build, easy to assemble, water-resistant coating"
+    },
+    {
+      "Brand": "Urban Ladder",
+      "Material": "Engineered Wood",
+      "Shape": "Round",
+      "Color": "Walnut Brown",
+      "Table Type": "Coffee Table",
+      "Seating Capacity": "N/A",
+      "Finish Type": "Glossy",
+      "Storage Included": "Yes",
+      "Storage Type": "Open Shelf",
+      "Dimensions": {
+        "Height": "450 mm",
+        "Width": "900 mm",
+        "Depth": "900 mm"
+      },
+      "Weight": "18 kg",
+      "Care Instructions": "Clean with dry cloth, avoid moisture, use coasters for hot items",
+      "Model Series Name": "Caspian",
+      "Additional Features": "Scratch-resistant surface, easy to move"
+    }
+  ],
+  "Beds": [
+    {
+      "Brand": "Wakefit",
+      "Material": "Engineered Wood",
+      "Color": "Dark Walnut",
+      "Size": "Queen",
+      "Storage Included": "Yes",
+      "Storage Type": "Box Storage",
+      "Headboard Included": "Yes",
+      "Finish Type": "Matte",
+      "Dimensions": {
+        "Length": "2030 mm",
+        "Width": "1570 mm",
+        "Height": "900 mm"
+      },
+      "Weight": "70 kg",
+      "Care Instructions": "Wipe with a dry cloth, avoid water spills, assemble on flat surface",
+      "Model Series Name": "Aurora",
+      "Additional Features": "Termite resistant, scratch-resistant laminate, noise-free joints"
+    },
+    {
+      "Brand": "Godrej Interio",
+      "Material": "Metal Frame with MDF Board",
+      "Color": "Grey",
+      "Size": "Single",
+      "Storage Included": "No",
+      "Headboard Included": "Yes",
+      "Finish Type": "Powder Coated",
+      "Dimensions": {
+        "Length": "1980 mm",
+        "Width": "910 mm",
+        "Height": "890 mm"
+      },
+      "Weight": "35 kg",
+      "Care Instructions": "Clean with mild soap solution, do not drag the bed, avoid moisture",
+      "Model Series Name": "Slimline",
+      "Additional Features": "Rust resistant coating, lightweight design"
+    },
+    {
+      "Brand": "Wakefit",
+      "Material": "Engineered Wood",
+      "Color": "Dark Walnut",
+      "Size": "Queen",
+      "Storage Included": "Yes",
+      "Storage Type": "Box Storage",
+      "Headboard Included": "Yes",
+      "Finish Type": "Matte",
+      "Dimensions": {
+        "Length": "2030 mm",
+        "Width": "1570 mm",
+        "Height": "900 mm"
+      },
+      "Weight": "70 kg",
+      "Care Instructions": "Wipe with a dry cloth, avoid water spills, assemble on flat surface",
+      "Model Series Name": "Aurora",
+      "Additional Features": "Termite resistant, scratch-resistant laminate, noise-free joints"
+    },
+    {
+      "Brand": "Godrej Interio",
+      "Material": "Metal Frame with MDF Board",
+      "Color": "Grey",
+      "Size": "Single",
+      "Storage Included": "No",
+      "Headboard Included": "Yes",
+      "Finish Type": "Powder Coated",
+      "Dimensions": {
+        "Length": "1980 mm",
+        "Width": "910 mm",
+        "Height": "890 mm"
+      },
+      "Weight": "35 kg",
+      "Care Instructions": "Clean with mild soap solution, do not drag the bed, avoid moisture",
+      "Model Series Name": "Slimline",
+      "Additional Features": "Rust resistant coating, lightweight design"
+    }
+  ],
+  "Couches": [
+    {
+      "Brand": "Pepperfry",
+      "Upholstery Material": "Polyester Fabric",
+      "Frame Material": "Solid Wood",
+      "Color": "Navy Blue",
+      "Seating Capacity": "3 Seater",
+      "Shape": "L-Shaped",
+      "Filling Material": "Foam",
+      "Removable Covers": "Yes",
+      "Leg Material": "Metal",
+      "Dimensions": {
+        "Width": "2200 mm",
+        "Depth": "1500 mm",
+        "Height": "850 mm"
+      },
+      "Weight": "60 kg",
+      "Comfort Level": "Soft",
+      "Care Instructions": "Vacuum regularly, avoid direct sunlight, professional cleaning recommended",
+      "Model Series Name": "Zyra",
+      "Additional Features": "Reversible chaise, stain-resistant fabric"
+    },
+    {
+      "Brand": "Durian",
+      "Upholstery Material": "Leatherette",
+      "Frame Material": "Hardwood",
+      "Color": "Beige",
+      "Seating Capacity": "2 Seater",
+      "Shape": "Straight",
+      "Filling Material": "High Density Foam",
+      "Removable Covers": "No",
+      "Leg Material": "Stainless Steel",
+      "Dimensions": {
+        "Width": "1650 mm",
+        "Depth": "850 mm",
+        "Height": "900 mm"
+      },
+      "Weight": "45 kg",
+      "Comfort Level": "Medium Firm",
+      "Care Instructions": "Wipe with damp cloth, avoid sharp objects, do not use abrasive cleaners",
+      "Model Series Name": "Luca",
+      "Additional Features": "Anti-sag design, contemporary look"
+    }
+  ],
+  "Dressers": [
+    {
+      "Brand": "HomeTown",
+      "Material": "Engineered Wood",
+      "Color": "Wenge Finish",
+      "Mirror Included": "Yes",
+      "Storage Type": "Drawer Storage",
+      "Number of Drawers": 4,
+      "Finish Type": "Matte",
+      "Dimensions": {
+        "Height": "1600 mm",
+        "Width": "800 mm",
+        "Depth": "400 mm"
+      },
+      "Weight": "35 kg",
+      "Care Instructions": "Wipe with dry cloth, avoid exposure to moisture and sunlight",
+      "Model Series Name": "Livia",
+      "Additional Features": "Smooth sliding drawers, detachable mirror"
+    },
+    {
+      "Brand": "Nilkamal",
+      "Material": "Plastic",
+      "Color": "Brown & Beige",
+      "Mirror Included": "No",
+      "Storage Type": "Cabinet and Drawer Combo",
+      "Number of Drawers": 3,
+      "Finish Type": "Glossy",
+      "Dimensions": {
+        "Height": "1200 mm",
+        "Width": "700 mm",
+        "Depth": "350 mm"
+      },
+      "Weight": "20 kg",
+      "Care Instructions": "Clean with mild soap water, avoid harsh cleaning agents",
+      "Model Series Name": "Flora",
+      "Additional Features": "Lightweight, easy to assemble, rust-proof body"
+    }
+  ]
   }
 }

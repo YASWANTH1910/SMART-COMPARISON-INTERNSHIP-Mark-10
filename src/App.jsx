@@ -97,8 +97,8 @@ function App() {
     { name: "Cameras", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iR6SKymCH-w100-h100/R6SKymCH.webp" },
     { name: "Earphones", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iUfE0ayqy-w100-h100/UfE0ayqy.webp" },
     { name: "Smartwatch", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iXjxQXvn2-w100-h100/XjxQXvn2.webp" },
+    
   ];
-
   const handleIconClick = (categoryName) => {
     // Navigate to products page with filter info
     navigate("/products", { state: { filterCategory: categoryName } });
