@@ -1,73 +1,101 @@
 import React from "react";
 import "./productList.css";
 
-const ProductList = ({ products = [], onSpecClick = () => {}, selectedProducts = [] }) => {
-  // safeguard: if products is not an array or empty, show friendly message
+const ProductList = ({
+  products = [],
+  onSpecClick = () => {},
+  selectedProducts = [],
+}) => {
   if (!Array.isArray(products) || products.length === 0) {
     return (
-      <div className="product-list">
-        <h2>All Products</h2>
-        <p>No products available.</p>
+      <div className="list-empty">
+        <p>No products found.</p>
       </div>
     );
   }
 
-  // keep a single console sample for debugging (optional)
-  console.log("Product sample:", products[0]);
-
   return (
-    <div className="product-list">
-      <h2>All Products</h2>
+    <div className="product-list-container">
+      {products.map((product, index) => {
+        const isSelected = selectedProducts.some((p) => p.id === product.id);
+        // Brand (used for display and also ensures we don't have an "assigned but unused" variable)
+        const brand = product?.features?.Brand || product?.brand || "Unknown";
 
-      {/* Product cards grid */}
-      <div className="product-grid">
-        {products.map((product) => {
-          const isSelected = Array.isArray(selectedProducts) && selectedProducts.some((p) => p.id === product.id);
+        // Safe numeric price and original price fallback
+        const price = Number(product?.price) || 0;
+        const originalPrice = product?.originalPrice
+          ? Number(product.originalPrice)
+          : Math.round(price * 1.25);
+        const discount =
+          originalPrice > 0 ? Math.round(((originalPrice - price) / originalPrice) * 100) : 0;
 
-          return (
-            <div
-              key={product.id}
-              className="product-card"
-              onClick={() => {
-                // clicking the card uses the same handler (optional). If you want card click to do something else,
-                // change this in future. For now it toggles selection like the button.
-                if (typeof onSpecClick === "function") onSpecClick(product);
-              }}
-            >
-              {/* Product Image */}
-              <div className="product-image-container">
-                {product.image ? (
-                  <img
-                    src={product.image}
-                    alt={product.name || "Product"}
-                    className="product-image"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="no-image">No Image</div>
+        // Compose a small spec string (if features exist)
+        const specs = [
+          product?.features?.Display,
+          product?.features?.Processor,
+          product?.features?.RAM,
+        ]
+          .filter(Boolean)
+          .join(" | ");
+
+        const handleCompareClick = (e) => {
+          e.stopPropagation();
+          // notify parent
+          onSpecClick(product);
+        };
+
+        return (
+          <div
+            key={product.id || index}
+            className="list-row"
+            title="Click the Compare button to add/remove from comparison"
+          >
+            {/* LEFT: Image */}
+            <div className="list-image">
+              {product?.image ? (
+                <img src={product.image} alt={product.name} loading="lazy" />
+              ) : (
+                <div className="no-img">No Image</div>
+              )}
+            </div>
+
+            {/* CENTER: Name + Brand + Specs */}
+            <div className="list-center">
+              <div className="list-name">{product.name}</div>
+              <div className="list-brand">{brand}</div>
+              <div className="list-specs">{specs}</div>
+            </div>
+
+            {/* RIGHT: Rating + Price + Selector */}
+            <div className="list-right">
+              <div className="list-rating">
+                {product?.rating ? `${product.rating}★` : "No Rating"}
+              </div>
+
+              <div className="list-price">
+                <span className="current">
+                  {price > 0 ? `₹${price.toLocaleString()}` : "N/A"}
+                </span>
+
+                {discount > 0 && originalPrice > 0 && (
+                  <>
+                    <span className="original">₹{originalPrice.toLocaleString()}</span>
+                    <span className="discount">-{discount}%</span>
+                  </>
                 )}
               </div>
 
-              {/* Product Info */}
-              <h3>{String(product.name ?? "Unnamed Product")}</h3>
-              <p className="description">{String(product.description ?? "No description")}</p>
-              <p>⭐ {String(product.rating ?? "N/A")}</p>
-              <p className="price">₹{String(product.price ?? "0")}</p>
-
-              {/* Compare button */}
+              {/* Compare Button */}
               <button
-                onClick={(e) => {
-                  e.stopPropagation(); // prevent triggering card click
-                  if (typeof onSpecClick === "function") onSpecClick(product);
-                }}
                 className={`compare-btn ${isSelected ? "selected" : ""}`}
+                onClick={handleCompareClick}
               >
-                {isSelected ? "✓ Selected" : "Compare"}
+                {isSelected ? "Remove" : "Compare"}
               </button>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

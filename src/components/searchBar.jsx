@@ -62,7 +62,7 @@ const SearchBar = () => {
     <div className="searchbar-container" ref={containerRef}>
       <input
         type="text"
-        placeholder="  Search products                                                        🔍"
+        placeholder=" Search products                                               🔍"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="searchbar-input"

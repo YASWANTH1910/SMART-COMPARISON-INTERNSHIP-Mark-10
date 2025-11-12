@@ -9,7 +9,6 @@ import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import "./App.css";
 import AllProductsPage from "./components/ProductsPage";
-import ProductFilters from "./components/ProductPageFilter";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -22,9 +21,9 @@ function App() {
   });
 
   const location = useLocation();
-  const navigate = useNavigate(); // ✅ Needed for navigation
+  const navigate = useNavigate();
 
-  // ✅ Load product data
+  // ✅ Load products
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -61,6 +60,7 @@ function App() {
     if (storedLogin === "true") setIsLoggedIn(true);
   }, []);
 
+  // ✅ Category select from Navbar or elsewhere
   const handleCategorySelect = (mainItems, subItems) => {
     setCurrentFilter({ mainItems, subItems });
     if (mainItems === "All") {
@@ -75,6 +75,7 @@ function App() {
     }
   };
 
+  // ✅ Add/remove compare products
   const handleCompareToggle = (product) => {
     setSelectedProducts((prev) => {
       const exists = prev.find((p) => p.id === product.id);
@@ -87,26 +88,30 @@ function App() {
     });
   };
 
-  // ✅ Category icons data
+  // ✅ Top icon categories
   const iconCategories = [
-   
-    { name: "Mobiles", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iViQd4cI8-w100-h100/ViQd4cI8.webp" },
-    { name: "Laptops", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-i6invpMY2-w100-h100/6invpMY2.webp" },
-    { name: "TVs", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-idTmyxzGZ-w100-h100/dTmyxzGZ.webp" },
-    { name: "Tablets", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iG5DXN6vc-w100-h100/G5DXN6vc.webp" },
-    { name: "Cameras", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iR6SKymCH-w100-h100/R6SKymCH.webp" },
-    { name: "Earphones", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iUfE0ayqy-w100-h100/UfE0ayqy.webp" },
-    { name: "Smartwatch", img: process.env.PUBLIC_URL + "https://cdn1.smartprix.com/rx-iXjxQXvn2-w100-h100/XjxQXvn2.webp" },
-    
+    { name: "Mobiles", img: "https://cdn1.smartprix.com/rx-iViQd4cI8-w100-h100/ViQd4cI8.webp" },
+    { name: "Laptops", img: "https://cdn1.smartprix.com/rx-i6invpMY2-w100-h100/6invpMY2.webp" },
+    { name: "TVs", img: "https://cdn1.smartprix.com/rx-idTmyxzGZ-w100-h100/dTmyxzGZ.webp" },
+    { name: "Tablets", img: "https://cdn1.smartprix.com/rx-iG5DXN6vc-w100-h100/G5DXN6vc.webp" },
+    { name: "Cameras", img: "https://cdn1.smartprix.com/rx-iR6SKymCH-w100-h100/R6SKymCH.webp" },
+    { name: "Earphones", img: "https://cdn1.smartprix.com/rx-iUfE0ayqy-w100-h100/UfE0ayqy.webp" },
+    { name: "Smartwatch", img: "https://cdn1.smartprix.com/rx-iXjxQXvn2-w100-h100/XjxQXvn2.webp" },
   ];
+
   const handleIconClick = (categoryName) => {
-    // Navigate to products page with filter info
     navigate("/products", { state: { filterCategory: categoryName } });
   };
 
-  // const handleViewAll = () => {
-  //   navigate("/products");
-  // };
+  // ✅ Navigate when clicking brand (from showcase)
+  const handleBrandClick = (brandName) => {
+    navigate("/products", { state: { filterBrand: brandName } });
+  };
+
+  // ✅ Navigate when clicking category (from showcase)
+  const handleCategoryClick = (categoryName) => {
+    navigate("/products", { state: { filterCategory: categoryName } });
+  };
 
   return (
     <div className="Appjsx">
@@ -122,26 +127,21 @@ function App() {
 
       <main className="appjsx-main">
         <Routes>
+          {/* ✅ Home Page */}
           <Route
             path="/"
             element={
               <>
                 <StoreBar />
                 <TopProducts />
-
-                {/* ✅ Category Icon Row Section */}
                 <div className="category-wrapper">
-                  <div className="category-header">
-                    {/* <span onClick={handleViewAll} className="view-all-link">
-                      View All
-                    </span> */}
-                  </div>
                   <div className="category-menu">
                     {iconCategories.map((cat, i) => (
                       <div
                         key={i}
                         className="category-item"
-                        onClick={() => handleIconClick(cat.name)}>
+                        onClick={() => handleIconClick(cat.name)}
+                      >
                         <img src={cat.img} alt={cat.name} />
                         <p>{cat.name}</p>
                       </div>
@@ -149,7 +149,11 @@ function App() {
                   </div>
                 </div>
 
-                <CategoryAndBrandShowcase />
+                {/* ✅ Showcase now supports both category + brand clicks */}
+                <CategoryAndBrandShowcase
+                  onCategoryClick={handleCategoryClick}
+                  onBrandClick={handleBrandClick}
+                />
 
                 <div className="productlist-box">
                   <ProductList
@@ -162,24 +166,30 @@ function App() {
               </>
             }
           />
+
+          {/* ✅ Product Page */}
           <Route
-  path="/products"
-  element={
-    <AllProductsPage
-      products={products}
-      filteredProducts={filteredProducts}
-      setFilteredProducts={setFilteredProducts}
-      currentFilter={currentFilter}
-      setCurrentFilter={setCurrentFilter}
-      onSpecClick={handleCompareToggle}
-      selectedProducts={selectedProducts}
-    />
-  }
-/>
+            path="/products"
+            element={
+              <AllProductsPage
+                products={products}
+                filteredProducts={filteredProducts}
+                setFilteredProducts={setFilteredProducts}
+                currentFilter={currentFilter}
+                setCurrentFilter={setCurrentFilter}
+                onSpecClick={handleCompareToggle}
+                selectedProducts={selectedProducts}
+              />
+            }
+          />
+
+          {/* ✅ Comparison Page */}
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}
           />
+
+          {/* ✅ Login Page */}
           <Route
             path="/login"
             element={<Login setIsLoggedIn={setIsLoggedIn} />}

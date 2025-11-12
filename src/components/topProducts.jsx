@@ -3,15 +3,16 @@ import React, { useRef, useEffect } from "react";
 const TopProducts = () => {
   const scrollRef = useRef(null);
 
-  const products = [
-    { name: "Jewellery & More", price: "From ₹999", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTLOiQdLl--TRDR6z0UDAgNPVOCHSe0jp-NC6BwApt2Bu3ForTSJKp39iAx9Krox5790A5xSCIHG_cS0QA3USuGp1eCuu6bIEhbNAQFC8IzKk2MrYF9kyXd" },
-    { name: "Clothes", price: "From ₹999", image: "https://nimbuscluster.blob.core.windows.net/server01/hrx/product/productImage-38gbSSJ24kq6rgB96WFSO-1662610620" },
-    { name: "Mobiles", price: "From ₹24999", image: "https://www.themobileindian.com/wp-content/uploads/2022/06/Rog-phone-6-600x600.png" },
-    { name: "Mobiles", price: "From ₹99999", image: "https://www.themobileindian.com/wp-content/uploads/2022/06/Rog-phone-6-600x600.png" },
-    { name: "Watches", price: "From ₹4999", image: "https://static.helioswatchstore.com/media/catalog/product/c/e/ceciwgn0019503w_1_3.jpg" },
-    { name: "Shoes", price: "From ₹2999", image: "https://offlimits.co.in/cdn/shop/files/OCM-64305_1.jpg?v=1720259294" },
-    { name: "Headphones", price: "From ₹7999", image: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/JULY/30/EA7AcMUK_71d8d2941dfa4342a412402a86982cbe.jpg" },
-    { name: "Backpacks", price: "From ₹2999", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYlyx_9Q9r5oqYnqwSXypb7pjq7G2HYKMXw&s" },
+  const products = [  
+    { name: "Tata Nexon", price: " ₹11.5 Lakh", image: "https://wallpapers.com/images/featured/blank-white-background-xbsfzsltjksfompa.jpg" },
+    { name: "Mahindra Scorpio-N", price: " ₹25.5 Lakh", image: "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Flarge%2Fmahindra%2Fscorpio-n%2Fmahindra-scorpio-n.jpg%3Fv%3D27&w=1600&q=75" },
+    { name: "Tata Nexon", price: " ₹11.5 Lakh", image: "https://images.carandbike.com/car-images/orig/tata/nexon/tata-nexon.jpg?v=74" },
+    { name: "iPhone 17 Pro Max", price: "₹149999", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIgDZAh57-CK8OIyaqF8QgLysjvMdGWkcJA&s" },
+    { name: "ASUS ROG Phone 9 Pro", price: " ₹95999", image: "https://sc04.alicdn.com/kf/Hd2e3bdad17724a5c98ff1c28ffc26bc4J.jpg" },
+    { name: "Watches", price: " ₹4999", image: "https://static.helioswatchstore.com/media/catalog/product/c/e/ceciwgn0019503w_1_3.jpg" },
+    { name: "Shoes", price: " ₹2999", image: "https://offlimits.co.in/cdn/shop/files/OCM-64305_1.jpg?v=1720259294" },
+    { name: "Headphones", price: " ₹7999", image: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/JULY/30/EA7AcMUK_71d8d2941dfa4342a412402a86982cbe.jpg" },
+    { name: "Backpacks", price: " ₹2999", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYlyx_9Q9r5oqYnqwSXypb7pjq7G2HYKMXw&s" },
   ];
 
   const scroll = (direction) => {
@@ -45,8 +46,7 @@ const TopProducts = () => {
         width: "90%",
         position: "relative",
         overflow: "hidden", // ✅ back to hidden for clean edges
-      }}
-    >
+      }}>
       <h2
         style={{
           marginLeft: "18px",

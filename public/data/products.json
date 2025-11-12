@@ -257,6 +257,8 @@
   "Furniture" : {
     "Tables": [
     {
+      "id": "T1",
+      "Name" : "Tables-1",
       "Brand": "IKEA",
       "Material": "Solid Pine Wood",
       "Shape": "Rectangular",
@@ -276,6 +278,8 @@
       "Additional Features": "Sturdy build, easy to assemble, water-resistant coating"
     },
     {
+      "id": "T2",
+      "Name" : "Tables-2",
       "Brand": "Urban Ladder",
       "Material": "Engineered Wood",
       "Shape": "Round",
@@ -296,6 +300,8 @@
       "Additional Features": "Scratch-resistant surface, easy to move"
     },
     {
+      "id": "T3",
+      "Name" : "Tables-3",
       "Brand": "IKEA",
       "Material": "Solid Pine Wood",
       "Shape": "Rectangular",
@@ -315,6 +321,8 @@
       "Additional Features": "Sturdy build, easy to assemble, water-resistant coating"
     },
     {
+      "id": "T4",
+      "Name" : "Tables-4",
       "Brand": "Urban Ladder",
       "Material": "Engineered Wood",
       "Shape": "Round",
@@ -337,6 +345,8 @@
   ],
   "Beds": [
     {
+      "id": "B1",
+      "Name" : "Beds-1",
       "Brand": "Wakefit",
       "Material": "Engineered Wood",
       "Color": "Dark Walnut",
@@ -356,6 +366,8 @@
       "Additional Features": "Termite resistant, scratch-resistant laminate, noise-free joints"
     },
     {
+      "id": "B2",
+      "Name" : "Beds-2",
       "Brand": "Godrej Interio",
       "Material": "Metal Frame with MDF Board",
       "Color": "Grey",
@@ -374,6 +386,8 @@
       "Additional Features": "Rust resistant coating, lightweight design"
     },
     {
+      "id": "B3",
+      "Name" : "Beds-3",
       "Brand": "Wakefit",
       "Material": "Engineered Wood",
       "Color": "Dark Walnut",
@@ -393,6 +407,8 @@
       "Additional Features": "Termite resistant, scratch-resistant laminate, noise-free joints"
     },
     {
+      "id": "B4",
+      "Name" : "Beds-4",
       "Brand": "Godrej Interio",
       "Material": "Metal Frame with MDF Board",
       "Color": "Grey",
@@ -413,6 +429,8 @@
   ],
   "Couches": [
     {
+      "id": "c1",
+      "Name" : "Couches1",
       "Brand": "Pepperfry",
       "Upholstery Material": "Polyester Fabric",
       "Frame Material": "Solid Wood",
@@ -434,6 +452,54 @@
       "Additional Features": "Reversible chaise, stain-resistant fabric"
     },
     {
+      "id": "c2",
+      "Name" : "Couches2",
+      "Brand": "Durian",
+      "Upholstery Material": "Leatherette",
+      "Frame Material": "Hardwood",
+      "Color": "Beige",
+      "Seating Capacity": "2 Seater",
+      "Shape": "Straight",
+      "Filling Material": "High Density Foam",
+      "Removable Covers": "No",
+      "Leg Material": "Stainless Steel",
+      "Dimensions": {
+        "Width": "1650 mm",
+        "Depth": "850 mm",
+        "Height": "900 mm"
+      },
+      "Weight": "45 kg",
+      "Comfort Level": "Medium Firm",
+      "Care Instructions": "Wipe with damp cloth, avoid sharp objects, do not use abrasive cleaners",
+      "Model Series Name": "Luca",
+      "Additional Features": "Anti-sag design, contemporary look"
+    },
+    {
+      "id": "c3",
+      "Name" : "Couches3",
+      "Brand": "Pepperfry",
+      "Upholstery Material": "Polyester Fabric",
+      "Frame Material": "Solid Wood",
+      "Color": "Navy Blue",
+      "Seating Capacity": "3 Seater",
+      "Shape": "L-Shaped",
+      "Filling Material": "Foam",
+      "Removable Covers": "Yes",
+      "Leg Material": "Metal",
+      "Dimensions": {
+        "Width": "2200 mm",
+        "Depth": "1500 mm",
+        "Height": "850 mm"
+      },
+      "Weight": "60 kg",
+      "Comfort Level": "Soft",
+      "Care Instructions": "Vacuum regularly, avoid direct sunlight, professional cleaning recommended",
+      "Model Series Name": "Zyra",
+      "Additional Features": "Reversible chaise, stain-resistant fabric"
+    },
+    {
+      "id": "c4",
+      "Name" : "Couches4",
       "Brand": "Durian",
       "Upholstery Material": "Leatherette",
       "Frame Material": "Hardwood",
@@ -457,6 +523,8 @@
   ],
   "Dressers": [
     {
+      "id": "D1",
+      "Name": "Dressers4",
       "Brand": "HomeTown",
       "Material": "Engineered Wood",
       "Color": "Wenge Finish",
@@ -475,6 +543,48 @@
       "Additional Features": "Smooth sliding drawers, detachable mirror"
     },
     {
+      "id": "D2",
+      "Name": "Dressers3",
+      "Brand": "Nilkamal",
+      "Material": "Plastic",
+      "Color": "Brown & Beige",
+      "Mirror Included": "No",
+      "Storage Type": "Cabinet and Drawer Combo",
+      "Number of Drawers": 3,
+      "Finish Type": "Glossy",
+      "Dimensions": {
+        "Height": "1200 mm",
+        "Width": "700 mm",
+        "Depth": "350 mm"
+      },
+      "Weight": "20 kg",
+      "Care Instructions": "Clean with mild soap water, avoid harsh cleaning agents",
+      "Model Series Name": "Flora",
+      "Additional Features": "Lightweight, easy to assemble, rust-proof body"
+    },
+    {
+      "id": "D3",
+      "Name": "Dressers1",
+      "Brand": "HomeTown",
+      "Material": "Engineered Wood",
+      "Color": "Wenge Finish",
+      "Mirror Included": "Yes",
+      "Storage Type": "Drawer Storage",
+      "Number of Drawers": 4,
+      "Finish Type": "Matte",
+      "Dimensions": {
+        "Height": "1600 mm",
+        "Width": "800 mm",
+        "Depth": "400 mm"
+      },
+      "Weight": "35 kg",
+      "Care Instructions": "Wipe with dry cloth, avoid exposure to moisture and sunlight",
+      "Model Series Name": "Livia",
+      "Additional Features": "Smooth sliding drawers, detachable mirror"
+    },
+    {
+      "id": "D4",
+      "Name": "Dressers2",
       "Brand": "Nilkamal",
       "Material": "Plastic",
       "Color": "Brown & Beige",
@@ -495,3 +605,6 @@
   ]
   }
 }
+
+
+

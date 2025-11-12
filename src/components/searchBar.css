@@ -40,26 +40,6 @@ border-color: white;
   width: 100%;
 }
 
-/* Search Input Box */
-/* .search-input {
-  width: 600px;
-  max-width: 90%;
-  padding: 28px 20px;
-  font-size: 1.1rem;
-  text-align: center;
-  border: 1px solid white;
-  border-radius: 30px;
-  background-color:white;
-  box-shadow: 0 4px 10px black;
-  transition: all 0.3s ease;
-} */
-
-/* .search-input:focus {
-  outline: none;
-  border-color: white;
-  box-shadow: 0 0 30px black(2, 129, 255);
-} */
-
 /* Dropdown Suggestion Box */
 .suggestions-box {
   position: absolute;
@@ -189,8 +169,6 @@ border-color: white;
 }
 .searchbar-input::placeholder {
   color: black;
-  
-  
 }
 
 .sug-main {
