@@ -1,10 +1,8 @@
+// components/CategoryAndBrandShowcase.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./showCase.css";
 
-const CategoryAndBrandShowcase = () => {
-  const navigate = useNavigate();
-
+const CategoryAndBrandShowcase = ({ onCategoryClick, onBrandClick, onViewAll }) => {
   // Categories
   const categories = [
     {
@@ -61,33 +59,29 @@ const CategoryAndBrandShowcase = () => {
     },
   ];
 
-  // Navigate to products page with state
-  const handleCategoryClick = (category) => {
-    navigate("/products", { state: { filterType: "category", value: category } });
-  };
-
-  const handleBrandClick = (brand) => {
-    navigate("/products", { state: { filterType: "brand", value: brand } });
-  };
-
-  const handleViewAll = (type) => {
-    navigate("/products", { state: { viewAll: type } });
-  };
-
   return (
     <div className="showcase-container">
       {/* CATEGORY BOX */}
       <div className="showcase-box">
         <div className="showcase-header">
           <h2>Shop by Category</h2>
-          <span onClick={() => handleViewAll("categories")}>View All →</span>
+          <span
+            className="view-all"
+            onClick={() => {
+              if (onViewAll) onViewAll();
+            }}
+          >
+            View All →
+          </span>
         </div>
         <div className="showcase-grid">
           {categories.map((cat, i) => (
             <div
               key={i}
               className="showcase-card"
-              onClick={() => handleCategoryClick(cat.title)}
+              onClick={() => {
+                if (onCategoryClick) onCategoryClick(cat.title);
+              }}
             >
               <div className="image-wrapper">
                 <img src={cat.image} alt={cat.title} />
@@ -103,14 +97,23 @@ const CategoryAndBrandShowcase = () => {
       <div className="showcase-box">
         <div className="showcase-header">
           <h2>Top Brands</h2>
-          <span onClick={() => handleViewAll("brands")}>View All →</span>
+          <span
+            className="view-all"
+            onClick={() => {
+              if (onViewAll) onViewAll();
+            }}
+          >
+            View All →
+          </span>
         </div>
         <div className="showcase-grid">
           {brands.map((brand, i) => (
             <div
               key={i}
               className="showcase-card"
-              onClick={() => handleBrandClick(brand.title)}
+              onClick={() => {
+                if (onBrandClick) onBrandClick(brand.title);
+              }}
             >
               <div className="image-wrapper">
                 <img src={brand.image} alt={brand.title} />

@@ -60,7 +60,7 @@ function App() {
     if (storedLogin === "true") setIsLoggedIn(true);
   }, []);
 
-  // ✅ Category select from Navbar or elsewhere
+  // ✅ Filter by category/subcategory
   const handleCategorySelect = (mainItems, subItems) => {
     setCurrentFilter({ mainItems, subItems });
     if (mainItems === "All") {
@@ -75,7 +75,6 @@ function App() {
     }
   };
 
-  // ✅ Add/remove compare products
   const handleCompareToggle = (product) => {
     setSelectedProducts((prev) => {
       const exists = prev.find((p) => p.id === product.id);
@@ -88,7 +87,7 @@ function App() {
     });
   };
 
-  // ✅ Top icon categories
+  // ✅ Category icons
   const iconCategories = [
     { name: "Mobiles", img: "https://cdn1.smartprix.com/rx-iViQd4cI8-w100-h100/ViQd4cI8.webp" },
     { name: "Laptops", img: "https://cdn1.smartprix.com/rx-i6invpMY2-w100-h100/6invpMY2.webp" },
@@ -99,19 +98,14 @@ function App() {
     { name: "Smartwatch", img: "https://cdn1.smartprix.com/rx-iXjxQXvn2-w100-h100/XjxQXvn2.webp" },
   ];
 
-  // ✅ Navigate when clicking category icon
+  // ✅ Click category → navigate + send filter
   const handleIconClick = (categoryName) => {
     navigate("/products", { state: { filterCategory: categoryName } });
   };
 
-  // ✅ Navigate when clicking brand (from showcase)
+  // ✅ Click brand → navigate + send filter
   const handleBrandClick = (brandName) => {
     navigate("/products", { state: { filterBrand: brandName } });
-  };
-
-  // ✅ Navigate when clicking category (from showcase)
-  const handleCategoryClick = (categoryName) => {
-    navigate("/products", { state: { filterCategory: categoryName } });
   };
 
   return (
@@ -141,8 +135,7 @@ function App() {
                       <div
                         key={i}
                         className="category-item"
-                        onClick={() => handleIconClick(cat.name)}
-                      >
+                        onClick={() => handleIconClick(cat.name)}>
                         <img src={cat.img} alt={cat.name} />
                         <p>{cat.name}</p>
                       </div>
@@ -150,11 +143,7 @@ function App() {
                   </div>
                 </div>
 
-                {/* ✅ Showcase now supports both category + brand clicks */}
-                <CategoryAndBrandShowcase
-                  onCategoryClick={handleCategoryClick}
-                  onBrandClick={handleBrandClick}
-                />
+                <CategoryAndBrandShowcase onBrandClick={handleBrandClick} />
 
                 <div className="productlist-box">
                   <ProductList
@@ -168,7 +157,7 @@ function App() {
             }
           />
 
-          {/* ✅ Product Page */}
+          {/* ✅ Product Page (filters here will respond to state from navigation) */}
           <Route
             path="/products"
             element={
@@ -183,18 +172,11 @@ function App() {
               />
             }
           />
-
-          {/* ✅ Comparison Page */}
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}
           />
-
-          {/* ✅ Login Page */}
-          <Route
-            path="/login"
-            element={<Login setIsLoggedIn={setIsLoggedIn} />}
-          />
+          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </main>
 

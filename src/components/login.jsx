@@ -15,9 +15,9 @@ function Login({ setIsLoggedIn }) {
 
     // ✅ Add this part — persist login
     alert("Login successful!");
-    localStorage.setItem("isLoggedIn", "true"); // save to localStorage
-    setIsLoggedIn(true);                         // update React state
-    navigate("/");                               // redirect to homepage
+    localStorage.setItem("isLoggedIn", "true"); 
+    setIsLoggedIn(true);                         
+    navigate("/");                              
   };
 
   return (

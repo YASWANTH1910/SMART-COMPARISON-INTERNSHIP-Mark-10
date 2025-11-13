@@ -42,6 +42,12 @@ const CategoryFilterMenu = ({ onCategorySelect }) => {
         { id: 16, name: "Footwear" },
         { id: 17, name: "Accessories" },
       ],
+      id:  3,
+      name: "Home-Appliances",
+      subcategories: [
+        { id: 27, name: "Refrigerators" },
+        { id: 28, name: "Washing Machines" },
+      ],
     },
     {
       id: 3,

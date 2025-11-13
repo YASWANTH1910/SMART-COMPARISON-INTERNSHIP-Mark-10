@@ -1,130 +1,108 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./showCase.css";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ProductList from "./productList";
+import ProductFilters from "./ProductPageFilter";
+import "./ProductsPage.css";
 
-const CategoryAndBrandShowcase = () => {
-  const navigate = useNavigate();
+const AllProductsPage = ({
+  products,
+  filteredProducts,
+  setFilteredProducts,
+  currentFilter,
+  setCurrentFilter,
+  onSpecClick,
+  selectedProducts,
+}) => {
+  const location = useLocation();
 
-  // Categories
-  const categories = [
-    {
-      title: "Electronics",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShKzf_0i1gQzDbjW3vBHfSjO6L7oc4VhlwyQ&s",
-      price: "Laptops from ₹49,999",
-    },
-    {
-      title: "Furniture",
-      image:
-        "https://images.unsplash.com/photo-1616628188469-7d6a3a3d5f3f",
-      price: "Couches from ₹9,999",
-    },
-    {
-      title: "Fashion",
-      image:
-        "https://imgs.search.brave.com/kAcC_x0Wv-Ut6j7cAr53qXz-jg8s2qj_qJ6mc7ezyJU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF6TVoxcXhSQUwu/anBn",
-      price: "Clothing from ₹599",
-    },
-    {
-      title: "Skincare & Beauty",
-      image:
-        "https://imgs.search.brave.com/AMYlcBUhlHwEvhHKm9GdNikNePF7rptr7QMuQdkJu_E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFjK0RxTkh1OEwu/anBn",
-      price: "Facewash from ₹399",
-    },
-  ];
+  // Handle category icon click from home
+  useEffect(() => {
+    if (location.state?.filterCategory) {
+      const cat = location.state.filterCategory;
+      const newFilter = { mainItems: cat, subItems: "All" };
+      setCurrentFilter(newFilter);
 
-  // Brands
-  const brands = [
-    {
-      title: "Apple",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
-      category: "Electronics",
-    },
-    {
-      title: "IKEA",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/c/c5/Ikea_logo.svg",
-      category: "Furniture",
-    },
-    {
-      title: "ZARA",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg",
-      category: "Fashion",
-    },
-    {
-      title: "L’Oreal",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/a/a7/L%27Oreal_logo.svg",
-      category: "Skincare & Beauty",
-    },
-  ];
+      const result = products.filter(p => p.category === cat);
+      setFilteredProducts(result);
+    }
+  }, [location.state, products, setFilteredProducts, setCurrentFilter]);
 
-  // ✅ Navigate to products page with category filter
-  const handleCategoryClick = (category) => {
-    navigate("/products", { state: { filterCategory: category } });
-  };
+  const applyFilter = (main, sub) => {
+    setCurrentFilter({ mainItems: main, subItems: sub });
 
-  // ✅ Navigate to products page with brand filter
-  const handleBrandClick = (brand) => {
-    navigate("/products", { state: { filterBrand: brand } });
-  };
-
-  // ✅ View All — show all products (no filters)
-  const handleViewAll = () => {
-    navigate("/products");
+    if (main === "All") {
+      setFilteredProducts(products);
+    } else {
+      const result = products.filter(p =>
+        p.category === main && (sub === "All" || p.subcategory === sub)
+      );
+      setFilteredProducts(result);
+    }
   };
 
   return (
-    <div className="showcase-container">
-      {/* CATEGORY BOX */}
-      <div className="showcase-box">
-        <div className="showcase-header">
-          <h2>Shop by Category</h2>
-          <span onClick={handleViewAll}>View All →</span>
-        </div>
-        <div className="showcase-grid">
-          {categories.map((cat, i) => (
-            <div
-              key={i}
-              className="showcase-card"
-              onClick={() => handleCategoryClick(cat.title)}
-            >
-              <div className="image-wrapper">
-                <img src={cat.image} alt={cat.title} />
-              </div>
-              <p className="title">{cat.title}</p>
-              <p className="price">{cat.price}</p>
-            </div>
-          ))}
-        </div>
+    <div className="all-products-wrapper">
+      <div className="page-title-box">
+        <h2 className="page-main-title">Explore All Products</h2>
       </div>
 
-      {/* BRANDS BOX */}
-      <div className="showcase-box">
-        <div className="showcase-header">
-          <h2>Top Brands</h2>
-          <span onClick={handleViewAll}>View All →</span>
-        </div>
-        <div className="showcase-grid">
-          {brands.map((brand, i) => (
-            <div
-              key={i}
-              className="showcase-card"
-              onClick={() => handleBrandClick(brand.title)}
-            >
-              <div className="image-wrapper">
-                <img src={brand.image} alt={brand.title} />
-              </div>
-              <p className="title">{brand.title}</p>
-              <p className="price">{brand.category}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+     <div className="filter-section">
+  <div className="filters-and-list">
+    <div className="filters-sidebar">
+      <ProductFilters
+        products={products}
+        currentFilter={currentFilter}
+       onApplyFilters={(filters) => {
+  let filtered = products;
+
+  if (filters.category !== "All") {
+    filtered = filtered.filter(p => p.category === filters.category);
+  }
+  if (filters.subcategory !== "All") {
+    filtered = filtered.filter(p => p.subcategory === filters.subcategory);
+  }
+  if (filters.brands.length > 0) {
+    filtered = filtered.filter(p => filters.brands.includes(p.features.Brand));
+  }
+  filtered = filtered.filter(p => p.price <= filters.priceRange[1]);
+  if (filters.minRating > 0) {
+    filtered = filtered.filter(p => p.rating >= filters.minRating);
+  }
+
+  // NEW: Sort by price
+  if (filters.sortOrder === "low-to-high") {
+    filtered = filtered.sort((a, b) => a.price - b.price);
+  } else if (filters.sortOrder === "high-to-low") {
+    filtered = filtered.sort((a, b) => b.price - a.price);
+  } 
+
+  setFilteredProducts(filtered);
+  setCurrentFilter({
+    mainItems: filters.category,
+    subItems: filters.subcategory
+  });
+}}
+        
+        onClearFilters={() => {
+          setFilteredProducts(products);
+          setCurrentFilter({ mainItems: "All", subItems: "All" });
+        }}
+      />
+    </div>
+
+    <div className="products-list-area">
+      <ProductList
+        products={filteredProducts}
+        currentFilter={currentFilter}
+        onSpecClick={onSpecClick}
+        selectedProducts={selectedProducts}
+      />
+    </div>
+  </div>
+</div>
     </div>
   );
-};
+}
 
-export default CategoryAndBrandShowcase;
+
+export default AllProductsPage;

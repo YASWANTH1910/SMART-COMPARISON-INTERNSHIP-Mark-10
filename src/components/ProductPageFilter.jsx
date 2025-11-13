@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useMemo } from "react";
-import "./ProductFilterPage.css";   // ← Make sure this file exists
+import "./ProductFilterPage.css";   
 
 const MAIN_CATEGORIES = [
   { value: "All", label: "All Products" },
   { value: "Electronics", label: "Electronics" },
-  { value: "Home Appliances", label: "Home Appliances" },
+  { value: "Home-Appliances", label: "Home-Appliances" },
+  { value: "Furniture", label: "Furniture" },
   { value: "Fashion", label: "Fashion" },
+  { value: "SkincareandBeauty", label: "Skincare & Beauty" },
+  
 ];
 
 const SUBCATEGORIES = {
@@ -13,16 +16,37 @@ const SUBCATEGORIES = {
     { value: "All", label: "All Electronics" },
     { value: "Mobiles", label: "Mobiles" },
     { value: "Laptops", label: "Laptops" },
+    { value: "Headphones", label: "Headphones" },
+    { value: "Watches", label: "Watches" },
   ],
-  "Home Appliances": [
+    "Home-Appliances": [
     { value: "All", label: "All Appliances" },
     { value: "Refrigerators", label: "Refrigerators" },
     { value: "Washing Machines", label: "Washing Machines" },
+    ],
+  Furniture: [
+    { value: "All", label: "All Appliances" },
+    { value: "Beds", label: "Beds" },
+    { value: "Couches", label: "Couches" },
+    { value: "Tables", label: "Tables" },
+    { value: "Dressers", label: "Dressers" },
   ],
   Fashion: [
     { value: "All", label: "All Fashion" },
-    { value: "Men", label: "Men" },
+    { value: "Men's Clothing", label: "Men's Clothing" },
+    { value: "Women's Clothing", label: "Women's Clothing" },
+    { value: "Footwear", label: "Footwear" },
+    { value: "Accessories", label: "Accessories" },
   ],
+  SkincareandBeauty: [
+    { value: "All", label: "All Skincare & Beauty" },
+    { value: "Face Wash", label: "Face Wash" },
+    { value: "Foundations", label: "Foundations" },
+    { value: "Moisturizers", label: "Moisturizers" },
+    { value: "Lipsticks", label: "Lipsticks" },
+    { value: "Eye Shadows", label: "Eye Shadows" },
+  ],
+  
 };
 
 function ProductFilters({
@@ -38,14 +62,14 @@ function ProductFilters({
   const [minRating, setMinRating] = useState("All");
   const [sortOrder, setSortOrder] = useState("default");
 
-  // Extract brands from products
+
   const availableBrands = useMemo(() => {
     const set = new Set();
     products.forEach((p) => p.features?.Brand && set.add(p.features.Brand));
     return Array.from(set).sort();
   }, [products]);
 
-  // Sync with parent filter
+ 
   useEffect(() => {
     setCategory(currentFilter?.mainItems ?? "All");
     setSubcategory(currentFilter?.subItems ?? "All");
@@ -91,11 +115,12 @@ function ProductFilters({
       {/* Category */}
       <div className="filter-group">
         <label>Category</label>
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+   <select value={category}onChange={(e) => setCategory(e.target.value)}>
           {MAIN_CATEGORIES.map((c) => (
             <option key={c.value} value={c.value}>{c.label}</option>
           ))}
         </select>
+       
       </div>
 
       {/* Sub-category */}
