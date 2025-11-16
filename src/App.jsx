@@ -11,6 +11,7 @@ import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid";
 
 
+
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
