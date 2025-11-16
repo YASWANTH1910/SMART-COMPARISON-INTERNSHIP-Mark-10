@@ -4,9 +4,8 @@ import "./ProductFilterPage.css";
 const MAIN_CATEGORIES = [
   { value: "All", label: "All Products" },
   { value: "Electronics", label: "Electronics" },
-  { value: "Home-Appliances", label: "Home-Appliances" },
   { value: "Furniture", label: "Furniture" },
-  { value: "Fashion", label: "Fashion" },
+  { value: "Automobiles", label: "Automobiles" },
   { value: "SkincareandBeauty", label: "Skincare & Beauty" },
   
 ];
@@ -18,12 +17,15 @@ const SUBCATEGORIES = {
     { value: "Laptops", label: "Laptops" },
     { value: "Headphones", label: "Headphones" },
     { value: "Watches", label: "Watches" },
+    { value: "Home Appliances", label: "Home Appliances" },
   ],
-    "Home-Appliances": [
-    { value: "All", label: "All Appliances" },
-    { value: "Refrigerators", label: "Refrigerators" },
-    { value: "Washing Machines", label: "Washing Machines" },
-    ],
+
+  Automobiles: [
+    { value: "All", label: "All Automobiles" },
+    { value: "Cars", label: "Cars" },
+    { value: "Bikes", label: "Bikes" },
+  ],
+   
   Furniture: [
     { value: "All", label: "All Appliances" },
     { value: "Beds", label: "Beds" },
@@ -31,17 +33,10 @@ const SUBCATEGORIES = {
     { value: "Tables", label: "Tables" },
     { value: "Dressers", label: "Dressers" },
   ],
-  Fashion: [
-    { value: "All", label: "All Fashion" },
-    { value: "Men's Clothing", label: "Men's Clothing" },
-    { value: "Women's Clothing", label: "Women's Clothing" },
-    { value: "Footwear", label: "Footwear" },
-    { value: "Accessories", label: "Accessories" },
-  ],
+  
   SkincareandBeauty: [
     { value: "All", label: "All Skincare & Beauty" },
     { value: "Face Wash", label: "Face Wash" },
-    { value: "Foundations", label: "Foundations" },
     { value: "Moisturizers", label: "Moisturizers" },
     { value: "Lipsticks", label: "Lipsticks" },
     { value: "Eye Shadows", label: "Eye Shadows" },

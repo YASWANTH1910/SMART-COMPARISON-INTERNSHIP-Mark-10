@@ -3,6 +3,7 @@ import "./comparisonPage.css";
 import { useNavigate } from "react-router-dom";
 import ComparisonTable from "../components/comparisonTable";
 
+
 const ComparisonPage = ({ selectedProducts }) => {
   const navigate = useNavigate();
 
@@ -12,6 +13,7 @@ const ComparisonPage = ({ selectedProducts }) => {
       navigate("/");
     }
   }, [selectedProducts, navigate]);
+
 
   // 🎛️ Filter states
   const [minPrice, setMinPrice] = useState("");

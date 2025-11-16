@@ -2,7 +2,7 @@
   "Electronics": {
     "Mobiles": [
       {
-        "id": "m1",
+        "id": "x1",
         "name": "iPhone 16 Pro Max",
         "category": "Smartphone",
         "price": 159900,
@@ -20,7 +20,7 @@
         "image": "https://avatars.mds.yandex.net/get-mpic/4525599/2a00000191e1854d43b0abe09e9dcaba9c19/orig"
       },
       {
-        "id": "m2",
+        "id": "x2",
         "name": "Samsung Galaxy S24 Ultra",
         "category": "Smartphone",
         "price": 139999,
@@ -38,7 +38,7 @@
         "image": "https://static1.pocketnowimages.com/wordpress/wp-content/uploads/2024/01/pbi-samsung-galaxy-s24-ultra.png"
       },
       {
-        "id": "m3",
+        "id": "x3",
         "name": "OnePlus 12",
         "category": "Smartphone",
         "price": 69999,
@@ -56,7 +56,7 @@
         "image": "https://image01.oneplus.net/ebp/202401/10/1-m00-54-e1-cpgm7v5e1oyafxvlaam1cgqzkx8491.png"
       },
       {
-        "id": "m4",
+        "id": "x4",
         "name": "Google Pixel 9 Pro XL",
         "category": "Smartphone",
         "price": 124999,
@@ -74,7 +74,7 @@
         "image": "https://lh3.googleusercontent.com/..."
       },
       {
-        "id": "m5",
+        "id": "x5",
         "name": "Xiaomi 14 Ultra",
         "category": "Smartphone",
         "price": 99999,
@@ -90,281 +90,11 @@
           "OS": "HyperOS"
         },
         "image": "https://i01.appmifile.com/..."
-      },
-      {
-        "id": "m6",
-        "name": "Vivo X100 Pro",
-        "category": "Smartphone",
-        "price": 89999,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Vivo",
-          "Display": "6.78 inch AMOLED",
-          "Processor": "Dimensity 9300",
-          "RAM": "16 GB",
-          "Storage": "512 GB",
-          "Battery": "5400 mAh",
-          "Camera": "50 MP + 50 MP + 64 MP",
-          "OS": "Funtouch OS 14"
-        },
-        "image": "https://www.vivo.com/..."
-      },
-      {
-        "id": "m7",
-        "name": "Oppo Find X7 Ultra",
-        "category": "Smartphone",
-        "price": 94999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "Oppo",
-          "Display": "6.82 inch AMOLED",
-          "Processor": "Snapdragon 8 Gen 3",
-          "RAM": "16 GB",
-          "Storage": "512 GB",
-          "Battery": "5000 mAh",
-          "Camera": "50 MP + 50 MP + 50 MP + 50 MP",
-          "OS": "ColorOS 14"
-        },
-        "image": "https://www.oppo.com/..."
-      },
-      {
-        "id": "m8",
-        "name": "Realme GT 6 Pro",
-        "category": "Smartphone",
-        "price": 54999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Realme",
-          "Display": "6.78 inch AMOLED",
-          "Processor": "Snapdragon 8 Gen 3",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5800 mAh",
-          "Camera": "50 MP + 50 MP + 8 MP",
-          "OS": "Realme UI 5.0"
-        },
-        "image": "https://www.realme.com/..."
-      },
-      {
-        "id": "m9",
-        "name": "Motorola Edge 50 Ultra",
-        "category": "Smartphone",
-        "price": 59999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Motorola",
-          "Display": "6.7 inch pOLED",
-          "Processor": "Snapdragon 8s Gen 3",
-          "RAM": "12 GB",
-          "Storage": "512 GB",
-          "Battery": "4500 mAh",
-          "Camera": "50 MP + 64 MP + 50 MP",
-          "OS": "Hello UI"
-        },
-        "image": "https://www.motorola.in/..."
-      },
-      {
-        "id": "m10",
-        "name": "Asus ROG Phone 8 Pro",
-        "category": "Smartphone",
-        "price": 94999,
-        "rating": 4.7,
-        "features": {
-          "Brand": "Asus",
-          "Display": "6.78 inch AMOLED 165Hz",
-          "Processor": "Snapdragon 8 Gen 3",
-          "RAM": "24 GB",
-          "Storage": "1 TB",
-          "Battery": "5500 mAh",
-          "Camera": "50 MP + 32 MP + 13 MP",
-          "OS": "ROG UI"
-        },
-        "image": "https://rog.asus.com/..."
-      },
-      {
-        "id": "m11",
-        "name": "Nothing Phone (3)",
-        "category": "Smartphone",
-        "price": 44999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Nothing",
-          "Display": "6.7 inch AMOLED",
-          "Processor": "Snapdragon 7+ Gen 3",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5000 mAh",
-          "Camera": "50 MP + 50 MP",
-          "OS": "Nothing OS 2.5"
-        },
-        "image": "https://in.nothing.tech/..."
-      },
-      {
-        "id": "m12",
-        "name": "Poco F6 Pro",
-        "category": "Smartphone",
-        "price": 39999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Poco",
-          "Display": "6.67 inch AMOLED 120Hz",
-          "Processor": "Snapdragon 8 Gen 2",
-          "RAM": "12 GB",
-          "Storage": "512 GB",
-          "Battery": "5000 mAh",
-          "Camera": "64 MP + 8 MP + 2 MP",
-          "OS": "MIUI 15"
-        },
-        "image": "https://www.po.co/..."
-      },
-      {
-        "id": "m13",
-        "name": "iQOO Neo 9 Pro",
-        "category": "Smartphone",
-        "price": 37999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "iQOO",
-          "Display": "6.78 inch AMOLED 144Hz",
-          "Processor": "Snapdragon 8 Gen 2",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5160 mAh",
-          "Camera": "50 MP + 8 MP",
-          "OS": "Funtouch OS 14"
-        },
-        "image": "https://www.iqoo.com/..."
-      },
-      {
-        "id": "m14",
-        "name": "Redmi Note 14 Pro+",
-        "category": "Smartphone",
-        "price": 32999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Redmi",
-          "Display": "6.67 inch AMOLED 120Hz",
-          "Processor": "Dimensity 7200 Ultra",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "6200 mAh",
-          "Camera": "200 MP + 8 MP + 2 MP",
-          "OS": "MIUI 15"
-        },
-        "image": "https://www.mi.com/..."
-      },
-      {
-        "id": "m15",
-        "name": "Samsung Galaxy A55",
-        "category": "Smartphone",
-        "price": 38999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Samsung",
-          "Display": "6.6 inch Super AMOLED",
-          "Processor": "Exynos 1480",
-          "RAM": "8 GB",
-          "Storage": "256 GB",
-          "Battery": "5000 mAh",
-          "Camera": "50 MP + 12 MP + 5 MP",
-          "OS": "One UI 6.1"
-        },
-        "image": "https://images.samsung.com/..."
-      },
-      {
-        "id": "m16",
-        "name": "OnePlus Nord 4",
-        "category": "Smartphone",
-        "price": 32999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "OnePlus",
-          "Display": "6.74 inch AMOLED 120Hz",
-          "Processor": "Snapdragon 7+ Gen 3",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5500 mAh",
-          "Camera": "50 MP + 8 MP",
-          "OS": "OxygenOS 14"
-        },
-        "image": "https://www.oneplus.in/..."
-      },
-      {
-        "id": "m17",
-        "name": "Vivo V30 Pro",
-        "category": "Smartphone",
-        "price": 41999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Vivo",
-          "Display": "6.78 inch AMOLED",
-          "Processor": "Dimensity 8200",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5000 mAh",
-          "Camera": "50 MP + 50 MP + 12 MP",
-          "OS": "Funtouch OS 14"
-        },
-        "image": "https://www.vivo.com/..."
-      },
-      {
-        "id": "m18",
-        "name": "Oppo Reno 12 Pro",
-        "category": "Smartphone",
-        "price": 44999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Oppo",
-          "Display": "6.7 inch AMOLED 120Hz",
-          "Processor": "Dimensity 7300",
-          "RAM": "12 GB",
-          "Storage": "512 GB",
-          "Battery": "5000 mAh",
-          "Camera": "50 MP + 50 MP + 8 MP",
-          "OS": "ColorOS 14"
-        },
-        "image": "https://www.oppo.com/..."
-      },
-      {
-        "id": "m19",
-        "name": "Realme 13 Pro+",
-        "category": "Smartphone",
-        "price": 35999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Realme",
-          "Display": "6.7 inch AMOLED",
-          "Processor": "Snapdragon 7s Gen 2",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5200 mAh",
-          "Camera": "200 MP + 8 MP + 2 MP",
-          "OS": "Realme UI 5.0"
-        },
-        "image": "https://www.realme.com/..."
-      },
-      {
-        "id": "m20",
-        "name": "Infinix Zero 40",
-        "category": "Smartphone",
-        "price": 27999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Infinix",
-          "Display": "6.78 inch AMOLED 144Hz",
-          "Processor": "Dimensity 8200",
-          "RAM": "12 GB",
-          "Storage": "256 GB",
-          "Battery": "5000 mAh",
-          "Camera": "108 MP + 13 MP + 2 MP",
-          "OS": "XOS 14"
-        },
-        "image": "https://www.infinixmobiles.com/..."
       }
     ],
     "Laptops": [
       {
-        "id": "l1",
+        "id": "a1",
         "name": "MacBook Air M3",
         "category": "Laptop",
         "price": 124900,
@@ -381,7 +111,7 @@
         "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-m3"
       },
       {
-        "id": "l2",
+        "id": "a2",
         "name": "Dell XPS 15",
         "category": "Laptop",
         "price": 189999,
@@ -398,7 +128,7 @@
         "image": "https://i.dell.com/sites/imagecontent/products/publishingimages/xps-15-9530"
       },
       {
-        "id": "l3",
+        "id": "a3",
         "name": "HP Spectre x360",
         "category": "Laptop",
         "price": 139999,
@@ -415,7 +145,7 @@
         "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08300067.png"
       },
       {
-        "id": "l4",
+        "id": "a4",
         "name": "Lenovo ThinkPad X1 Carbon Gen 12",
         "category": "Laptop",
         "price": 179999,
@@ -432,7 +162,7 @@
         "image": "https://www.lenovo.com/..."
       },
       {
-        "id": "l5",
+        "id": "a5",
         "name": "Asus Zenbook 14 OLED",
         "category": "Laptop",
         "price": 104999,
@@ -447,584 +177,172 @@
           "OS": "Windows 11 Home"
         },
         "image": "https://www.asus.com/..."
-      },
+      }
+    ],
+    "Headphones": [
       {
-        "id": "l6",
-        "name": "Acer Swift Go 14",
-        "category": "Laptop",
-        "price": 79999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Acer",
-          "Display": "14 inch 2.8K OLED",
-          "Processor": "Intel Core Ultra 5",
-          "RAM": "16 GB",
-          "Storage": "512 GB SSD",
-          "Battery": "14 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://www.acer.com/..."
-      },
-      {
-        "id": "l7",
-        "name": "MSI Prestige 16 AI Evo",
-        "category": "Laptop",
-        "price": 119999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "MSI",
-          "Display": "16 inch QHD+ 165Hz",
-          "Processor": "Intel Core Ultra 7",
-          "RAM": "32 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "16 hours",
-          "OS": "Windows 11 Pro"
-        },
-        "image": "https://www.msi.com/..."
-      },
-      {
-        "id": "l8",
-        "name": "Samsung Galaxy Book4 Pro",
-        "category": "Laptop",
-        "price": 129999,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Samsung",
-          "Display": "14 inch AMOLED 3K",
-          "Processor": "Intel Core Ultra 7",
-          "RAM": "16 GB",
-          "Storage": "512 GB SSD",
-          "Battery": "18 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://images.samsung.com/..."
-      },
-      {
-        "id": "l9",
-        "name": "LG Gram 17",
-        "category": "Laptop",
-        "price": 114999,
-        "rating": 4.7,
-        "features": {
-          "Brand": "LG",
-          "Display": "17 inch WQXGA IPS",
-          "Processor": "Intel Core Ultra 7",
-          "RAM": "16 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "20 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://www.lg.com/..."
-      },
-      {
-        "id": "l10",
-        "name": "Microsoft Surface Laptop 7",
-        "category": "Laptop",
-        "price": 134999,
-        "rating": 4.7,
-        "features": {
-          "Brand": "Microsoft",
-          "Display": "13.8 inch PixelSense",
-          "Processor": "Snapdragon X Elite",
-          "RAM": "16 GB",
-          "Storage": "512 GB SSD",
-          "Battery": "20 hours",
-          "OS": "Windows 11"
-        },
-        "image": "https://www.microsoft.com/..."
-      },
-      {
-        "id": "l11",
-        "name": "Dell Inspiron 16 Plus",
-        "category": "Laptop",
-        "price": 89999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Dell",
-          "Display": "16 inch 2.5K",
-          "Processor": "Intel Core i7-13700H",
-          "RAM": "16 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "12 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://i.dell.com/..."
-      },
-      {
-        "id": "l12",
-        "name": "HP Pavilion Plus 14",
-        "category": "Laptop",
-        "price": 74999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "HP",
-          "Display": "14 inch 2.2K",
-          "Processor": "AMD Ryzen 7 7840U",
-          "RAM": "16 GB",
-          "Storage": "512 GB SSD",
-          "Battery": "13 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://www.hp.com/..."
-      },
-      {
-        "id": "l13",
-        "name": "Lenovo Yoga Slim 7i",
-        "category": "Laptop",
-        "price": 94999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "Lenovo",
-          "Display": "14 inch 2.8K OLED",
-          "Processor": "Intel Core Ultra 7",
-          "RAM": "16 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "15 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://www.lenovo.com/..."
-      },
-      {
-        "id": "l14",
-        "name": "Acer Predator Helios Neo 16",
-        "category": "Laptop",
-        "price": 129999,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Acer",
-          "Display": "16 inch WQXGA 165Hz",
-          "Processor": "Intel Core i7-13700HX",
-          "RAM": "16 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "6 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://www.acer.com/..."
-      },
-      {
-        "id": "l15",
-        "name": "Asus ROG Zephyrus G14",
-        "category": "Laptop",
-        "price": 154999,
-        "rating": 4.7,
-        "features": {
-          "Brand": "Asus",
-          "Display": "14 inch QHD+ 120Hz",
-          "Processor": "AMD Ryzen 9 8945HS",
-          "RAM": "32 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "10 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://rog.asus.com/..."
-      },
-      {
-        "id": "l16",
-        "name": "MSI Creator Z17 HX Studio",
-        "category": "Laptop",
-        "price": 219999,
+        "id": "h1",
+        "name": "Sony WH-1000XM5",
+        "category": "Over-Ear Headphones",
+        "price": 29999,
         "rating": 4.8,
         "features": {
-          "Brand": "MSI",
-          "Display": "17 inch QHD+ 165Hz",
-          "Processor": "Intel Core i9-13980HX",
-          "RAM": "64 GB",
-          "Storage": "2 TB SSD",
-          "Battery": "8 hours",
-          "OS": "Windows 11 Pro"
+          "Brand": "Sony",
+          "Type": "Wireless Over-Ear",
+          "Noise Cancellation": "Industry-leading ANC",
+          "Battery": "30 hours",
+          "Driver": "40mm",
+          "Connectivity": "Bluetooth 5.2"
         },
-        "image": "https://www.msi.com/..."
+        "image": "https://www.sony.co.in/image/..."
       },
       {
-        "id": "l17",
-        "name": "Razer Blade 16",
-        "category": "Laptop",
-        "price": 249999,
+        "id": "h2",
+        "name": "Apple AirPods Max",
+        "category": "Over-Ear Headphones",
+        "price": 54900,
         "rating": 4.7,
         "features": {
-          "Brand": "Razer",
-          "Display": "16 inch QHD+ 240Hz",
-          "Processor": "Intel Core i9-13950HX",
-          "RAM": "32 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "7 hours",
-          "OS": "Windows 11 Home"
-        },
-        "image": "https://www.razer.com/..."
-      },
-      {
-        "id": "l18",
-        "name": "Apple MacBook Pro 16 M3 Max",
-        "category": "Laptop",
-        "price": 349900,
-        "rating": 5.0,
-        "features": {
           "Brand": "Apple",
-          "Display": "16.2 inch Liquid Retina XDR",
-          "Processor": "Apple M3 Max",
-          "RAM": "48 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "22 hours",
-          "OS": "macOS Sequoia"
+          "Type": "Wireless Over-Ear",
+          "Noise Cancellation": "Active Noise Cancellation",
+          "Battery": "20 hours",
+          "Driver": "40mm",
+          "Connectivity": "Bluetooth 5.0"
         },
         "image": "https://store.storeimages.cdn-apple.com/..."
       },
       {
-        "id": "l19",
-        "name": "HP Omen 16",
-        "category": "Laptop",
-        "price": 119999,
-        "rating": 4.5,
+        "id": "h3",
+        "name": "Bose QuietComfort Ultra",
+        "category": "Over-Ear Headphones",
+        "price": 35999,
+        "rating": 4.8,
         "features": {
-          "Brand": "HP",
-          "Display": "16.1 inch FHD 165Hz",
-          "Processor": "AMD Ryzen 9 7940HS",
-          "RAM": "16 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "6 hours",
-          "OS": "Windows 11 Home"
+          "Brand": "Bose",
+          "Type": "Wireless Over-Ear",
+          "Noise Cancellation": "CustomTune ANC",
+          "Battery": "24 hours",
+          "Driver": "35mm",
+          "Connectivity": "Bluetooth 5.3"
         },
-        "image": "https://www.hp.com/..."
+        "image": "https://www.boseindia.com/..."
       },
       {
-        "id": "l20",
-        "name": "Lenovo Legion Pro 7i",
-        "category": "Laptop",
-        "price": 199999,
+        "id": "h4",
+        "name": "Sennheiser Momentum 4",
+        "category": "Over-Ear Headphones",
+        "price": 34999,
         "rating": 4.7,
         "features": {
-          "Brand": "Lenovo",
-          "Display": "16 inch WQXGA 240Hz",
-          "Processor": "Intel Core i9-13900HX",
-          "RAM": "32 GB",
-          "Storage": "1 TB SSD",
-          "Battery": "7 hours",
-          "OS": "Windows 11 Home"
+          "Brand": "Sennheiser",
+          "Type": "Wireless Over-Ear",
+          "Noise Cancellation": "Adaptive ANC",
+          "Battery": "60 hours",
+          "Driver": "42mm",
+          "Connectivity": "Bluetooth 5.2"
         },
-        "image": "https://www.lenovo.com/..."
+        "image": "https://www.sennheiser-india.com/..."
+      },
+      {
+        "id": "h5",
+        "name": "JBL Tune 760NC",
+        "category": "Over-Ear Headphones",
+        "price": 7999,
+        "rating": 4.4,
+        "features": {
+          "Brand": "JBL",
+          "Type": "Wireless Over-Ear",
+          "Noise Cancellation": "Adaptive NC",
+          "Battery": "50 hours",
+          "Driver": "40mm",
+          "Connectivity": "Bluetooth 5.0"
+        },
+        "image": "https://in.jbl.com/..."
       }
     ],
-    "Headphones": [
-{
-"id": "h1",
-"name": "Sony WH-1000XM5",
-"category": "Over-Ear Headphones",
-"price": 29999,
-"rating": 4.8,
-"features": {
-"Brand": "Sony",
-"Type": "Wireless Over-Ear",
-"Noise Cancellation": "Industry-leading ANC",
-"Battery": "30 hours",
-"Driver": "40mm",
-"Connectivity": "Bluetooth 5.2"
-},
-"image": "https://www.sony.co.in/image/..."
-},
-{
-"id": "h2",
-"name": "Apple AirPods Max",
-"category": "Over-Ear Headphones",
-"price": 54900,
-"rating": 4.7,
-"features": {
-"Brand": "Apple",
-"Type": "Wireless Over-Ear",
-"Noise Cancellation": "Active Noise Cancellation",
-"Battery": "20 hours",
-"Driver": "40mm",
-"Connectivity": "Bluetooth 5.0"
-},
-"image": "https://store.storeimages.cdn-apple.com/..."
-},
-{
-"id": "h3",
-"name": "Bose QuietComfort Ultra",
-"category": "Over-Ear Headphones",
-"price": 35999,
-"rating": 4.8,
-"features": {
-"Brand": "Bose",
-"Type": "Wireless Over-Ear",
-"Noise Cancellation": "CustomTune ANC",
-"Battery": "24 hours",
-"Driver": "35mm",
-"Connectivity": "Bluetooth 5.3"
-},
-"image": "https://www.boseindia.com/..."
-},
-{
-"id": "h4",
-"name": "Sennheiser Momentum 4",
-"category": "Over-Ear Headphones",
-"price": 34999,
-"rating": 4.7,
-"features": {
-"Brand": "Sennheiser",
-"Type": "Wireless Over-Ear",
-"Noise Cancellation": "Adaptive ANC",
-"Battery": "60 hours",
-"Driver": "42mm",
-"Connectivity": "Bluetooth 5.2"
-},
-"image": "https://www.sennheiser-india.com/..."
-},
-{
-"id": "h5",
-"name": "JBL Tune 760NC",
-"category": "Over-Ear Headphones",
-"price": 7999,
-"rating": 4.4,
-"features": {
-"Brand": "JBL",
-"Type": "Wireless Over-Ear",
-"Noise Cancellation": "Adaptive NC",
-"Battery": "50 hours",
-"Driver": "40mm",
-"Connectivity": "Bluetooth 5.0"
-},
-"image": "https://in.jbl.com/..."
-},
-{
-"id": "h6",
-"name": "boAt Rockerz 550",
-"category": "Over-Ear Headphones",
-"price": 2799,
-"rating": 4.2,
-"features": {
-"Brand": "boAt",
-"Type": "Wireless Over-Ear",
-"Noise Cancellation": "Passive",
-"Battery": "20 hours",
-"Driver": "50mm",
-"Connectivity": "Bluetooth 5.0"
-},
-"image": "https://www.boat-lifestyle.com/..."
-},
-{
-"id": "h7",
-"name": "Realme Buds Air 6 Pro",
-"category": "TWS Earbuds",
-"price": 4999,
-"rating": 4.3,
-"features": {
-"Brand": "Realme",
-"Type": "True Wireless",
-"Noise Cancellation": "50dB ANC",
-"Battery": "40 hours (with case)",
-"Driver": "11mm + 6mm",
-"Connectivity": "Bluetooth 5.3"
-},
-"image": "https://www.realme.com/..."
-},
-{
-"id": "h8",
-"name": "OnePlus Buds Pro 2",
-"category": "TWS Earbuds",
-"price": 11999,
-"rating": 4.5,
-"features": {
-"Brand": "OnePlus",
-"Type": "True Wireless",
-"Noise Cancellation": "49dB ANC",
-"Battery": "39 hours (with case)",
-"Driver": "11mm + 6mm",
-"Connectivity": "Bluetooth 5.3"
-},
-"image": "https://www.oneplus.in/..."
-},
-{
-"id": "h9",
-"name": "Samsung Galaxy Buds 3 Pro",
-"category": "TWS Earbuds",
-"price": 17999,
-"rating": 4.6,
-"features": {
-"Brand": "Samsung",
-"Type": "True Wireless",
-"Noise Cancellation": "Adaptive ANC",
-"Battery": "30 hours (with case)",
-"Driver": "Dual Driver",
-"Connectivity": "Bluetooth 5.4"
-},
-"image": "https://www.samsung.com/..."
-},
-{
-"id": "h10",
-"name": "Noise Air Buds Pro SE",
-"category": "TWS Earbuds",
-"price": 2499,
-"rating": 4.1,
-"features": {
-"Brand": "Noise",
-"Type": "True Wireless",
-"Noise Cancellation": "30dB ANC",
-"Battery": "40 hours (with case)",
-"Driver": "13mm",
-"Connectivity": "Bluetooth 5.3"
-},
-"image": "https://www.gonoise.com/..."
-}
-],
-"Watches": [
-{
-"id": "w1",
-"name": "Apple Watch Ultra 2",
-"category": "Smartwatch",
-"price": 89900,
-"rating": 4.9,
-"features": {
-"Brand": "Apple",
-"Display": "1.92 inch Retina LTPO OLED",
-"Processor": "S9 SiP",
-"Battery": "36 hours",
-"Water Resistance": "100m",
-"OS": "watchOS 10"
-},
-"image": "https://store.storeimages.cdn-apple.com/..."
-},
-{
-"id": "w2",
-"name": "Samsung Galaxy Watch 7",
-"category": "Smartwatch",
-"price": 32999,
-"rating": 4.6,
-"features": {
-"Brand": "Samsung",
-"Display": "1.5 inch AMOLED",
-"Processor": "Exynos W1000",
-"Battery": "48 hours",
-"Water Resistance": "50m",
-"OS": "Wear OS 5"
-},
-"image": "https://images.samsung.com/..."
-},
-{
-"id": "w3",
-"name": "Garmin Fenix 8",
-"category": "Smartwatch",
-"price": 104999,
-"rating": 4.8,
-"features": {
-"Brand": "Garmin",
-"Display": "1.4 inch AMOLED",
-"Battery": "28 days",
-"Water Resistance": "100m",
-"GPS": "Multi-band"
-},
-"image": "https://www.garmin.com/..."
-},
-{
-"id": "w4",
-"name": "Noise ColorFit Pro 5 Max",
-"category": "Smartwatch",
-"price": 7999,
-"rating": 4.3,
-"features": {
-"Brand": "Noise",
-"Display": "1.96 inch AMOLED",
-"Battery": "7 days",
-"Water Resistance": "IP68",
-"Health": "SpO2, Heart Rate"
-},
-"image": "https://www.gonoise.com/..."
-},
-{
-"id": "w5",
-"name": "boAt Storm Plus",
-"category": "Smartwatch",
-"price": 3499,
-"rating": 4.1,
-"features": {
-"Brand": "boAt",
-"Display": "1.78 inch HD",
-"Battery": "7 days",
-"Water Resistance": "IP67",
-"Sports Modes": "100+"
-},
-"image": "https://www.boat-lifestyle.com/..."
-},
-{
-"id": "w6",
-"name": "Fastrack Reflex Vox",
-"category": "Smartwatch",
-"price": 4995,
-"rating": 4.2,
-"features": {
-"Brand": "Fastrack",
-"Display": "1.69 inch",
-"Battery": "10 days",
-"Water Resistance": "IP68",
-"Alexa Built-in": "Yes"
-},
-"image": "https://www.fastrack.in/..."
-},
-{
-"id": "w7",
-"name": "Fire-Boltt Phoenix Ultra",
-"category": "Smartwatch",
-"price": 1999,
-"rating": 4.0,
-"features": {
-"Brand": "Fire-Boltt",
-"Display": "1.39 inch",
-"Battery": "7 days",
-"Water Resistance": "IP67",
-"Bluetooth Calling": "Yes"
-},
-"image": "https://www.fireboltt.com/..."
-},
-{
-"id": "w8",
-"name": "Titan Smart Pro",
-"category": "Smartwatch",
-"price": 11995,
-"rating": 4.4,
-"features": {
-"Brand": "Titan",
-"Display": "1.39 inch AMOLED",
-"Battery": "14 days",
-"Water Resistance": "5 ATM",
-"GPS": "Built-in"
-},
-"image": "https://www.titan.co.in/..."
-},
-{
-"id": "w9",
-"name": "Amazfit GTR 5",
-"category": "Smartwatch",
-"price": 18999,
-"rating": 4.5,
-"features": {
-"Brand": "Amazfit",
-"Display": "1.45 inch AMOLED",
-"Battery": "14 days",
-"Water Resistance": "5 ATM",
-"Health": "BioTracker 5.0"
-},
-"image": "https://www.amazfit.com/..."
-},
-{
-"id": "w10",
-"name": "Fossil Gen 6",
-"category": "Smartwatch",
-"price": 23995,
-"rating": 4.3,
-"features": {
-"Brand": "Fossil",
-"Display": "1.28 inch AMOLED",
-"Battery": "24 hours",
-"Water Resistance": "3 ATM",
-"OS": "Wear OS"
-},
-"image": "https://www.fossil.com/..."
-}
-]
-  },
-  "Home-Appliances": {
-    "Refrigerators": [
+    "Watches": [
       {
-        "id": "r1",
+        "id": "w1",
+        "name": "Apple Watch Ultra 2",
+        "category": "Smartwatch",
+        "price": 89900,
+        "rating": 4.9,
+        "features": {
+          "Brand": "Apple",
+          "Display": "1.92 inch Retina LTPO OLED",
+          "Processor": "S9 SiP",
+          "Battery": "36 hours",
+          "Water Resistance": "100m",
+          "OS": "watchOS 10"
+        },
+        "image": "https://store.storeimages.cdn-apple.com/..."
+      },
+      {
+        "id": "w2",
+        "name": "Samsung Galaxy Watch 7",
+        "category": "Smartwatch",
+        "price": 32999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Samsung",
+          "Display": "1.5 inch AMOLED",
+          "Processor": "Exynos W1000",
+          "Battery": "48 hours",
+          "Water Resistance": "50m",
+          "OS": "Wear OS 5"
+        },
+        "image": "https://images.samsung.com/..."
+      },
+      {
+        "id": "w3",
+        "name": "Garmin Fenix 8",
+        "category": "Smartwatch",
+        "price": 104999,
+        "rating": 4.8,
+        "features": {
+          "Brand": "Garmin",
+          "Display": "1.4 inch AMOLED",
+          "Battery": "28 days",
+          "Water Resistance": "100m",
+          "GPS": "Multi-band"
+        },
+        "image": "https://www.garmin.com/..."
+      },
+      {
+        "id": "w4",
+        "name": "Noise ColorFit Pro 5 Max",
+        "category": "Smartwatch",
+        "price": 7999,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Noise",
+          "Display": "1.96 inch AMOLED",
+          "Battery": "7 days",
+          "Water Resistance": "IP68",
+          "Health": "SpO2, Heart Rate"
+        },
+        "image": "https://www.gonoise.com/..."
+      },
+      {
+        "id": "w5",
+        "name": "boAt Storm Plus",
+        "category": "Smartwatch",
+        "price": 3499,
+        "rating": 4.1,
+        "features": {
+          "Brand": "boAt",
+          "Display": "1.78 inch HD",
+          "Battery": "7 days",
+          "Water Resistance": "IP67",
+          "Sports Modes": "100+"
+        },
+        "image": "https://www.boat-lifestyle.com/..."
+      }
+    ],
+    "Home Appliances": [
+      {
+        "id": "ha1",
         "name": "LG 260L Frost Free Refrigerator",
         "category": "Refrigerator",
         "price": 28999,
@@ -1040,7 +358,7 @@
         "image": "https://www.lg.com/in/images/refrigerators/md07587902/gallery/Digi-Touch-Cool.jpg"
       },
       {
-        "id": "r2",
+        "id": "ha2",
         "name": "Samsung 324L Convertible Refrigerator",
         "category": "Refrigerator",
         "price": 34999,
@@ -1055,296 +373,7 @@
         "image": "https://images.samsung.com/is/image/samsung/in-rt34a4533bx-tl-gallery"
       },
       {
-        "id": "r3",
-        "name": "Whirlpool 265L 3 Star Refrigerator",
-        "category": "Refrigerator",
-        "price": 27999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Whirlpool",
-          "Type": "Double Door",
-          "Capacity": "265 L",
-          "Compressor": "IntelliSense Inverter",
-          "Energy Rating": "3 Star"
-        },
-        "image": "https://www.whirlpoolindia.com/sites/default/files/2023-02/WPREFIG.jpg"
-      },
-      {
-        "id": "r4",
-        "name": "Godrej 244L Frost Free Double Door",
-        "category": "Refrigerator",
-        "price": 25999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Godrej",
-          "Type": "Double Door",
-          "Capacity": "244 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "2 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.godrej.com/..."
-      },
-      {
-        "id": "r5",
-        "name": "Haier 190L Direct Cool Single Door",
-        "category": "Refrigerator",
-        "price": 14999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Haier",
-          "Type": "Single Door",
-          "Capacity": "190 L",
-          "Compressor": "Normal",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Direct Cool"
-        },
-        "image": "https://www.haier.com/..."
-      },
-      {
-        "id": "r6",
-        "name": "Bosch 655L Side-by-Side",
-        "category": "Refrigerator",
-        "price": 89999,
-        "rating": 4.7,
-        "features": {
-          "Brand": "Bosch",
-          "Type": "Side-by-Side",
-          "Capacity": "655 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "No Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.bosch-home.in/..."
-      },
-      {
-        "id": "r7",
-        "name": "Panasonic 592L French Door",
-        "category": "Refrigerator",
-        "price": 84999,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Panasonic",
-          "Type": "French Door",
-          "Capacity": "592 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "No Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.panasonic.com/..."
-      },
-      {
-        "id": "r8",
-        "name": "Voltas Beko 470L Double Door",
-        "category": "Refrigerator",
-        "price": 44999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Voltas Beko",
-          "Type": "Double Door",
-          "Capacity": "470 L",
-          "Compressor": "ProSmart Inverter",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.voltasbeko.com/..."
-      },
-      {
-        "id": "r9",
-        "name": "Lloyd 587L Side-by-Side",
-        "category": "Refrigerator",
-        "price": 64999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "Lloyd",
-          "Type": "Side-by-Side",
-          "Capacity": "587 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "No Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.mylloyd.com/..."
-      },
-      {
-        "id": "r10",
-        "name": "Candy 170L Single Door",
-        "category": "Refrigerator",
-        "price": 12999,
-        "rating": 4.1,
-        "features": {
-          "Brand": "Candy",
-          "Type": "Single Door",
-          "Capacity": "170 L",
-          "Compressor": "Normal",
-          "Energy Rating": "2 Star",
-          "Defrost System": "Direct Cool"
-        },
-        "image": "https://www.candy-home.com/..."
-      },
-      {
-        "id": "r11",
-        "name": "Midea 235L Double Door",
-        "category": "Refrigerator",
-        "price": 21999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Midea",
-          "Type": "Double Door",
-          "Capacity": "235 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.midea.com/..."
-      },
-      {
-        "id": "r12",
-        "name": "TCL 345L Convertible",
-        "category": "Refrigerator",
-        "price": 36999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "TCL",
-          "Type": "Convertible",
-          "Capacity": "345 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.tcl.com/..."
-      },
-      {
-        "id": "r13",
-        "name": "BPL 564L Side-by-Side",
-        "category": "Refrigerator",
-        "price": 55999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "BPL",
-          "Type": "Side-by-Side",
-          "Capacity": "564 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "No Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.bpl.in/..."
-      },
-      {
-        "id": "r14",
-        "name": "Onida 190L Direct Cool",
-        "category": "Refrigerator",
-        "price": 13999,
-        "rating": 4.0,
-        "features": {
-          "Brand": "Onida",
-          "Type": "Single Door",
-          "Capacity": "190 L",
-          "Compressor": "Normal",
-          "Energy Rating": "2 Star",
-          "Defrost System": "Direct Cool"
-        },
-        "image": "https://www.onida.com/..."
-      },
-      {
-        "id": "r15",
-        "name": "Hitachi 451L Bottom Mount",
-        "category": "Refrigerator",
-        "price": 59999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "Hitachi",
-          "Type": "Bottom Mount",
-          "Capacity": "451 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.hitachiaircon.com/..."
-      },
-      {
-        "id": "r16",
-        "name": "Siemens 401L Double Door",
-        "category": "Refrigerator",
-        "price": 52999,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Siemens",
-          "Type": "Double Door",
-          "Capacity": "401 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.siemens-home.bsh-group.com/..."
-      },
-      {
-        "id": "r17",
-        "name": "Kelvinator 190L Single Door",
-        "category": "Refrigerator",
-        "price": 12499,
-        "rating": 4.1,
-        "features": {
-          "Brand": "Kelvinator",
-          "Type": "Single Door",
-          "Capacity": "190 L",
-          "Compressor": "Normal",
-          "Energy Rating": "2 Star",
-          "Defrost System": "Direct Cool"
-        },
-        "image": "https://www.kelvinator.co.in/..."
-      },
-      {
-        "id": "r18",
-        "name": "Croma 415L Double Door",
-        "category": "Refrigerator",
-        "price": 39999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Croma",
-          "Type": "Double Door",
-          "Capacity": "415 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.croma.com/..."
-      },
-      {
-        "id": "r19",
-        "name": "AmazonBasics 468L Side-by-Side",
-        "category": "Refrigerator",
-        "price": 48999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "AmazonBasics",
-          "Type": "Side-by-Side",
-          "Capacity": "468 L",
-          "Compressor": "Inverter",
-          "Energy Rating": "No Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://m.media-amazon.com/..."
-      },
-      {
-        "id": "r20",
-        "name": "Videocon 250L Double Door",
-        "category": "Refrigerator",
-        "price": 22999,
-        "rating": 4.1,
-        "features": {
-          "Brand": "Videocon",
-          "Type": "Double Door",
-          "Capacity": "250 L",
-          "Compressor": "Normal",
-          "Energy Rating": "3 Star",
-          "Defrost System": "Frost Free"
-        },
-        "image": "https://www.videoconworld.com/..."
-      }
-    ],
-    "Washing Machines": [
-      {
-        "id": "w1",
+        "id": "ha3",
         "name": "LG 8kg Front Load Washing Machine",
         "category": "Washing Machine",
         "price": 49999,
@@ -1359,7 +388,7 @@
         "image": "https://www.lg.com/in/images/washing-machines/md07589310/gallery/FHM1408BDL-Washing-Machine.jpg"
       },
       {
-        "id": "w2",
+        "id": "ha4",
         "name": "Samsung 7kg EcoBubble Washing Machine",
         "category": "Washing Machine",
         "price": 39999,
@@ -1374,7 +403,7 @@
         "image": "https://images.samsung.com/is/image/samsung/in-wf70f5e0w2w"
       },
       {
-        "id": "w3",
+        "id": "ha5",
         "name": "Whirlpool 7.5kg Top Load Washing Machine",
         "category": "Washing Machine",
         "price": 23999,
@@ -1386,3225 +415,756 @@
           "Technology": "6th Sense Smart Sensors"
         },
         "image": "https://www.whirlpoolindia.com/sites/default/files/2023-02/whirlpool7kg.png"
-      },
-      {
-        "id": "w4",
-        "name": "Bosch 8kg Front Load",
-        "category": "Washing Machine",
-        "price": 45999,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Bosch",
-          "Type": "Front Load",
-          "Capacity": "8 kg",
-          "Motor": "EcoSilence Drive",
-          "Energy Rating": "5 Star"
-        },
-        "image": "https://www.bosch-home.in/..."
-      },
-      {
-        "id": "w5",
-        "name": "IFB 8.5kg Front Load",
-        "category": "Washing Machine",
-        "price": 41999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "IFB",
-          "Type": "Front Load",
-          "Capacity": "8.5 kg",
-          "Motor": "BLDC",
-          "Energy Rating": "5 Star"
-        },
-        "image": "https://www.ifbappliances.com/..."
-      },
-      {
-        "id": "w6",
-        "name": "Godrej 7kg Semi-Automatic",
-        "category": "Washing Machine",
-        "price": 10999,
-        "rating": 4.1,
-        "features": {
-          "Brand": "Godrej",
-          "Type": "Semi-Automatic",
-          "Capacity": "7 kg",
-          "Motor": "Toughened Glass"
-        },
-        "image": "https://www.godrej.com/..."
-      },
-      {
-        "id": "w7",
-        "name": "Haier 6.5kg Top Load",
-        "category": "Washing Machine",
-        "price": 14999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Haier",
-          "Type": "Top Load",
-          "Capacity": "6.5 kg",
-          "Motor": "Oceanus Wave"
-        },
-        "image": "https://www.haier.com/..."
-      },
-      {
-        "id": "w8",
-        "name": "Panasonic 7kg Top Load",
-        "category": "Washing Machine",
-        "price": 18999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Panasonic",
-          "Type": "Top Load",
-          "Capacity": "7 kg",
-          "Technology": "Active Foam Wash"
-        },
-        "image": "https://www.panasonic.com/..."
-      },
-      {
-        "id": "w9",
-        "name": "Onida 8kg Top Load",
-        "category": "Washing Machine",
-        "price": 17999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Onida",
-          "Type": "Top Load",
-          "Capacity": "8 kg",
-          "Motor": "Pulsator"
-        },
-        "image": "https://www.onida.com/..."
-      },
-      {
-        "id": "w10",
-        "name": "Lloyd 7.5kg Semi-Automatic",
-        "category": "Washing Machine",
-        "price": 9999,
-        "rating": 4.0,
-        "features": {
-          "Brand": "Lloyd",
-          "Type": "Semi-Automatic",
-          "Capacity": "7.5 kg",
-          "Motor": "Magic Filter"
-        },
-        "image": "https://www.mylloyd.com/..."
-      },
-      {
-        "id": "w11",
-        "name": "Voltas Beko 8kg Front Load",
-        "category": "Washing Machine",
-        "price": 32999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Voltas Beko",
-          "Type": "Front Load",
-          "Capacity": "8 kg",
-          "Motor": "ProSmart Inverter",
-          "Energy Rating": "5 Star"
-        },
-        "image": "https://www.voltasbeko.com/..."
-      },
-      {
-        "id": "w12",
-        "name": "Candy 7kg Front Load",
-        "category": "Washing Machine",
-        "price": 24999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Candy",
-          "Type": "Front Load",
-          "Capacity": "7 kg",
-          "Motor": "Inverter"
-        },
-        "image": "https://www.candy-home.com/..."
-      },
-      {
-        "id": "w13",
-        "name": "Midea 7.5kg Top Load",
-        "category": "Washing Machine",
-        "price": 16999,
-        "rating": 4.1,
-        "features": {
-          "Brand": "Midea",
-          "Type": "Top Load",
-          "Capacity": "7.5 kg",
-          "Technology": "Water Magic Cube"
-        },
-        "image": "https://www.midea.com/..."
-      },
-      {
-        "id": "w14",
-        "name": "TCL 8.5kg Front Load",
-        "category": "Washing Machine",
-        "price": 35999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "TCL",
-          "Type": "Front Load",
-          "Capacity": "8.5 kg",
-          "Motor": "DD Inverter"
-        },
-        "image": "https://www.tcl.com/..."
-      },
-      {
-        "id": "w15",
-        "name": "BPL 6.2kg Semi-Automatic",
-        "category": "Washing Machine",
-        "price": 8999,
-        "rating": 3.9,
-        "features": {
-          "Brand": "BPL",
-          "Type": "Semi-Automatic",
-          "Capacity": "6.2 kg",
-          "Motor": "Rust Proof"
-        },
-        "image": "https://www.bpl.in/..."
-      },
-      {
-        "id": "w16",
-        "name": "Croma 7kg Top Load",
-        "category": "Washing Machine",
-        "price": 15999,
-        "rating": 4.1,
-        "features": {
-          "Brand": "Croma",
-          "Type": "Top Load",
-          "Capacity": "7 kg",
-          "Technology": "Pulsator"
-        },
-        "image": "https://www.croma.com/..."
-      },
-      {
-        "id": "w17",
-        "name": "AmazonBasics 7.5kg Semi-Automatic",
-        "category": "Washing Machine",
-        "price": 9499,
-        "rating": 4.0,
-        "features": {
-          "Brand": "AmazonBasics",
-          "Type": "Semi-Automatic",
-          "Capacity": "7.5 kg",
-          "Motor": "High Efficiency"
-        },
-        "image": "https://m.media-amazon.com/..."
-      },
-      {
-        "id": "w18",
-        "name": "Intex 7.5kg Semi-Automatic",
-        "category": "Washing Machine",
-        "price": 8999,
-        "rating": 3.9,
-        "features": {
-          "Brand": "Intex",
-          "Type": "Semi-Automatic",
-          "Capacity": "7.5 kg",
-          "Motor": "Magic Filter"
-        },
-        "image": "https://www.intex.in/..."
-      },
-      {
-        "id": "w19",
-        "name": "Thomson 8kg Top Load",
-        "category": "Washing Machine",
-        "price": 18999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Thomson",
-          "Type": "Top Load",
-          "Capacity": "8 kg",
-          "Technology": "Fuzzy Logic"
-        },
-        "image": "https://www.thomsonhome.in/..."
-      },
-      {
-        "id": "w20",
-        "name": "Electrolux 7kg Front Load",
-        "category": "Washing Machine",
-        "price": 36999,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Electrolux",
-          "Type": "Front Load",
-          "Capacity": "7 kg",
-          "Motor": "Inverter",
-          "Energy Rating": "5 Star"
-        },
-        "image": "https://www.electrolux.in/..."
       }
     ]
   },
-  "Fashion": {
-    "Men's Clothing": [
+  "Furniture": {
+    "Beds": [
       {
-        "id": "f1",
-        "name": "Levi’s 511 Slim Fit Jeans",
-        "category": "Clothing",
-        "price": 4499,
+        "id": "b1",
+        "name": "Wakefit Orion Bed",
+        "category": "Bed",
+        "price": 14999,
         "rating": 4.5,
         "features": {
-          "Brand": "Levi’s",
-          "Material": "Cotton Stretch Denim",
-          "Fit": "Slim Fit",
-          "Color": "Indigo Blue",
-          "Wash": "Mid Wash"
+          "Brand": "Wakefit",
+          "Size": "King",
+          "Material": "Engineered Wood",
+          "Storage": "Hydraulic",
+          "Color": "Walnut"
         },
-        "image": "https://lsco.scene7.com/is/image/lsco/045111703-front-pdp"
+        "image": "https://www.wakefit.co/..."
       },
       {
-        "id": "f2",
-        "name": "Nike Air Force 1 Sneakers",
-        "category": "Footwear",
-        "price": 8999,
-        "rating": 4.8,
-        "features": {
-          "Brand": "Nike",
-          "Material": "Leather",
-          "Color": "White",
-          "Type": "Sneakers"
-        },
-        "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-force-1-07-white.jpg"
-      },
-      {
-        "id": "f3",
-        "name": "Puma Sports T-Shirt",
-        "category": "Clothing",
-        "price": 1999,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Puma",
-          "Material": "Polyester",
-          "Fit": "Regular Fit",
-          "Color": "Red",
-          "Type": "Activewear"
-        },
-        "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/523243/01/fnd/IND"
-      },
-      {
-        "id": "f4",
-        "name": "Allen Solly Formal Shirt",
-        "category": "Clothing",
-        "price": 2499,
-        "rating": 4.4,
-        "features": {
-          "Brand": "Allen Solly",
-          "Material": "Cotton",
-          "Fit": "Slim Fit",
-          "Color": "White",
-          "Type": "Formal"
-        },
-        "image": "https://www.allensolly.com/..."
-      },
-      {
-        "id": "f5",
-        "name": "Peter England Blazer",
-        "category": "Clothing",
-        "price": 5999,
-        "rating": 4.5,
-        "features": {
-          "Brand": "Peter England",
-          "Material": "Poly-Viscose",
-          "Fit": "Regular Fit",
-          "Color": "Navy Blue",
-          "Type": "Formal"
-        },
-        "image": "https://www.peterengland.com/..."
-      },
-      {
-        "id": "f6",
-        "name": "Adidas Ultraboost 23",
-        "category": "Footwear",
+        "id": "b2",
+        "name": "Pepperfry Queen Bed",
+        "category": "Bed",
         "price": 18999,
-        "rating": 4.7,
-        "features": {
-          "Brand": "Adidas",
-          "Material": "Primeknit",
-          "Color": "Black",
-          "Type": "Running Shoes"
-        },
-        "image": "https://www.adidas.co.in/..."
-      },
-      {
-        "id": "f7",
-        "name": "Raymond Trouser",
-        "category": "Clothing",
-        "price": 3499,
-        "rating": 4.6,
-        "features": {
-          "Brand": "Raymond",
-          "Material": "Wool Blend",
-          "Fit": "Slim Fit",
-          "Color": "Charcoal",
-          "Type": "Formal"
-        },
-        "image": "https://www.raymond.in/..."
-      },
-      {
-        "id": "f8",
-        "name": "Van Heusen Belt",
-        "category": "Accessories",
-        "price": 1499,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Van Heusen",
-          "Material": "Leather",
-          "Color": "Black",
-          "Type": "Reversible"
-        },
-        "image": "https://www.vanheusenindia.com/..."
-      },
-      {
-        "id": "f9",
-        "name": "Woodland Leather Wallet",
-        "category": "Accessories",
-        "price": 1299,
         "rating": 4.4,
         "features": {
-          "Brand": "Woodland",
-          "Material": "Genuine Leather",
-          "Color": "Brown",
-          "Type": "Bi-fold"
+          "Brand": "Pepperfry",
+          "Size": "Queen",
+          "Material": "Sheesham Wood",
+          "Storage": "Box",
+          "Color": "Teak"
         },
-        "image": "https://www.woodlandworldwide.com/..."
+        "image": "https://www.pepperfry.com/..."
       },
       {
-        "id": "f10",
-        "name": "Reebok Track Pants",
-        "category": "Clothing",
-        "price": 2199,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Reebok",
-          "Material": "Polyester",
-          "Fit": "Regular Fit",
-          "Color": "Grey",
-          "Type": "Sports"
-        },
-        "image": "https://www.reebok.in/..."
-      },
-      {
-        "id": "f11",
-        "name": "Fastrack Watch",
-        "category": "Accessories",
-        "price": 3499,
-        "rating": 4.5,
-        "features": {
-          "Brand": "Fastrack",
-          "Material": "Stainless Steel",
-          "Color": "Silver",
-          "Type": "Analog"
-        },
-        "image": "https://www.fastrack.in/..."
-      },
-      {
-        "id": "f12",
-        "name": "Bata Formal Shoes",
-        "category": "Footwear",
-        "price": 2999,
+        "id": "b3",
+        "name": "Urban Ladder Bunk Bed",
+        "category": "Bed",
+        "price": 32999,
         "rating": 4.3,
         "features": {
-          "Brand": "Bata",
-          "Material": "Leather",
-          "Color": "Black",
-          "Type": "Oxford"
+          "Brand": "Urban Ladder",
+          "Size": "Twin over Twin",
+          "Material": "Metal",
+          "Color": "Black"
         },
-        "image": "https://www.bata.in/..."
+        "image": "https://www.urbanladder.com/..."
       },
       {
-        "id": "f13",
-        "name": "H&M Hoodie",
-        "category": "Clothing",
-        "price": 1999,
-        "rating": 4.2,
-        "features": {
-          "Brand": "H&M",
-          "Material": "Cotton Blend",
-          "Fit": "Regular Fit",
-          "Color": "Black",
-          "Type": "Casual"
-        },
-        "image": "https://www2.hm.com/..."
-      },
-      {
-        "id": "f14",
-        "name": "Sparx Sports Shoes",
-        "category": "Footwear",
-        "price": 1299,
+        "id": "b4",
+        "name": "Nilkamal Single Bed",
+        "category": "Bed",
+        "price": 8999,
         "rating": 4.1,
         "features": {
-          "Brand": "Sparx",
-          "Material": "Mesh",
-          "Color": "Blue",
-          "Type": "Running"
+          "Brand": "Nilkamal",
+          "Size": "Single",
+          "Material": "Plastic",
+          "Color": "Brown"
         },
-        "image": "https://www.sparx.com/..."
+        "image": "https://www.nilkamal.com/..."
       },
       {
-        "id": "f15",
-        "name": "Jack & Jones Denim Jacket",
-        "category": "Clothing",
-        "price": 3999,
-        "rating": 4.4,
+        "id": "b5",
+        "name": "Godrej Interio King Bed",
+        "category": "Bed",
+        "price": 45999,
+        "rating": 4.6,
         "features": {
-          "Brand": "Jack & Jones",
-          "Material": "Denim",
-          "Fit": "Regular Fit",
-          "Color": "Blue",
-          "Type": "Casual"
+          "Brand": "Godrej Interio",
+          "Size": "King",
+          "Material": "Solid Wood",
+          "Storage": "Hydraulic",
+          "Color": "Mahogany"
         },
-        "image": "https://www.jackjones.in/..."
-      },
-      {
-        "id": "f16",
-        "name": "Campus Sutra T-Shirt",
-        "category": "Clothing",
-        "price": 799,
-        "rating": 4.0,
-        "features": {
-          "Brand": "Campus Sutra",
-          "Material": "Cotton",
-          "Fit": "Regular Fit",
-          "Color": "White",
-          "Type": "Graphic"
-        },
-        "image": "https://www.campussutra.com/..."
-      },
-      {
-        "id": "f17",
-        "name": "Red Tape Sneakers",
-        "category": "Footwear",
-        "price": 2499,
-        "rating": 4.2,
-        "features": {
-          "Brand": "Red Tape",
-          "Material": "PU",
-          "Color": "White",
-          "Type": "Casual"
-        },
-        "image": "https://www.redtape.com/..."
-      },
-      {
-        "id": "f18",
-        "name": "Roadster Cargo Pants",
-        "category": "Clothing",
-        "price": 1899,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Roadster",
-          "Material": "Cotton",
-          "Fit": "Relaxed Fit",
-          "Color": "Olive",
-          "Type": "Casual"
-        },
-        "image": "https://www.myntra.com/..."
-      },
-      {
-        "id": "f19",
-        "name": "U.S. Polo Assn. Polo T-Shirt",
-        "category": "Clothing",
-        "price": 1799,
-        "rating": 4.4,
-        "features": {
-          "Brand": "U.S. Polo Assn.",
-          "Material": "Cotton Pique",
-          "Fit": "Regular Fit",
-          "Color": "Navy",
-          "Type": "Polo"
-        },
-        "image": "https://www.uspoloassn.in/..."
-      },
-      {
-        "id": "f20",
-        "name": "Lee Cooper Boots",
-        "category": "Footwear",
-        "price": 4499,
-        "rating": 4.3,
-        "features": {
-          "Brand": "Lee Cooper",
-          "Material": "Leather",
-          "Color": "Brown",
-          "Type": "Ankle Boots"
-        },
-        "image": "https://www.leecooper.com/..."
+        "image": "https://www.godrejinterio.com/..."
       }
     ],
-
-"Women's Clothing": [
-{
-"id": "wc1",
-"name": "Biba Kurta Set",
-"category": "Ethnic Wear",
-"price": 3999,
-"rating": 4.5,
-"features": {
-"Brand": "Biba",
-"Material": "Cotton",
-"Fit": "Regular",
-"Color": "Pink",
-"Set": "Kurta + Palazzo + Dupatta"
-},
-"image": "https://www.biba.in/..."
-},
-{
-"id": "wc2",
-"name": "H&M Maxi Dress",
-"category": "Western Wear",
-"price": 2999,
-"rating": 4.3,
-"features": {
-"Brand": "H&M",
-"Material": "Viscose",
-"Fit": "Relaxed",
-"Color": "Floral Print",
-"Length": "Maxi"
-},
-"image": "https://www2.hm.com/..."
-},
-{
-"id": "wc3",
-"name": "Myntra Roadster Jeans",
-"category": "Western Wear",
-"price": 1299,
-"rating": 4.2,
-"features": {
-"Brand": "Roadster",
-"Material": "Denim",
-"Fit": "Skinny",
-"Color": "Blue",
-"Wash": "Light Wash"
-},
-"image": "https://www.myntra.com/..."
-},
-{
-"id": "wc4",
-"name": "Libas Anarkali Suit",
-"category": "Ethnic Wear",
-"price": 3499,
-"rating": 4.4,
-"features": {
-"Brand": "Libas",
-"Material": "Rayon",
-"Fit": "Flared",
-"Color": "Green",
-"Set": "Anarkali + Churidar"
-},
-"image": "https://www.libas.in/..."
-},
-{
-"id": "wc5",
-"name": "Only Crop Top",
-"category": "Western Wear",
-"price": 999,
-"rating": 4.1,
-"features": {
-"Brand": "Only",
-"Material": "Cotton",
-"Fit": "Slim",
-"Color": "White",
-"Neck": "Round"
-},
-"image": "https://www.only.in/..."
-},
-{
-"id": "wc6",
-"name": "W for Woman Saree",
-"category": "Ethnic Wear",
-"price": 4999,
-"rating": 4.5,
-"features": {
-"Brand": "W",
-"Material": "Georgette",
-"Color": "Red",
-"Print": "Printed",
-"Blouse": "Included"
-},
-"image": "https://www.wforwoman.com/..."
-},
-{
-"id": "wc7",
-"name": "Forever 21 Jumpsuit",
-"category": "Western Wear",
-"price": 2499,
-"rating": 4.2,
-"features": {
-"Brand": "Forever 21",
-"Material": "Polyester",
-"Fit": "Regular",
-"Color": "Black",
-"Style": "Sleeveless"
-},
-"image": "https://www.forever21.in/..."
-},
-{
-"id": "wc8",
-"name": "Sangria Lehenga Set",
-"category": "Ethnic Wear",
-"price": 7999,
-"rating": 4.6,
-"features": {
-"Brand": "Sangria",
-"Material": "Silk",
-"Color": "Gold",
-"Set": "Lehenga + Blouse + Dupatta"
-},
-"image": "https://www.myntra.com/..."
-},
-{
-"id": "wc9",
-"name": "Zara Blouse",
-"category": "Western Wear",
-"price": 3590,
-"rating": 4.4,
-"features": {
-"Brand": "Zara",
-"Material": "Satin",
-"Fit": "Regular",
-"Color": "Emerald",
-"Sleeve": "Puff"
-},
-"image": "https://www.zara.com/..."
-},
-{
-"id": "wc10",
-"name": "Global Desi Palazzo Set",
-"category": "Ethnic Wear",
-"price": 4299,
-"rating": 4.3,
-"features": {
-"Brand": "Global Desi",
-"Material": "Cotton",
-"Color": "Mustard",
-"Set": "Kurti + Palazzo"
-},
-"image": "https://www.globaldesi.in/..."
+    "Couches": [
+      {
+        "id": "c1",
+        "name": "Wakefit 3-Seater Sofa",
+        "category": "Sofa",
+        "price": 18999,
+        "rating": 4.4,
+        "features": {
+          "Brand": "Wakefit",
+          "Seater": "3",
+          "Material": "Fabric",
+          "Color": "Grey"
+        },
+        "image": "https://www.wakefit.co/..."
+      },
+      {
+        "id": "c2",
+        "name": "Pepperfry L-Shaped Sofa",
+        "category": "Sofa",
+        "price": 45999,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Pepperfry",
+          "Type": "L-Shaped",
+          "Material": "Leatherette",
+          "Color": "Brown"
+        },
+        "image": "https://www.pepperfry.com/..."
+      },
+      {
+        "id": "c3",
+        "name": "Urban Ladder Recliner Sofa",
+        "category": "Sofa",
+        "price": 64999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Urban Ladder",
+          "Seater": "3",
+          "Material": "Leather",
+          "Recline": "Yes",
+          "Color": "Beige"
+        },
+        "image": "https://www.urbanladder.com/..."
+      },
+      {
+        "id": "c4",
+        "name": "Nilkamal 2-Seater Sofa",
+        "category": "Sofa",
+        "price": 12999,
+        "rating": 4.1,
+        "features": {
+          "Brand": "Nilkamal",
+          "Seater": "2",
+          "Material": "Plastic",
+          "Color": "Black"
+        },
+        "image": "https://www.nilkamal.com/..."
+      },
+      {
+        "id": "c5",
+        "name": "Godrej Interio Sectional",
+        "category": "Sofa",
+        "price": 79999,
+        "rating": 4.7,
+        "features": {
+          "Brand": "Godrej Interio",
+          "Type": "Sectional",
+          "Material": "Fabric",
+          "Color": "Blue"
+        },
+        "image": "https://www.godrejinterio.com/..."
+      }
+    ],
+    "Tables": [
+      {
+        "id": "t1",
+        "name": "Wakefit Study Table",
+        "category": "Table",
+        "price": 5999,
+        "rating": 4.4,
+        "features": {
+          "Brand": "Wakefit",
+          "Type": "Study Table",
+          "Material": "Engineered Wood",
+          "Color": "Walnut"
+        },
+        "image": "https://www.wakefit.co/..."
+      },
+      {
+        "id": "t2",
+        "name": "Pepperfry Coffee Table",
+        "category": "Table",
+        "price": 8999,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Pepperfry",
+          "Type": "Coffee Table",
+          "Material": "Sheesham Wood",
+          "Color": "Honey"
+        },
+        "image": "https://www.pepperfry.com/..."
+      },
+      {
+        "id": "t3",
+        "name": "Urban Ladder Dining Table",
+        "category": "Table",
+        "price": 25999,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Urban Ladder",
+          "Type": "6-Seater Dining",
+          "Material": "Solid Wood",
+          "Color": "Teak"
+        },
+        "image": "https://www.urbanladder.com/..."
+      },
+      {
+        "id": "t4",
+        "name": "Nilkamal Center Table",
+        "category": "Table",
+        "price": 3999,
+        "rating": 4.1,
+        "features": {
+          "Brand": "Nilkamal",
+          "Type": "Center Table",
+          "Material": "Plastic",
+          "Color": "Brown"
+        },
+        "image": "https://www.nilkamal.com/..."
+      },
+      {
+        "id": "t5",
+        "name": "Godrej Interio Console",
+        "category": "Table",
+        "price": 14999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Godrej Interio",
+          "Type": "Console Table",
+          "Material": "Engineered Wood",
+          "Color": "Wenge"
+        },
+        "image": "https://www.godrejinterio.com/..."
+      }
+    ],
+    "Dressers": [
+      {
+        "id": "d1",
+        "name": "Wakefit Dressing Table",
+        "category": "Dresser",
+        "price": 9999,
+        "rating": 4.4,
+        "features": {
+          "Brand": "Wakefit",
+          "Material": "Engineered Wood",
+          "Mirror": "Yes",
+          "Storage": "3 Drawers",
+          "Color": "Walnut"
+        },
+        "image": "https://www.wakefit.co/..."
+      },
+      {
+        "id": "d2",
+        "name": "Pepperfry Vanity",
+        "category": "Dresser",
+        "price": 15999,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Pepperfry",
+          "Material": "Sheesham Wood",
+          "Mirror": "Foldable",
+          "Storage": "4 Drawers",
+          "Color": "Honey"
+        },
+        "image": "https://www.pepperfry.com/..."
+      },
+      {
+        "id": "d3",
+        "name": "Urban Ladder Dresser",
+        "category": "Dresser",
+        "price": 22999,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Urban Ladder",
+          "Material": "Solid Wood",
+          "Mirror": "LED Light",
+          "Storage": "6 Drawers",
+          "Color": "Teak"
+        },
+        "image": "https://www.urbanladder.com/..."
+      },
+      {
+        "id": "d4",
+        "name": "Nilkamal Plastic Dresser",
+        "category": "Dresser",
+        "price": 4999,
+        "rating": 4.0,
+        "features": {
+          "Brand": "Nilkamal",
+          "Material": "Plastic",
+          "Mirror": "No",
+          "Storage": "2 Drawers",
+          "Color": "Brown"
+        },
+        "image": "https://www.nilkamal.com/..."
+      },
+      {
+        "id": "d5",
+        "name": "Godrej Interio Dresser",
+        "category": "Dresser",
+        "price": 18999,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Godrej Interio",
+          "Material": "Engineered Wood",
+          "Mirror": "Yes",
+          "Storage": "5 Drawers",
+          "Color": "Wenge"
+        },
+        "image": "https://www.godrejinterio.com/..."
+      }
+    ]
+  },
+  "SkincareandBeauty": {
+    "Face Wash": [
+      {
+        "id": "fw1",
+        "name": "Cetaphil Gentle Cleanser",
+        "category": "Face Wash",
+        "price": 599,
+        "rating": 4.7,
+        "features": {
+          "Brand": "Cetaphil",
+          "Skin Type": "All",
+          "Size": "125 ml",
+          "Fragrance": "Free",
+          "Key Ingredient": "Glycerin"
+        },
+        "image": "https://www.cetaphil.in/..."
+      },
+      {
+        "id": "fw2",
+        "name": "Himalaya Neem Face Wash",
+        "category": "Face Wash",
+        "price": 175,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Himalaya",
+          "Skin Type": "Oily/Acne-Prone",
+          "Size": "100 ml",
+          "Key Ingredient": "Neem + Turmeric"
+        },
+        "image": "https://himalayawellness.in/..."
+      },
+      {
+        "id": "fw3",
+        "name": "The Derma Co Salicylic",
+        "category": "Face Wash",
+        "price": 249,
+        "rating": 4.5,
+        "features": {
+          "Brand": "The Derma Co",
+          "Skin Type": "Acne-Prone",
+          "Size": "100 ml",
+          "Key Ingredient": "2% Salicylic Acid"
+        },
+        "image": "https://thedermaco.com/..."
+      },
+      {
+        "id": "fw4",
+        "name": "Minimalist 2% Salicylic",
+        "category": "Face Wash",
+        "price": 299,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Minimalist",
+          "Skin Type": "Oily",
+          "Size": "100 ml",
+          "Key Ingredient": "Salicylic + LHA"
+        },
+        "image": "https://beminimalist.co/..."
+      },
+      {
+        "id": "fw5",
+        "name": "Mamaearth Ubtan",
+        "category": "Face Wash",
+        "price": 249,
+        "rating": 4.2,
+        "features": {
+          "Brand": "Mamaearth",
+          "Skin Type": "All",
+          "Size": "100 ml",
+          "Key Ingredient": "Turmeric + Saffron"
+        },
+        "image": "https://mamaearth.in/..."
+      }
+    ],
+    "Moisturizers": [
+      {
+        "id": "m1",
+        "name": "Cetaphil Moisturising Lotion",
+        "category": "Moisturizer",
+        "price": 499,
+        "rating": 4.7,
+        "features": {
+          "Brand": "Cetaphil",
+          "Skin Type": "Dry to Normal",
+          "Size": "250 ml",
+          "Fragrance": "Free",
+          "Key Ingredient": "Glycerin"
+        },
+        "image": "https://www.cetaphil.in/..."
+      },
+      {
+        "id": "m2",
+        "name": "Nivea Soft Light",
+        "category": "Moisturizer",
+        "price": 225,
+        "rating": 4.4,
+        "features": {
+          "Brand": "Nivea",
+          "Skin Type": "All",
+          "Size": "200 ml",
+          "Key Ingredient": "Vitamin E + Jojoba"
+        },
+        "image": "https://www.nivea.in/..."
+      },
+      {
+        "id": "m3",
+        "name": "The Ordinary Hyaluronic Acid",
+        "category": "Moisturizer",
+        "price": 650,
+        "rating": 4.6,
+        "features": {
+          "Brand": "The Ordinary",
+          "Skin Type": "All",
+          "Size": "30 ml",
+          "Key Ingredient": "2% Hyaluronic Acid"
+        },
+        "image": "https://theordinary.deciem.com/..."
+      },
+      {
+        "id": "m4",
+        "name": "Minimalist 10% Niacinamide",
+        "category": "Moisturizer",
+        "price": 599,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Minimalist",
+          "Skin Type": "Oily/Acne",
+          "Size": "50 gm",
+          "Key Ingredient": "Niacinamide + Zinc"
+        },
+        "image": "https://beminimalist.co/..."
+      },
+      {
+        "id": "m5",
+        "name": "Plum Goodness E-Luminous",
+        "category": "Moisturizer",
+        "price": 470,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Plum",
+          "Skin Type": "All",
+          "Size": "50 gm",
+          "Key Ingredient": "Vitamin C + Aloe"
+        },
+        "image": "https://plumgoodness.com/..."
+      }
+    ],
+    "Lipsticks": [
+      {
+        "id": "l1",
+        "name": "Maybelline Super Stay Matte Ink",
+        "category": "Lipstick",
+        "price": 699,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Maybelline",
+          "Finish": "Matte",
+          "Longevity": "16H",
+          "Shades": "30+",
+          "Transfer-proof": "Yes"
+        },
+        "image": "https://www.maybelline.co.in/..."
+      },
+      {
+        "id": "l2",
+        "name": "Lakmé Enrich Matte",
+        "category": "Lipstick",
+        "price": 350,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Lakmé",
+          "Finish": "Matte",
+          "Shades": "20",
+          "Vitamin E": "Yes"
+        },
+        "image": "https://www.lakmeindia.com/..."
+      },
+      {
+        "id": "l3",
+        "name": "MAC Retro Matte",
+        "category": "Lipstick",
+        "price": 2100,
+        "rating": 4.8,
+        "features": {
+          "Brand": "MAC",
+          "Finish": "Matte",
+          "Shades": "50+",
+          "Iconic": "Ruby Woo"
+        },
+        "image": "https://www.maccosmetics.in/..."
+      },
+      {
+        "id": "l4",
+        "name": "Sugar Matte As Hell Crayon",
+        "category": "Lipstick",
+        "price": 799,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Sugar",
+          "Format": "Crayon",
+          "Finish": "Matte",
+          "Shades": "25+",
+          "Sharpener": "Included"
+        },
+        "image": "https://in.sugarcosmetics.com/..."
+      },
+      {
+        "id": "l5",
+        "name": "Nykaa Matte Luxe",
+        "category": "Lipstick",
+        "price": 699,
+        "rating": 4.2,
+        "features": {
+          "Brand": "Nykaa",
+          "Finish": "Matte",
+          "Shades": "15",
+          "Cruelty-free": "Yes"
+        },
+        "image": "https://www.nykaa.com/..."
+      }
+    ],
+    "Eye Shadows": [
+      {
+        "id": "e1",
+        "name": "Huda Beauty Rose Quartz",
+        "category": "Eye Shadow",
+        "price": 6200,
+        "rating": 4.8,
+        "features": {
+          "Brand": "Huda Beauty",
+          "Shades": "18",
+          "Finish": "Matte/Shimmer",
+          "Pigmentation": "High"
+        },
+        "image": "https://www.hudabeauty.com/..."
+      },
+      {
+        "id": "e2",
+        "name": "Nykaa So Creme Palette",
+        "category": "Eye Shadow",
+        "price": 899,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Nykaa",
+          "Shades": "12",
+          "Finish": "Creamy Matte",
+          "Cruelty-free": "Yes"
+        },
+        "image": "https://www.nykaa.com/..."
+      },
+      {
+        "id": "e3",
+        "name": "Sugar Blend The Rules",
+        "category": "Eye Shadow",
+        "price": 1299,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Sugar",
+          "Shades": "10",
+          "Finish": "Matte/Metallic",
+          "Mirror": "Yes"
+        },
+        "image": "https://in.sugarcosmetics.com/..."
+      },
+      {
+        "id": "e4",
+        "name": "Faces Canada Ultime Pro",
+        "category": "Eye Shadow",
+        "price": 699,
+        "rating": 4.2,
+        "features": {
+          "Brand": "Faces Canada",
+          "Shades": "12",
+          "Finish": "Matte/Shimmer",
+          "Budget": "Yes"
+        },
+        "image": "https://www.facescanada.com/..."
+      },
+      {
+        "id": "e5",
+        "name": "Swiss Beauty Brick Palette",
+        "category": "Eye Shadow",
+        "price": 449,
+        "rating": 4.1,
+        "features": {
+          "Brand": "Swiss Beauty",
+          "Shades": "35",
+          "Finish": "Multi",
+          "Pigmentation": "Medium"
+        },
+        "image": "https://www.swissbeauty.in/..."
+      }
+    ]
+  },
+  "Automobiles": {
+    "Cars": [
+      {
+        "id": "car1",
+        "name": "Tata Nexon EV",
+        "category": "Electric SUV",
+        "price": 1499000,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Tata",
+          "Range": "400+ km",
+          "Battery": "40.5 kWh",
+          "Power": "144 HP",
+          "Charging": "Fast DC"
+        },
+        "image": "https://cars.tatamotors.com/images/nexon-ev/..."
+      },
+      {
+        "id": "car2",
+        "name": "Hyundai Creta",
+        "category": "SUV",
+        "price": 1199000,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Hyundai",
+          "Engine": "1.5L Petrol",
+          "Mileage": "18 kmpl",
+          "Power": "115 HP",
+          "Features": "Panoramic Sunroof"
+        },
+        "image": "https://www.hyundai.com/in/en/find-a-car/creta/highlights"
+      },
+      {
+        "id": "car3",
+        "name": "Mahindra Thar",
+        "category": "Off-Road SUV",
+        "price": 1499000,
+        "rating": 4.7,
+        "features": {
+          "Brand": "Mahindra",
+          "Engine": "2.0L Turbo",
+          "Mileage": "15 kmpl",
+          "Power": "150 HP",
+          "Drivetrain": "4x4"
+        },
+        "image": "https://auto.mahindra.com/suv/thar"
+      },
+      {
+        "id": "car4",
+        "name": "Maruti Swift",
+        "category": "Hatchback",
+        "price": 649000,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Maruti Suzuki",
+          "Engine": "1.2L Petrol",
+          "Mileage": "25 kmpl",
+          "Power": "82 HP",
+          "Features": "Auto AC"
+        },
+        "image": "https://www.marutisuzuki.com/swift"
+      },
+      {
+        "id": "car5",
+        "name": "Kia Seltos",
+        "category": "SUV",
+        "price": 1099000,
+        "rating": 4.6,
+        "features": {
+          "Brand": "Kia",
+          "Engine": "1.5L Diesel",
+          "Mileage": "20 kmpl",
+          "Power": "115 HP",
+          "Features": "UVO Connect"
+        },
+        "image": "https://www.kia.com/in/our-vehicles/seltos/showroom.html"
+      }
+    ],
+    "Bikes": [
+      {
+        "id": "bike1",
+        "name": "Royal Enfield Classic 350",
+        "category": "Cruiser",
+        "price": 199000,
+        "rating": 4.7,
+        "features": {
+          "Brand": "Royal Enfield",
+          "Engine": "349cc",
+          "Mileage": "35 kmpl",
+          "Power": "20.2 HP",
+          "Weight": "195 kg"
+        },
+        "image": "https://www.royalenfield.com/in/en/motorcycles/classic-350/"
+      },
+      {
+        "id": "bike2",
+        "name": "Bajaj Pulsar NS200",
+        "category": "Naked Sports",
+        "price": 149000,
+        "rating": 4.5,
+        "features": {
+          "Brand": "Bajaj",
+          "Engine": "200cc",
+          "Mileage": "36 kmpl",
+          "Power": "24.1 HP",
+          "Brakes": "Dual Disc ABS"
+        },
+        "image": "https://www.bajajauto.com/bikes/pulsar/pulsar-ns200"
+      },
+      {
+        "id": "bike3",
+        "name": "Hero Splendor Plus",
+        "category": "Commuter",
+        "price": 75000,
+        "rating": 4.3,
+        "features": {
+          "Brand": "Hero",
+          "Engine": "97.2cc",
+          "Mileage": "70 kmpl",
+          "Power": "8 HP",
+          "Weight": "112 kg"
+        },
+        "image": "https://www.heromotocorp.com/en-in/motorcycles/commuter/splendor-plus.html"
+      },
+      {
+        "id": "bike4",
+        "name": "TVS Apache RTR 160",
+        "category": "Sports Commuter",
+        "price": 124000,
+        "rating": 4.4,
+        "features": {
+          "Brand": "TVS",
+          "Engine": "160cc",
+          "Mileage": "50 kmpl",
+          "Power": "15.5 HP",
+          "Features": "Glide Through Tech"
+        },
+        "image": "https://www.tvsmotor.com/tvs-apache/apache-rtr-160"
+      },
+      {
+        "id": "bike5",
+        "name": "Honda Activa 6G",
+        "category": "Scooter",
+        "price": 78000,
+        "rating": 4.2,
+        "features": {
+          "Brand": "Honda",
+          "Engine": "110cc",
+          "Mileage": "55 kmpl",
+          "Power": "7.8 HP",
+          "Features": "Silent Start"
+        },
+        "image": "https://www.honda2wheelersindia.com/activa6g/"
+      }
+    ]
+  }
 }
-],
-"Footwear": [
-{
-"id": "fw1",
-"name": "Bata Heels",
-"category": "Women's Footwear",
-"price": 1999,
-"rating": 4.2,
-"features": {
-"Brand": "Bata",
-"Material": "PU",
-"Color": "Black",
-"Heel Height": "3 inch",
-"Type": "Block Heels"
-},
-"image": "https://www.bata.in/..."
-},
-{
-"id": "fw2",
-"name": "Metro Sandals",
-"category": "Women's Footwear",
-"price": 2490,
-"rating": 4.3,
-"features": {
-"Brand": "Metro",
-"Material": "Leather",
-"Color": "Tan",
-"Type": "Flat Sandals"
-},
-"image": "https://www.metroshoes.com/..."
-},
-{
-"id": "fw3",
-"name": "Catwalk Pumps",
-"category": "Women's Footwear",
-"price": 1795,
-"rating": 4.1,
-"features": {
-"Brand": "Catwalk",
-"Material": "Synthetic",
-"Color": "Red",
-"Heel Height": "4 inch"
-},
-"image": "https://www.myntra.com/..."
-},
-{
-"id": "fw4",
-"name": "Crocs Clogs",
-"category": "Unisex Footwear",
-"price": 2495,
-"rating": 4.5,
-"features": {
-"Brand": "Crocs",
-"Material": "Croslite",
-"Color": "Navy",
-"Type": "Clogs"
-},
-"image": "https://www.crocs.in/..."
-},
-{
-"id": "fw5",
-"name": "Skechers Go Walk",
-"category": "Women's Footwear",
-"price": 5999,
-"rating": 4.6,
-"features": {
-"Brand": "Skechers",
-"Material": "Mesh",
-"Color": "Grey",
-"Type": "Walking Shoes"
-},
-"image": "https://www.skechers.in/..."
-},
-{
-"id": "fw6",
-"name": "Liberty Formal Shoes",
-"category": "Men's Footwear",
-"price": 2999,
-"rating": 4.3,
-"features": {
-"Brand": "Liberty",
-"Material": "Leather",
-"Color": "Black",
-"Type": "Derby"
-},
-"image": "https://www.liberty.in/..."
-},
-{
-"id": "fw7",
-"name": "Campus Running Shoes",
-"category": "Unisex Footwear",
-"price": 1499,
-"rating": 4.1,
-"features": {
-"Brand": "Campus",
-"Material": "Mesh",
-"Color": "Blue",
-"Type": "Sports"
-},
-"image": "https://www.campusshoes.com/..."
-},
-{
-"id": "fw8",
-"name": "Hush Puppies Loafers",
-"category": "Men's Footwear",
-"price": 4999,
-"rating": 4.5,
-"features": {
-"Brand": "Hush Puppies",
-"Material": "Leather",
-"Color": "Brown",
-"Type": "Slip-on"
-},
-"image": "https://www.hushpuppies.in/..."
-},
-{
-"id": "fw9",
-"name": "Mochi Flats",
-"category": "Women's Footwear",
-"price": 1590,
-"rating": 4.2,
-"features": {
-"Brand": "Mochi",
-"Material": "Synthetic",
-"Color": "Gold",
-"Type": "Ballerinas"
-},
-"image": "https://www.mochi.com/..."
-},
-{
-"id": "fw10",
-"name": "Red Chief Boots",
-"category": "Men's Footwear",
-"price": 4499,
-"rating": 4.4,
-"features": {
-"Brand": "Red Chief",
-"Material": "Leather",
-"Color": "Tan",
-"Type": "Ankle Boots"
-},
-"image": "https://www.redchief.in/..."
-}
-],
-"Accessories": [
-{
-"id": "a1",
-"name": "Titan Karishma Analog Watch",
-"category": "Watches",
-"price": 2495,
-"rating": 4.4,
-"features": {
-"Brand": "Titan",
-"Gender": "Men",
-"Dial": "White",
-"Strap": "Stainless Steel"
-},
-"image": "https://www.titan.co.in/..."
-},
-{
-"id": "a2",
-"name": "Fastrack Sunglasses",
-"category": "Eyewear",
-"price": 1299,
-"rating": 4.3,
-"features": {
-"Brand": "Fastrack",
-"Frame": "Wayfarer",
-"Lens": "UV Protected",
-"Color": "Black"
-},
-"image": "https://www.fastrack.in/..."
-},
-{
-"id": "a3",
-"name": "Lavie Handbag",
-"category": "Bags",
-"price": 3499,
-"rating": 4.5,
-"features": {
-"Brand": "Lavie",
-"Material": "PU",
-"Color": "Tan",
-"Type": "Tote"
-},
-"image": "https://www.lavie.com/..."
-},
-{
-"id": "a4",
-"name": "Caprese Sling Bag",
-"category": "Bags",
-"price": 1999,
-"rating": 4.2,
-"features": {
-"Brand": "Caprese",
-"Material": "PU",
-"Color": "Red",
-"Type": "Crossbody"
-},
-"image": "https://www.capresebags.com/..."
-},
-{
-"id": "a5",
-"name": "WildHorn Wallet",
-"category": "Wallets",
-"price": 899,
-"rating": 4.3,
-"features": {
-"Brand": "WildHorn",
-"Material": "Leather",
-"Color": "Brown",
-"Type": "Bi-fold"
-},
-"image": "https://www.myntra.com/..."
-},
-{
-"id": "a6",
-"name": "Lino Perros Clutch",
-"category": "Bags",
-"price": 1595,
-"rating": 4.2,
-"features": {
-"Brand": "Lino Perros",
-"Material": "PU",
-"Color": "Gold",
-"Type": "Evening Clutch"
-},
-"image": "https://www.linoperros.com/..."
-},
-{
-"id": "a7",
-"name": "Voyage Backpack",
-"category": "Bags",
-"price": 2499,
-"rating": 4.4,
-"features": {
-"Brand": "Voyage",
-"Material": "Polyester",
-"Color": "Black",
-"Capacity": "30L"
-},
-"image": "https://www.myntra.com/..."
-},
-{
-"id": "a8",
-"name": "Police Sunglasses",
-"category": "Eyewear",
-"price": 4999,
-"rating": 4.5,
-"features": {
-"Brand": "Police",
-"Frame": "Aviator",
-"Lens": "Polarized",
-"Color": "Gunmetal"
-},
-"image": "https://www.police.it/..."
-},
-{
-"id": "a9",
-"name": "Da Milano Belt",
-"category": "Belts",
-"price": 2999,
-"rating": 4.6,
-"features": {
-"Brand": "Da Milano",
-"Material": "Leather",
-"Color": "Black",
-"Type": "Reversible"
-},
-"image": "https://www.damilano.com/..."
-},
-{
-"id": "a10",
-"name": "Baggit Wallet",
-"category": "Wallets",
-"price": 1299,
-"rating": 4.2,
-"features": {
-"Brand": "Baggit",
-"Material": "PU",
-"Color": "Pink",
-"Type": "Tri-fold"
-},
-"image": "https://www.baggit.com/..."
-}
-]
-},
-"Furniture": {
-"Beds": [
-{
-"id": "b1",
-"name": "Wakefit Orion Bed",
-"category": "Bed",
-"price": 14999,
-"rating": 4.5,
-"features": {
-"Brand": "Wakefit",
-"Size": "King",
-"Material": "Engineered Wood",
-"Storage": "Hydraulic",
-"Color": "Walnut"
-},
-"image": "https://www.wakefit.co/..."
-},
-{
-"id": "b2",
-"name": "Pepperfry Queen Bed",
-"category": "Bed",
-"price": 18999,
-"rating": 4.4,
-"features": {
-"Brand": "Pepperfry",
-"Size": "Queen",
-"Material": "Sheesham Wood",
-"Storage": "Box",
-"Color": "Teak"
-},
-"image": "https://www.pepperfry.com/..."
-},
-{
-"id": "b3",
-"name": "Urban Ladder Bunk Bed",
-"category": "Bed",
-"price": 32999,
-"rating": 4.3,
-"features": {
-"Brand": "Urban Ladder",
-"Size": "Twin over Twin",
-"Material": "Metal",
-"Color": "Black"
-},
-"image": "https://www.urbanladder.com/..."
-},
-{
-"id": "b4",
-"name": "Nilkamal Single Bed",
-"category": "Bed",
-"price": 8999,
-"rating": 4.1,
-"features": {
-"Brand": "Nilkamal",
-"Size": "Single",
-"Material": "Plastic",
-"Color": "Brown"
-},
-"image": "https://www.nilkamal.com/..."
-},
-{
-"id": "b5",
-"name": "Godrej Interio King Bed",
-"category": "Bed",
-"price": 45999,
-"rating": 4.6,
-"features": {
-"Brand": "Godrej Interio",
-"Size": "King",
-"Material": "Solid Wood",
-"Storage": "Hydraulic",
-"Color": "Mahogany"
-},
-"image": "https://www.godrejinterio.com/..."
-},
-{
-"id": "b6",
-"name": "Durian Platform Bed",
-"category": "Bed",
-"price": 27999,
-"rating": 4.4,
-"features": {
-"Brand": "Durian",
-"Size": "Queen",
-"Material": "Engineered Wood",
-"Color": "Wenge"
-},
-"image": "https://www.durian.in/..."
-},
-{
-"id": "b7",
-"name": "Spacewood Double Bed",
-"category": "Bed",
-"price": 21999,
-"rating": 4.3,
-"features": {
-"Brand": "Spacewood",
-"Size": "Double",
-"Material": "Particle Board",
-"Storage": "Yes",
-"Color": "Frosty White"
-},
-"image": "https://www.spacewood.in/..."
-},
-{
-"id": "b8",
-"name": "Zuari Storage Bed",
-"category": "Bed",
-"price": 18999,
-"rating": 4.2,
-"features": {
-"Brand": "Zuari",
-"Size": "Queen",
-"Material": "MDF",
-"Storage": "Box",
-"Color": "Oak"
-},
-"image": "https://www.zuari.com/..."
-},
-{
-"id": "b9",
-"name": "Home Centre Upholstered Bed",
-"category": "Bed",
-"price": 35999,
-"rating": 4.5,
-"features": {
-"Brand": "Home Centre",
-"Size": "King",
-"Material": "Fabric",
-"Color": "Grey"
-},
-"image": "https://www.homecentre.in/..."
-},
-{
-"id": "b10",
-"name": "IKEA MALM Bed",
-"category": "Bed",
-"price": 15999,
-"rating": 4.4,
-"features": {
-"Brand": "IKEA",
-"Size": "Queen",
-"Material": "Particle Board",
-"Storage": "Optional",
-"Color": "White"
-},
-"image": "https://www.ikea.com/..."
-}
-],
-"Couches": [
-{
-"id": "c1",
-"name": "Wakefit 3-Seater Sofa",
-"category": "Sofa",
-"price": 18999,
-"rating": 4.4,
-"features": {
-"Brand": "Wakefit",
-"Seater": "3",
-"Material": "Fabric",
-"Color": "Grey"
-},
-"image": "https://www.wakefit.co/..."
-},
-{
-"id": "c2",
-"name": "Pepperfry L-Shaped Sofa",
-"category": "Sofa",
-"price": 45999,
-"rating": 4.5,
-"features": {
-"Brand": "Pepperfry",
-"Type": "L-Shaped",
-"Material": "Leatherette",
-"Color": "Brown"
-},
-"image": "https://www.pepperfry.com/..."
-},
-{
-"id": "c3",
-"name": "Urban Ladder Recliner Sofa",
-"category": "Sofa",
-"price": 64999,
-"rating": 4.6,
-"features": {
-"Brand": "Urban Ladder",
-"Seater": "3",
-"Material": "Leather",
-"Recline": "Yes",
-"Color": "Beige"
-},
-"image": "https://www.urbanladder.com/..."
-},
-{
-"id": "c4",
-"name": "Nilkamal 2-Seater Sofa",
-"category": "Sofa",
-"price": 12999,
-"rating": 4.1,
-"features": {
-"Brand": "Nilkamal",
-"Seater": "2",
-"Material": "Plastic",
-"Color": "Black"
-},
-"image": "https://www.nilkamal.com/..."
-},
-{
-"id": "c5",
-"name": "Godrej Interio Sectional",
-"category": "Sofa",
-"price": 79999,
-"rating": 4.7,
-"features": {
-"Brand": "Godrej Interio",
-"Type": "Sectional",
-"Material": "Fabric",
-"Color": "Blue"
-},
-"image": "https://www.godrejinterio.com/..."
-},
-{
-"id": "c6",
-"name": "Durian Chesterfield",
-"category": "Sofa",
-"price": 89999,
-"rating": 4.8,
-"features": {
-"Brand": "Durian",
-"Style": "Chesterfield",
-"Material": "Leather",
-"Color": "Tan"
-},
-"image": "https://www.durian.in/..."
-},
-{
-"id": "c7",
-"name": "Spacewood Sofa Cum Bed",
-"category": "Sofa",
-"price": 24999,
-"rating": 4.3,
-"features": {
-"Brand": "Spacewood",
-"Function": "Sofa Cum Bed",
-"Material": "Fabric",
-"Color": "Grey"
-},
-"image": "https://www.spacewood.in/..."
-},
-{
-"id": "c8",
-"name": "Zuari Loveseat",
-"category": "Sofa",
-"price": 17999,
-"rating": 4.2,
-"features": {
-"Brand": "Zuari",
-"Seater": "2",
-"Material": "Fabric",
-"Color": "Maroon"
-},
-"image": "https://www.zuari.com/..."
-},
-{
-"id": "c9",
-"name": "Home Centre Fabric Sofa",
-"category": "Sofa",
-"price": 33999,
-"rating": 4.4,
-"features": {
-"Brand": "Home Centre",
-"Seater": "3",
-"Material": "Velvet",
-"Color": "Green"
-},
-"image": "https://www.homecentre.in/..."
-},
-{
-"id": "c10",
-"name": "IKEA FRIHETEN Sofa Bed",
-"category": "Sofa",
-"price": 29999,
-"rating": 4.5,
-"features": {
-"Brand": "IKEA",
-"Function": "Sofa Bed",
-"Material": "Polyester",
-"Color": "Grey"
-},
-"image": "https://www.ikea.com/..."
-}
-],
-"Tables": [
-{
-"id": "t1",
-"name": "Wakefit Study Table",
-"category": "Table",
-"price": 5999,
-"rating": 4.4,
-"features": {
-"Brand": "Wakefit",
-"Type": "Study Table",
-"Material": "Engineered Wood",
-"Color": "Walnut"
-},
-"image": "https://www.wakefit.co/..."
-},
-{
-"id": "t2",
-"name": "Pepperfry Coffee Table",
-"category": "Table",
-"price": 8999,
-"rating": 4.3,
-"features": {
-"Brand": "Pepperfry",
-"Type": "Coffee Table",
-"Material": "Sheesham Wood",
-"Color": "Honey"
-},
-"image": "https://www.pepperfry.com/..."
-},
-{
-"id": "t3",
-"name": "Urban Ladder Dining Table",
-"category": "Table",
-"price": 25999,
-"rating": 4.5,
-"features": {
-"Brand": "Urban Ladder",
-"Type": "6-Seater Dining",
-"Material": "Solid Wood",
-"Color": "Teak"
-},
-"image": "https://www.urbanladder.com/..."
-},
-{
-"id": "t4",
-"name": "Nilkamal Center Table",
-"category": "Table",
-"price": 3999,
-"rating": 4.1,
-"features": {
-"Brand": "Nilkamal",
-"Type": "Center Table",
-"Material": "Plastic",
-"Color": "Brown"
-},
-"image": "https://www.nilkamal.com/..."
-},
-{
-"id": "t5",
-"name": "Godrej Interio Console",
-"category": "Table",
-"price": 14999,
-"rating": 4.6,
-"features": {
-"Brand": "Godrej Interio",
-"Type": "Console Table",
-"Material": "Engineered Wood",
-"Color": "Wenge"
-},
-"image": "https://www.godrejinterio.com/..."
-},
-{
-"id": "t6",
-"name": "Durian Nesting Tables",
-"category": "Table",
-"price": 11999,
-"rating": 4.4,
-"features": {
-"Brand": "Durian",
-"Type": "Nesting Set of 3",
-"Material": "MDF + Glass",
-"Color": "Black"
-},
-"image": "https://www.durian.in/..."
-},
-{
-"id": "t7",
-"name": "Spacewood Side Table",
-"category": "Table",
-"price": 4999,
-"rating": 4.2,
-"features": {
-"Brand": "Spacewood",
-"Type": "Bedside Table",
-"Material": "Particle Board",
-"Color": "White"
-},
-"image": "https://www.spacewood.in/..."
-},
-{
-"id": "t8",
-"name": "Zuari Folding Table",
-"category": "Table",
-"price": 6999,
-"rating": 4.1,
-"features": {
-"Brand": "Zuari",
-"Type": "Folding Study",
-"Material": "MDF",
-"Color": "Oak"
-},
-"image": "https://www.zuari.com/..."
-},
-{
-"id": "t9",
-"name": "Home Centre Marble Top",
-"category": "Table",
-"price": 18999,
-"rating": 4.5,
-"features": {
-"Brand": "Home Centre",
-"Type": "Coffee Table",
-"Material": "Marble + Metal",
-"Color": "Gold"
-},
-"image": "https://www.homecentre.in/..."
-},
-{
-"id": "t10",
-"name": "IKEA LACK Side Table",
-"category": "Table",
-"price": 1499,
-"rating": 4.3,
-"features": {
-"Brand": "IKEA",
-"Type": "Side Table",
-"Material": "Particle Board",
-"Color": "White"
-},
-"image": "https://www.ikea.com/..."
-}
-],
-"Dressers": [
-{
-"id": "d1",
-"name": "Wakefit Dressing Table",
-"category": "Dresser",
-"price": 9999,
-"rating": 4.4,
-"features": {
-"Brand": "Wakefit",
-"Material": "Engineered Wood",
-"Mirror": "Yes",
-"Storage": "3 Drawers",
-"Color": "Walnut"
-},
-"image": "https://www.wakefit.co/..."
-},
-{
-"id": "d2",
-"name": "Pepperfry Vanity",
-"category": "Dresser",
-"price": 15999,
-"rating": 4.5,
-"features": {
-"Brand": "Pepperfry",
-"Material": "Sheesham Wood",
-"Mirror": "Foldable",
-"Storage": "4 Drawers",
-"Color": "Honey"
-},
-"image": "https://www.pepperfry.com/..."
-},
-{
-"id": "d3",
-"name": "Urban Ladder Dresser",
-"category": "Dresser",
-"price": 22999,
-"rating": 4.6,
-"features": {
-"Brand": "Urban Ladder",
-"Material": "Solid Wood",
-"Mirror": "LED Light",
-"Storage": "6 Drawers",
-"Color": "Teak"
-},
-"image": "https://www.urbanladder.com/..."
-},
-{
-"id": "d4",
-"name": "Nilkamal Plastic Dresser",
-"category": "Dresser",
-"price": 4999,
-"rating": 4.0,
-"features": {
-"Brand": "Nilkamal",
-"Material": "Plastic",
-"Mirror": "No",
-"Storage": "2 Drawers",
-"Color": "Brown"
-},
-"image": "https://www.nilkamal.com/..."
-},
-{
-"id": "d5",
-"name": "Godrej Interio Dresser",
-"category": "Dresser",
-"price": 18999,
-"rating": 4.5,
-"features": {
-"Brand": "Godrej Interio",
-"Material": "Engineered Wood",
-"Mirror": "Yes",
-"Storage": "5 Drawers",
-"Color": "Wenge"
-},
-"image": "https://www.godrejinterio.com/..."
-},
-{
-"id": "d6",
-"name": "Durian Wall Mounted",
-"category": "Dresser",
-"price": 12999,
-"rating": 4.3,
-"features": {
-"Brand": "Durian",
-"Type": "Wall Mounted",
-"Material": "MDF",
-"Mirror": "Yes",
-"Color": "White"
-},
-"image": "https://www.durian.in/..."
-},
-{
-"id": "d7",
-"name": "Spacewood Compact",
-"category": "Dresser",
-"price": 8999,
-"rating": 4.2,
-"features": {
-"Brand": "Spacewood",
-"Material": "Particle Board",
-"Mirror": "Yes",
-"Storage": "2 Drawers",
-"Color": "Frosty White"
-},
-"image": "https://www.spacewood.in/..."
-},
-{
-"id": "d8",
-"name": "Zuari Classic Dresser",
-"category": "Dresser",
-"price": 14999,
-"rating": 4.3,
-"features": {
-"Brand": "Zuari",
-"Material": "MDF",
-"Mirror": "Yes",
-"Storage": "4 Drawers",
-"Color": "Oak"
-},
-"image": "https://www.zuari.com/..."
-},
-{
-"id": "d9",
-"name": "Home Centre LED Mirror",
-"category": "Dresser",
-"price": 17999,
-"rating": 4.4,
-"features": {
-"Brand": "Home Centre",
-"Mirror": "LED Touch",
-"Material": "Engineered Wood",
-"Storage": "3 Drawers",
-"Color": "Grey"
-},
-"image": "https://www.homecentre.in/..."
-},
-{
-"id": "d10",
-"name": "IKEA HEMNES Dresser",
-"category": "Dresser",
-"price": 19999,
-"rating": 4.6,
-"features": {
-"Brand": "IKEA",
-"Material": "Solid Wood",
-"Mirror": "Optional",
-"Storage": "8 Drawers",
-"Color": "White Stain"
-},
-"image": "https://www.ikea.com/..."
-}
-]
-},
-"SkincareandBeauty": {
-"Face Wash": [
-{
-"id": "fw1",
-"name": "Cetaphil Gentle Cleanser",
-"category": "Face Wash",
-"price": 599,
-"rating": 4.7,
-"features": {
-"Brand": "Cetaphil",
-"Skin Type": "All",
-"Size": "125 ml",
-"Fragrance": "Free",
-"Key Ingredient": "Glycerin"
-},
-"image": "https://www.cetaphil.in/..."
-},
-{
-"id": "fw2",
-"name": "Himalaya Neem Face Wash",
-"category": "Face Wash",
-"price": 175,
-"rating": 4.3,
-"features": {
-"Brand": "Himalaya",
-"Skin Type": "Oily/Acne-Prone",
-"Size": "100 ml",
-"Key Ingredient": "Neem + Turmeric"
-},
-"image": "https://himalayawellness.in/..."
-},
-{
-"id": "fw3",
-"name": "The Derma Co Salicylic",
-"category": "Face Wash",
-"price": 249,
-"rating": 4.5,
-"features": {
-"Brand": "The Derma Co",
-"Skin Type": "Acne-Prone",
-"Size": "100 ml",
-"Key Ingredient": "2% Salicylic Acid"
-},
-"image": "https://thedermaco.com/..."
-},
-{
-"id": "fw4",
-"name": "Minimalist 2% Salicylic",
-"category": "Face Wash",
-"price": 299,
-"rating": 4.6,
-"features": {
-"Brand": "Minimalist",
-"Skin Type": "Oily",
-"Size": "100 ml",
-"Key Ingredient": "Salicylic + LHA"
-},
-"image": "https://beminimalist.co/..."
-},
-{
-"id": "fw5",
-"name": "Mamaearth Ubtan",
-"category": "Face Wash",
-"price": 249,
-"rating": 4.2,
-"features": {
-"Brand": "Mamaearth",
-"Skin Type": "All",
-"Size": "100 ml",
-"Key Ingredient": "Turmeric + Saffron"
-},
-"image": "https://mamaearth.in/..."
-},
-{
-"id": "fw6",
-"name": "Neutrogena Deep Clean",
-"category": "Face Wash",
-"price": 525,
-"rating": 4.4,
-"features": {
-"Brand": "Neutrogena",
-"Skin Type": "Oily",
-"Size": "200 ml",
-"Key Ingredient": "Hydroxy Acid"
-},
-"image": "https://www.neutrogena.in/..."
-},
-{
-"id": "fw7",
-"name": "Dot & Key Vitamin C",
-"category": "Face Wash",
-"price": 245,
-"rating": 4.3,
-"features": {
-"Brand": "Dot & Key",
-"Skin Type": "Dull",
-"Size": "120 ml",
-"Key Ingredient": "Vitamin C + Turmeric"
-},
-"image": "https://www.dotandkey.com/..."
-},
-{
-"id": "fw8",
-"name": "Plum Green Tea",
-"category": "Face Wash",
-"price": 350,
-"rating": 4.5,
-"features": {
-"Brand": "Plum",
-"Skin Type": "Oily/Acne",
-"Size": "100 ml",
-"Key Ingredient": "Green Tea"
-},
-"image": "https://plumgoodness.com/..."
-},
-{
-"id": "fw9",
-"name": "Wow Skin Science Apple Cider",
-"category": "Face Wash",
-"price": 249,
-"rating": 4.1,
-"features": {
-"Brand": "Wow",
-"Skin Type": "All",
-"Size": "100 ml",
-"Key Ingredient": "Apple Cider Vinegar"
-},
-"image": "https://www.buywow.in/..."
-},
-{
-"id": "fw10",
-"name": "Biotique Bio Honey Gel",
-"category": "Face Wash",
-"price": 180,
-"rating": 4.2,
-"features": {
-"Brand": "Biotique",
-"Skin Type": "All",
-"Size": "100 ml",
-"Key Ingredient": "Honey + Aloe"
-},
-"image": "https://www.biotique.com/..."
-}
-],
-"Foundations": [
-{
-"id": "f1",
-"name": "Maybelline Fit Me Matte",
-"category": "Foundation",
-"price": 599,
-"rating": 4.4,
-"features": {
-"Brand": "Maybelline",
-"Finish": "Matte",
-"Coverage": "Medium",
-"Shades": "18",
-"SPF": "No"
-},
-"image": "https://www.maybelline.co.in/..."
-},
-{
-"id": "f2",
-"name": "Lakmé 9 to 5 Primer + Matte",
-"category": "Foundation",
-"price": 550,
-"rating": 4.3,
-"features": {
-"Brand": "Lakmé",
-"Finish": "Matte",
-"Coverage": "Full",
-"Shades": "6",
-"Built-in Primer": "Yes"
-},
-"image": "https://www.lakmeindia.com/..."
-},
-{
-"id": "f3",
-"name": "L'Oreal Paris Infallible",
-"category": "Foundation",
-"price": 1150,
-"rating": 4.5,
-"features": {
-"Brand": "L'Oreal",
-"Finish": "Matte",
-"Coverage": "Full",
-"Longevity": "24H",
-"SPF": "No"
-},
-"image": "https://www.lorealparis.co.in/..."
-},
-{
-"id": "f4",
-"name": "MAC Studio Fix Fluid",
-"category": "Foundation",
-"price": 3500,
-"rating": 4.7,
-"features": {
-"Brand": "MAC",
-"Finish": "Matte",
-"Coverage": "Medium-Full",
-"Shades": "60+",
-"SPF": "15"
-},
-"image": "https://www.maccosmetics.in/..."
-},
-{
-"id": "f5",
-"name": "Nykaa SKINgenius",
-"category": "Foundation",
-"price": 675,
-"rating": 4.2,
-"features": {
-"Brand": "Nykaa",
-"Finish": "Natural",
-"Coverage": "Medium",
-"Shades": "10",
-"SPF": "15"
-},
-"image": "https://www.nykaa.com/..."
-},
-{
-"id": "f6",
-"name": "Sugar Ace Of Face Stick",
-"category": "Foundation",
-"price": 899,
-"rating": 4.3,
-"features": {
-"Brand": "Sugar",
-"Finish": "Matte",
-"Coverage": "Full",
-"Format": "Stick",
-"Shades": "8"
-},
-"image": "https://in.sugarcosmetics.com/..."
-},
-{
-"id": "f7",
-"name": "Faces Canada Weightless",
-"category": "Foundation",
-"price": 599,
-"rating": 4.1,
-"features": {
-"Brand": "Faces Canada",
-"Finish": "Matte",
-"Coverage": "Medium",
-"Shades": "6",
-"SPF": "20"
-},
-"image": "https://www.facescanada.com/..."
-},
-{
-"id": "f8",
-"name": "Swiss Beauty Liquid",
-"category": "Foundation",
-"price": 399,
-"rating": 4.0,
-"features": {
-"Brand": "Swiss Beauty",
-"Finish": "Dewy",
-"Coverage": "Medium",
-"Shades": "5",
-"Long Lasting": "Yes"
-},
-"image": "https://www.swissbeauty.in/..."
-},
-{
-"id": "f9",
-"name": "Colorbar Perfect Match",
-"category": "Foundation",
-"price": 825,
-"rating": 4.2,
-"features": {
-"Brand": "Colorbar",
-"Finish": "Natural",
-"Coverage": "Medium",
-"Shades": "7",
-"SPF": "No"
-},
-"image": "https://www.colorbarcosmetics.com/..."
-},
-{
-"id": "f10",
-"name": "Revlon ColorStay",
-"category": "Foundation",
-"price": 1050,
-"rating": 4.4,
-"features": {
-"Brand": "Revlon",
-"Finish": "Matte",
-"Coverage": "Full",
-"Longevity": "24H",
-"SPF": "15"
-},
-"image": "https://www.revlon.com/..."
-}
-],
-"Moisturizers": [
-{
-"id": "m1",
-"name": "Cetaphil Moisturising Lotion",
-"category": "Moisturizer",
-"price": 499,
-"rating": 4.7,
-"features": {
-"Brand": "Cetaphil",
-"Skin Type": "Dry to Normal",
-"Size": "250 ml",
-"Fragrance": "Free",
-"Key Ingredient": "Glycerin"
-},
-"image": "https://www.cetaphil.in/..."
-},
-{
-"id": "m2",
-"name": "Nivea Soft Light",
-"category": "Moisturizer",
-"price": 225,
-"rating": 4.4,
-"features": {
-"Brand": "Nivea",
-"Skin Type": "All",
-"Size": "200 ml",
-"Key Ingredient": "Vitamin E + Jojoba"
-},
-"image": "https://www.nivea.in/..."
-},
-{
-"id": "m3",
-"name": "The Ordinary Hyaluronic Acid",
-"category": "Moisturizer",
-"price": 650,
-"rating": 4.6,
-"features": {
-"Brand": "The Ordinary",
-"Skin Type": "All",
-"Size": "30 ml",
-"Key Ingredient": "2% Hyaluronic Acid"
-},
-"image": "https://theordinary.deciem.com/..."
-},
-{
-"id": "m4",
-"name": "Minimalist 10% Niacinamide",
-"category": "Moisturizer",
-"price": 599,
-"rating": 4.5,
-"features": {
-"Brand": "Minimalist",
-"Skin Type": "Oily/Acne",
-"Size": "50 gm",
-"Key Ingredient": "Niacinamide + Zinc"
-},
-"image": "https://beminimalist.co/..."
-},
-{
-"id": "m5",
-"name": "Plum Goodness E-Luminous",
-"category": "Moisturizer",
-"price": 470,
-"rating": 4.3,
-"features": {
-"Brand": "Plum",
-"Skin Type": "All",
-"Size": "50 gm",
-"Key Ingredient": "Vitamin C + Aloe"
-},
-"image": "https://plumgoodness.com/..."
-},
-{
-"id": "m6",
-"name": "Dot & Key Ceramide Barrier",
-"category": "Moisturizer",
-"price": 495,
-"rating": 4.4,
-"features": {
-"Brand": "Dot & Key",
-"Skin Type": "Dry",
-"Size": "60 gm",
-"Key Ingredient": "Ceramides + Hyaluronic"
-},
-"image": "https://www.dotandkey.com/..."
-},
-{
-"id": "m7",
-"name": "Mamaearth Aqua Glow Gel",
-"category": "Moisturizer",
-"price": 399,
-"rating": 4.2,
-"features": {
-"Brand": "Mamaearth",
-"Skin Type": "Oily",
-"Size": "100 ml",
-"Key Ingredient": "Himalayan Water"
-},
-"image": "https://mamaearth.in/..."
-},
-{
-"id": "m8",
-"name": "Ponds Super Light Gel",
-"category": "Moisturizer",
-"price": 250,
-"rating": 4.3,
-"features": {
-"Brand": "Ponds",
-"Skin Type": "All",
-"Size": "73 gm",
-"Key Ingredient": "Hyaluronic + Vitamin E"
-},
-"image": "https://www.ponds.com/..."
-},
-{
-"id": "m9",
-"name": "Lakmé Peach Milk",
-"category": "Moisturizer",
-"price": 275,
-"rating": 4.1,
-"features": {
-"Brand": "Lakmé",
-"Skin Type": "Dry",
-"Size": "120 ml",
-"Key Ingredient": "Peach + Milk"
-},
-"image": "https://www.lakmeindia.com/..."
-},
-{
-"id": "m10",
-"name": "Neutrogena Hydro Boost",
-"category": "Moisturizer",
-"price": 650,
-"rating": 4.5,
-"features": {
-"Brand": "Neutrogena",
-"Skin Type": "All",
-"Size": "50 gm",
-"Key Ingredient": "Hyaluronic Acid"
-},
-"image": "https://www.neutrogena.in/..."
-}
-],
-"Lipsticks": [
-{
-"id": "l1",
-"name": "Maybelline Super Stay Matte Ink",
-"category": "Lipstick",
-"price": 699,
-"rating": 4.6,
-"features": {
-"Brand": "Maybelline",
-"Finish": "Matte",
-"Longevity": "16H",
-"Shades": "30+",
-"Transfer-proof": "Yes"
-},
-"image": "https://www.maybelline.co.in/..."
-},
-{
-"id": "l2",
-"name": "Lakmé Enrich Matte",
-"category": "Lipstick",
-"price": 350,
-"rating": 4.3,
-"features": {
-"Brand": "Lakmé",
-"Finish": "Matte",
-"Shades": "20",
-"Vitamin E": "Yes"
-},
-"image": "https://www.lakmeindia.com/..."
-},
-{
-"id": "l3",
-"name": "MAC Retro Matte",
-"category": "Lipstick",
-"price": 2100,
-"rating": 4.8,
-"features": {
-"Brand": "MAC",
-"Finish": "Matte",
-"Shades": "50+",
-"Iconic": "Ruby Woo"
-},
-"image": "https://www.maccosmetics.in/..."
-},
-{
-"id": "l4",
-"name": "Sugar Matte As Hell Crayon",
-"category": "Lipstick",
-"price": 799,
-"rating": 4.5,
-"features": {
-"Brand": "Sugar",
-"Format": "Crayon",
-"Finish": "Matte",
-"Shades": "25+",
-"Sharpener": "Included"
-},
-"image": "https://in.sugarcosmetics.com/..."
-},
-{
-"id": "l5",
-"name": "Nykaa Matte Luxe",
-"category": "Lipstick",
-"price": 699,
-"rating": 4.2,
-"features": {
-"Brand": "Nykaa",
-"Finish": "Matte",
-"Shades": "15",
-"Cruelty-free": "Yes"
-},
-"image": "https://www.nykaa.com/..."
-},
-{
-"id": "l6",
-"name": "L'Oreal Paris Rouge Signature",
-"category": "Lipstick",
-"price": 750,
-"rating": 4.4,
-"features": {
-"Brand": "L'Oreal",
-"Finish": "Matte",
-"Longevity": "12H",
-"Shades": "20"
-},
-"image": "https://www.lorealparis.co.in/..."
-},
-{
-"id": "l7",
-"name": "Faces Canada Weightless Matte",
-"category": "Lipstick",
-"price": 499,
-"rating": 4.1,
-"features": {
-"Brand": "Faces Canada",
-"Finish": "Matte",
-"Shades": "30+",
-"Vitamin E": "Yes"
-},
-"image": "https://www.facescanada.com/..."
-},
-{
-"id": "l8",
-"name": "Swiss Beauty HD Matte",
-"category": "Lipstick",
-"price": 299,
-"rating": 4.0,
-"features": {
-"Brand": "Swiss Beauty",
-"Finish": "Matte",
-"Shades": "24",
-"Budget": "Yes"
-},
-"image": "https://www.swissbeauty.in/..."
-},
-{
-"id": "l9",
-"name": "Colorbar Velvet Matte",
-"category": "Lipstick",
-"price": 425,
-"rating": 4.2,
-"features": {
-"Brand": "Colorbar",
-"Finish": "Velvet Matte",
-"Shades": "40+",
-"2-in-1 Primer": "Yes"
-},
-"image": "https://www.colorbarcosmetics.com/..."
-},
-{
-"id": "l10",
-"name": "Revlon Super Lustrous",
-"category": "Lipstick",
-"price": 799,
-"rating": 4.3,
-"features": {
-"Brand": "Revlon",
-"Finish": "Cream/Matte",
-"Shades": "70+",
-"Vitamin E": "Yes"
-},
-"image": "https://www.revlon.com/..."
-}
-],
-"Eye Shadows": [
-{
-"id": "e1",
-"name": "Huda Beauty Rose Quartz",
-"category": "Eye Shadow",
-"price": 6200,
-"rating": 4.8,
-"features": {
-"Brand": "Huda Beauty",
-"Shades": "18",
-"Finish": "Matte/Shimmer",
-"Pigmentation": "High"
-},
-"image": "https://www.hudabeauty.com/..."
-},
-{
-"id": "e2",
-"name": "Nykaa So Creme Palette",
-"category": "Eye Shadow",
-"price": 899,
-"rating": 4.3,
-"features": {
-"Brand": "Nykaa",
-"Shades": "12",
-"Finish": "Creamy Matte",
-"Cruelty-free": "Yes"
-},
-"image": "https://www.nykaa.com/..."
-},
-{
-"id": "e3",
-"name": "Sugar Blend The Rules",
-"category": "Eye Shadow",
-"price": 1299,
-"rating": 4.5,
-"features": {
-"Brand": "Sugar",
-"Shades": "10",
-"Finish": "Matte/Metallic",
-"Mirror": "Yes"
-},
-"image": "https://in.sugarcosmetics.com/..."
-},
-{
-"id": "e4",
-"name": "Faces Canada Ultime Pro",
-"category": "Eye Shadow",
-"price": 699,
-"rating": 4.2,
-"features": {
-"Brand": "Faces Canada",
-"Shades": "12",
-"Finish": "Matte/Shimmer",
-"Budget": "Yes"
-},
-"image": "https://www.facescanada.com/..."
-},
-{
-"id": "e5",
-"name": "Swiss Beauty Brick Palette",
-"category": "Eye Shadow",
-"price": 449,
-"rating": 4.1,
-"features": {
-"Brand": "Swiss Beauty",
-"Shades": "35",
-"Finish": "Multi",
-"Pigmentation": "Medium"
-},
-"image": "https://www.swissbeauty.in/..."
-},
-{
-"id": "e6",
-"name": "Colorbar Made For Magic",
-"category": "Eye Shadow",
-"price": 950,
-"rating": 4.3,
-"features": {
-"Brand": "Colorbar",
-"Shades": "9",
-"Finish": "Metallic",
-"Mirror": "Yes"
-},
-"image": "https://www.colorbarcosmetics.com/..."
-},
-{
-"id": "e7",
-"name": "Lakmé Absolute Spotlight",
-"category": "Eye Shadow",
-"price": 795,
-"rating": 4.2,
-"features": {
-"Brand": "Lakmé",
-"Shades": "12",
-"Finish": "Shimmer",
-"Applicator": "Dual-end"
-},
-"image": "https://www.lakmeindia.com/..."
-},
-{
-"id": "e8",
-"name": "Maybelline Nudes Palette",
-"category": "Eye Shadow",
-"price": 875,
-"rating": 4.4,
-"features": {
-"Brand": "Maybelline",
-"Shades": "12",
-"Finish": "Matte/Shimmer",
-"Tutorial": "Included"
-},
-"image": "https://www.maybelline.co.in/..."
-},
-{
-"id": "e9",
-"name": "Revlon ColorStay Palette",
-"category": "Eye Shadow",
-"price": 1150,
-"rating": 4.3,
-"features": {
-"Brand": "Revlon",
-"Shades": "16",
-"Finish": "Multi",
-"Long-wear": "Yes"
-},
-"image": "https://www.revlon.com/..."
-},
-{
-"id": "e10",
-"name": "Makeup Revolution Reloaded",
-"category": "Eye Shadow",
-"price": 650,
-"rating": 4.4,
-"features": {
-"Brand": "Makeup Revolution",
-"Shades": "15",
-"Finish": "Matte/Shimmer",
-"Cruelty-free": "Yes"
-},
-"image": "https://www.makeuprevolution.com/..."
-}
-]
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

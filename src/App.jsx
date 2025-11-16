@@ -10,6 +10,7 @@ import StoreBar from "./components/storeBar";
 import "./App.css";
 import AllProductsPage from "./components/ProductsPage";
 
+
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -145,14 +146,14 @@ function App() {
 
                 <CategoryAndBrandShowcase onBrandClick={handleBrandClick} />
 
-                <div className="productlist-box">
+               {/* <div className="productlist-box">
                   <ProductList
                     products={filteredProducts}
                     currentFilter={currentFilter}
                     onSpecClick={handleCompareToggle}
                     selectedProducts={selectedProducts}
                   />
-                </div>
+                </div> */}
               </>
             }
           />
