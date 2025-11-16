@@ -2,17 +2,17 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(to bottom right, lightblue, aliceblue);
+  background: linear-gradient(to bottom right, lightblue, pink);
   min-height: 100vh;
 }
 
 .searchbar-input{
-background-color: rgb(253, 234, 255) ;
+background-color: white;
 height: 30px;
 width: 350px;
 border: 10px;
-border-radius: 15px;
-border-color: rgb(4, 61, 154);
+border-radius: 5px;
+border-color: white;
 }
 
 /* App Container */
@@ -40,33 +40,13 @@ border-color: rgb(4, 61, 154);
   width: 100%;
 }
 
-/* Search Input Box */
-.search-input {
-  width: 600px;
-  max-width: 90%;
-  padding: 18px 20px;
-  font-size: 1.1rem;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 30px;
-  background: white;
-  box-shadow: 0 4px 10px rgba(70, 130, 180, 0.2);
-  transition: all 0.3s ease;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: rgb(0, 149, 255);
-  box-shadow: 0 0 15px rgb(2, 129, 255);
-}
-
 /* Dropdown Suggestion Box */
 .suggestions-box {
   position: absolute;
   width: 100%;
   background: white;
   border: 1px solid lightgray;
-  border-radius: 10px;
+  border-radius: 40px;
   margin-top: 10px;
   padding: 0;
   list-style: none;
@@ -75,7 +55,7 @@ border-color: rgb(4, 61, 154);
 }
 
 .suggestion-item {
-  padding: 12px 16px;
+  padding: 10px 16px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -101,7 +81,7 @@ border-color: rgb(4, 61, 154);
 }
 
 .comparison-table th {
-  background: lightsteelblue;
+  background: rgb(42, 108, 207);
   color: midnightblue;
   font-weight: 600;
   padding: 14px;
@@ -135,7 +115,7 @@ border-color: rgb(4, 61, 154);
 }
 
 .recommend-heading {
-  color: navy;
+  color: rgb(153, 153, 202);
   font-size: 1.3rem;
   margin-bottom: 16px;
 }
@@ -188,7 +168,7 @@ border-color: rgb(4, 61, 154);
   background: mediumblue;
 }
 .searchbar-input::placeholder {
-  color: #bd7676;
+  color: black;
 }
 
 .sug-main {
@@ -198,41 +178,42 @@ border-color: rgb(4, 61, 154);
   z-index: 10000;
   overflow-y: visible;
   color: black;
-  background-color: rgb(102, 223, 253);
+  background-color: white;
   border-radius: 5px;
 }
 
-.search-bar {
-  width: 45%;
-  padding: 8px 12px;
-  border-radius: 8px;
+.searchbar-container {
+  width: 95%;
+  padding: 9px 10px;
+  border-radius: 10px;
   border: none;
   outline: flexi;
-  font-size: 16px;
+  font-size: 15px;
+  
 }
 
 /* Suggestions dropdown */
 .suggestions-box {
   position: absolute;
-  top: 35px;
-  width: 46%;
-  background: white;
+  top: 45px;
+  width: 26%;
+  background: rgb(255, 255, 255);
   color:black;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 20px 10px rgba (199, 17, 17, 0.2);
   max-height: 100px;
   overflow-y: auto;
   list-style: none;
-  padding: 10px;
+  padding: 0px;
   margin: 5px ;
   z-index: 20;
 }
 
 .suggestions-box li {
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
 }
 
 .suggestions-box li:hover {
-  background-color: #ebe2e2;
+  background-color: white;
 }

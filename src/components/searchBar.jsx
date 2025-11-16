@@ -1,71 +1,87 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./searchBar.css";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
+  const containerRef = useRef(null);
 
-  //  Fetch data from products.json
+  // ✅ Load products from public/data/products.json
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
       .then((data) => {
-        // Extract all product items from nested categories
-        const extractedProducts = [];
-        Object.keys(data).forEach((category) => {
-          Object.keys(data[category]).forEach((subcat) => {
-            data[category][subcat].forEach((item) => extractedProducts.push(item));
+        const items = [];
+        Object.keys(data || {}).forEach((category) => {
+          Object.keys(data[category] || {}).forEach((subcat) => {
+            (data[category][subcat] || []).forEach((item, index) => {
+              items.push({
+                id: item.id || `${category}-${subcat}-${index}`,
+                name: item.name || item["Model Series Name"] || "Unnamed Product",
+              });
+            });
           });
         });
-        setAllProducts(extractedProducts);
+        setAllProducts(items);
       })
       .catch((err) => console.error("Error loading products:", err));
   }, []);
 
-  // Filter suggestions based on user input
+  // ✅ Filter results
   useEffect(() => {
     if (query.length > 1) {
       const filtered = allProducts.filter((p) =>
         p.name.toLowerCase().includes(query.toLowerCase())
       );
-      setSuggestions(filtered.slice(0, 5));
+      setSuggestions(filtered.slice(0, 6));
     } else {
       setSuggestions([]);
     }
   }, [query, allProducts]);
 
+  // ✅ Handle select
   const handleSelect = (item) => {
     alert(`Selected: ${item.name}`);
     setQuery("");
     setSuggestions([]);
   };
 
+  // ✅ Close when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setSuggestions([]);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="searchbar-container">
+    <div className="searchbar-container" ref={containerRef}>
       <input
         type="text"
-        placeholder="🔍 Search products..."
+        placeholder=" Search products                                               🔍"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="searchbar-input"
+        autoComplete="off"
       />
 
       {suggestions.length > 0 && (
-       <div className="sug-main"> <ul className="suggestion-box">
+        <ul className="suggestions-box">
           {suggestions.map((item) => (
-           <h4
+            <li
               key={item.id}
-              onClick={() => handleSelect(item)}
+              onMouseDown={() => handleSelect(item)} // works perfectly
               className="suggestion-item"
             >
-             {item.name}
-          
-             </h4>
+              {item.name}
+            </li>
           ))}
-       </ul>
-       </div>
-      )}    
+        </ul>
+      )}
     </div>
   );
 };
