@@ -48,8 +48,7 @@ const ProductList = ({
           <div
             key={product.id || index}
             className="list-row"
-            title="Click the Compare button to add/remove from comparison"
-          >
+            title="Click the Compare button to add/remove from comparison">
             {/* LEFT: Image */}
             <div className="list-image">
               {product?.image ? (

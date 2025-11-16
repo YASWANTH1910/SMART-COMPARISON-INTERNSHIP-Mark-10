@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import ProductList from "./components/productList";
 import Navbar from "./components/navBar";
 import ComparisonPage from "./components/comparisonPage";
 import Login from "./components/login";
@@ -9,6 +8,8 @@ import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import "./App.css";
 import AllProductsPage from "./components/ProductsPage";
+import ProductGrid from "./components/productgrid";
+
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -145,14 +146,14 @@ function App() {
 
                 <CategoryAndBrandShowcase onBrandClick={handleBrandClick} />
 
-                <div className="productlist-box">
+               {/* <div className="productlist-box">
                   <ProductList
                     products={filteredProducts}
                     currentFilter={currentFilter}
                     onSpecClick={handleCompareToggle}
                     selectedProducts={selectedProducts}
                   />
-                </div>
+                </div> */}
               </>
             }
           />

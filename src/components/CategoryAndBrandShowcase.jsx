@@ -69,8 +69,7 @@ const CategoryAndBrandShowcase = ({ onCategoryClick, onBrandClick, onViewAll }) 
             className="view-all"
             onClick={() => {
               if (onViewAll) onViewAll();
-            }}
-          >
+            }}>
             View All →
           </span>
         </div>

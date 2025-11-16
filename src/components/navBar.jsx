@@ -95,8 +95,7 @@ const Navbar = ({
               className="user-icon-container"
               onMouseEnter={() => setShowDropdown(true)}
               onMouseLeave={() => setShowDropdown(false)}
-              onClick={handleLoginLogout}
-            >
+              onClick={handleLoginLogout}>
               <FaUserCircle className="user-icon" />
               {showDropdown && (
                 <div className="user-dropdown">
