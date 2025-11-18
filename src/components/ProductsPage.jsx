@@ -100,8 +100,8 @@ const AllProductsPage = ({
     </div>
   </div>
 </div>
-    </div>
-  );
+</div>
+);
 }
 
 

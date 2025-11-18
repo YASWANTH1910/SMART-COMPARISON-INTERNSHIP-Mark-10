@@ -3,13 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  justify-content: center;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background: #83878d;
-  /* color: #35e819; */
   min-height: 60vh;
   color: #242e38;
   line-height: 1.6;
@@ -101,4 +99,4 @@ body::before {
 }
 .subcategory-list button:hover {
   background: #ce93d8;
-} 
+}

@@ -1,110 +1,103 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import ProductList from "./components/productList";
 import Navbar from "./components/navBar";
 import ComparisonPage from "./components/comparisonPage";
 import Login from "./components/login";
 import TopProducts from "./components/topProducts";
 import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
-import "./App.css";
 import AllProductsPage from "./components/ProductsPage";
-
+import ProductGrid from "./components/productgrid"; 
+import "./App.css";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [currentFilter, setCurrentFilter] = useState({
     mainItems: "All",
     subItems: "All",
   });
 
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // ✅ Load products
+  // Load products.json
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
       .then((data) => {
         const flattened = [];
-        for (const mainCat in data) {
-          const subCats = data[mainCat];
-          for (const subCat in subCats) {
-            subCats[subCat].forEach((item) => {
+        for (const cat in data) {
+          for (const sub in data[cat]) {
+            data[cat][sub].forEach((item) => {
               flattened.push({
                 ...item,
-                category: mainCat,
-                subcategory: subCat,
+                category: cat,
+                subcategory: sub,
               });
             });
           }
         }
+
         setProducts(flattened);
         setFilteredProducts(flattened);
       })
-      .catch((err) => console.error("Error loading product data:", err));
+      .catch((err) => console.error("Error loading products:", err));
   }, []);
 
-  // ✅ Clear compare selection when navigating home
+  // Reset compare when going home
   useEffect(() => {
-    if (location.pathname === "/") {
-      setSelectedProducts([]);
-    }
+    if (location.pathname === "/") setSelectedProducts([]);
   }, [location]);
 
-  // ✅ Restore login state
+  // Restore login state
   useEffect(() => {
-    const storedLogin = localStorage.getItem("isLoggedIn");
-    if (storedLogin === "true") setIsLoggedIn(true);
+    const state = localStorage.getItem("isLoggedIn");
+    if (state === "true") setIsLoggedIn(true);
   }, []);
 
-  // ✅ Filter by category/subcategory
-  const handleCategorySelect = (mainItems, subItems) => {
-    setCurrentFilter({ mainItems, subItems });
-    if (mainItems === "All") {
+  // Navigation from Navbar category dropdown
+  const handleCategorySelect = (cat, sub) => {
+    if (cat === "All") {
       setFilteredProducts(products);
-    } else {
-      const filtered = products.filter(
-        (p) =>
-          p.category === mainItems &&
-          (subItems === "All" || p.subcategory === subItems)
-      );
-      setFilteredProducts(filtered);
+      setCurrentFilter({ mainItems: "All", subItems: "All" });
+      return;
     }
+
+    const filtered = products.filter(
+      (p) =>
+        p.category.toLowerCase() === cat.toLowerCase() &&
+        (sub === "All" || p.subcategory.toLowerCase() === sub.toLowerCase())
+    );
+
+    setFilteredProducts(filtered);
+    setCurrentFilter({ mainItems: cat, subItems: sub });
   };
 
+  // Compare toggle
   const handleCompareToggle = (product) => {
     setSelectedProducts((prev) => {
       const exists = prev.find((p) => p.id === product.id);
-      if (exists) return prev.filter((p) => p.id !== product.id);
+      if (exists) {
+        return prev.filter((p) => p.id !== product.id);
+      }
+
       if (prev.length >= 4) {
-        alert("You can compare up to 4 products only!");
+        alert("You can compare up to 4 items.");
         return prev;
       }
+
       return [...prev, product];
     });
   };
 
-  // ✅ Category icons
-  const iconCategories = [
-    { name: "Mobiles", img: "https://cdn1.smartprix.com/rx-iViQd4cI8-w100-h100/ViQd4cI8.webp" },
-    { name: "Laptops", img: "https://cdn1.smartprix.com/rx-i6invpMY2-w100-h100/6invpMY2.webp" },
-    { name: "TVs", img: "https://cdn1.smartprix.com/rx-idTmyxzGZ-w100-h100/dTmyxzGZ.webp" },
-    { name: "Tablets", img: "https://cdn1.smartprix.com/rx-iG5DXN6vc-w100-h100/G5DXN6vc.webp" },
-    { name: "Cameras", img: "https://cdn1.smartprix.com/rx-iR6SKymCH-w100-h100/R6SKymCH.webp" },
-    { name: "Earphones", img: "https://cdn1.smartprix.com/rx-iUfE0ayqy-w100-h100/UfE0ayqy.webp" },
-    { name: "Smartwatch", img: "https://cdn1.smartprix.com/rx-iXjxQXvn2-w100-h100/XjxQXvn2.webp" },
-  ];
-
-  // ✅ Click category → navigate + send filter
   const handleIconClick = (categoryName) => {
     navigate("/products", { state: { filterCategory: categoryName } });
   };
 
-  // ✅ Click brand → navigate + send filter
   const handleBrandClick = (brandName) => {
     navigate("/products", { state: { filterBrand: brandName } });
   };
@@ -123,42 +116,31 @@ function App() {
 
       <main className="appjsx-main">
         <Routes>
-          {/* ✅ Home Page */}
+          {/* HOME PAGE */}
           <Route
             path="/"
             element={
               <>
                 <StoreBar />
                 <TopProducts />
-                <div className="category-wrapper">
-                  <div className="category-menu">
-                    {iconCategories.map((cat, i) => (
-                      <div
-                        key={i}
-                        className="category-item"
-                        onClick={() => handleIconClick(cat.name)}>
-                        <img src={cat.img} alt={cat.name} />
-                        <p>{cat.name}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
 
-                <CategoryAndBrandShowcase onBrandClick={handleBrandClick} />
+                <CategoryAndBrandShowcase
+                  onBrandClick={handleBrandClick}
+                  onCategoryClick={handleIconClick}
+                  onViewAll={() => navigate("/products")}
+                />
 
-               {/* <div className="productlist-box">
-                  <ProductList
-                    products={filteredProducts}
-                    currentFilter={currentFilter}
-                    onSpecClick={handleCompareToggle}
-                    selectedProducts={selectedProducts}
-                  />
-                </div> */}
+                <ProductGrid
+                  title="Trending Products"
+                  products={products.slice(0, 8)}
+                  onSpecClick={handleCompareToggle}
+                  selectedProducts={selectedProducts}
+                />
               </>
             }
           />
 
-          {/* ✅ Product Page (filters here will respond to state from navigation) */}
+          {/* ALL PRODUCTS PAGE */}
           <Route
             path="/products"
             element={
@@ -173,10 +155,14 @@ function App() {
               />
             }
           />
+
+          {/* COMPARE PAGE */}
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}
           />
+
+          {/* LOGIN */}
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </main>
