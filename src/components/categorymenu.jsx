@@ -54,7 +54,7 @@ const CategoryFilterMenu = ({ onCategorySelect }) => {
     },
     {
       id: 4,
-      name: "Skincare & Beauty",
+      name: "Skincare&Beauty",
       subcategories: [
         { id: 21, name: "Face Wash" },
         { id: 22, name: "Moisturizers" },

@@ -6,7 +6,7 @@ const MAIN_CATEGORIES = [
   { value: "Electronics", label: "Electronics" },
   { value: "Furniture", label: "Furniture" },
   { value: "Automobiles", label: "Automobiles" },
-  { value: "SkincareandBeauty", label: "Skincare & Beauty" },
+  { value: "Skincare&Beauty", label: "Skincare & Beauty" },
   
 ];
 

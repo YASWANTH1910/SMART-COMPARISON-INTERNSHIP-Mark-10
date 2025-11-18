@@ -4,7 +4,7 @@ const TopProducts = () => {
   const scrollRef = useRef(null);
 
   const products = [  
-    { name: "Tata Nexon", price: " ₹11.5 Lakh", image: "https://wallpapers.com/images/featured/blank-white-background-xbsfzsltjksfompa.jpg" },
+    { name: "Hyundai Creta", price: " ₹12.5 Lakh", image: "https://spn-sta.spinny.com/blog/20220228144639/Spinny-Assured-2021-Hyundai-Creta.jpg" },
     { name: "Mahindra Scorpio-N", price: " ₹25.5 Lakh", image: "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Flarge%2Fmahindra%2Fscorpio-n%2Fmahindra-scorpio-n.jpg%3Fv%3D27&w=1600&q=75" },
     { name: "Tata Nexon", price: " ₹11.5 Lakh", image: "https://images.carandbike.com/car-images/orig/tata/nexon/tata-nexon.jpg?v=74" },
     { name: "iPhone 17 Pro Max", price: "₹149999", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIgDZAh57-CK8OIyaqF8QgLysjvMdGWkcJA&s" },

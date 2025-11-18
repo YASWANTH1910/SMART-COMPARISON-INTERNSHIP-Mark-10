@@ -5,16 +5,17 @@
   padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10; /* ↓ reduced to avoid blocking page */
 }
 
+/* Inner container */
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  
+  pointer-events: auto !important; /* allow clicks */
 }
 
 /* Logo */
@@ -45,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  pointer-events: auto !important;
 }
 
 /* Menu buttons */
@@ -78,15 +80,16 @@
   background-color: #0056b3;
 }
 
-/* Right area (compare + user) — do not shift the whole container */
+/* Right area (compare + user) */
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px; 
-  margin-left: 14px; 
+  gap: 12px;
+  margin-left: 10px;
+  pointer-events: auto !important; /* prevent blocking */
 }
 
-/* Move only the Compare button visually (no layout reflow) */
+/* Compare button */
 .compare-btn-navbar {
   position: relative;
   background-color: #007bff;
@@ -98,11 +101,10 @@
   font-weight: 500;
   transition: transform 0.15s ease, background 0.15s ease;
   font-size: 0.95rem;
-  transform: translateX(-12px); 
 }
 
 .compare-btn-navbar:hover {
-  transform: translateX(-12px) scale(1.02);
+  transform: scale(1.03);
   background-color: #0056b3;
 }
 
@@ -130,6 +132,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  pointer-events: auto !important;
 }
 
 .user-icon {
@@ -152,6 +155,7 @@
   white-space: nowrap;
 }
 
+/* Login container */
 .login-container {
   width: 350px;
   margin: 100px auto;

@@ -1,107 +1,96 @@
+// src/components/productgrid.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./productgrid.css"; 
+import "./productgrid.css";
 
-export default function ProductGrid() {
+export default function ProductGrid({
+  title = "Popular Products",
+  products = [],
+  onSpecClick,
+  selectedProducts = [],
+}) {
   const navigate = useNavigate();
 
-  const products = [
-    {
-      id: 1,
-      name: "OnePlus 15",
-      price: "₹72,999",
-      rating: 5,
-      image: "https://via.placeholder.com/300x400?text=OnePlus+15",
-      category: "mobiles",
-      subCategory: "oneplus",
-    },
-    {
-      id: 2,
-      name: "Samsung S24 Ultra",
-      price: "₹1,29,999",
-      rating: 5,
-      image: "https://via.placeholder.com/300x400?text=Samsung+S24+Ultra",
-      category: "mobiles",
-      subCategory: "samsung",
-    },
-    {
-      id: 3,
-      name: "iPhone 16 Pro",
-      price: "₹1,39,999",
-      rating: 5,
-      image: "https://via.placeholder.com/300x400?text=iPhone+16+Pro",
-      category: "mobiles",
-      subCategory: "apple",
-    },
-    {
-      id: 4,
-      name: "Vivo X200 Pro",
-      price: "₹89,999",
-      rating: 4,
-      image: "https://via.placeholder.com/300x400?text=Vivo+X200+Pro",
-      category: "mobiles",
-      subCategory: "vivo",
-    },
-  ];
+  const isCompared = (id) =>
+    (selectedProducts || []).some((p) => p.id === id);
 
-  const goToProductPage = (product) => {
-    navigate(`/products?cat=${product.category}&subcat=${product.subCategory}`);
+    const handleCardClick = (product) => {
+    navigate("/products", {
+      state: { scrollTo: product.id }
+    });
   };
 
-  const viewAll = () => {
-    navigate("/products");
+  const handleCompareClick = (e, product) => {
+    e.stopPropagation();
+
+    if (typeof onSpecClick === "function") {
+      onSpecClick(product);
+      return;
+    }
+
+    // DO NOTHING when parent doesn’t send handler
+    console.log("Compare clicked but no onSpecClick handler.");
   };
 
   return (
-    <div className="product-grid-container">
-      
-      {/* HEADER */}
-      <div className="grid-header">
-        <h2 className="grid-title">Popular Mobiles</h2>
+    <section className="pgx-container" aria-label={title}>
+      <div className="pgx-header">
+        <h2 className="pgx-title">{title}</h2>
 
-        <div className="view-all-btn" onClick={viewAll}>
+        <button
+          type="button"
+          className="pgx-viewall"
+          onClick={() => navigate("/products")}
+        >
           View All →
-        </div>
+        </button>
       </div>
 
-      {/* PRODUCT GRID */}
-      <div className="product-grid">
+      <div className="pgx-grid">
+        {!products?.length && (
+          <div className="pgx-empty">No products to show.</div>
+        )}
+
         {products.map((product) => (
-          <div
+          <article
             key={product.id}
-            className="product-card"
-            onClick={() => goToProductPage(product)}
+            className="pgx-card"
+            onClick={() => handleCardClick(product)}
           >
-            <div className="product-image-wrapper">
+            <div className="pgx-imgwrap">
               <img
                 src={product.image}
                 alt={product.name}
-                className="product-image"
+                className="pgx-img"
+                onError={(ev) => {
+                  ev.currentTarget.src =
+                    "https://via.placeholder.com/400x400?text=No+Image";
+                }}
               />
             </div>
 
-            <div className="product-name">{product.name}</div>
-
-            <div className="product-price">{product.price}</div>
-
-            <div className="product-rating">
-              {Array.from({ length: product.rating }).map((_, idx) => (
-                <span key={idx}>⭐</span>
-              ))}
+            <div className="pgx-meta">
+              <div className="pgx-name">{product.name}</div>
+              <div className="pgx-price">₹{product.price}</div>
+              <div className="pgx-rating">
+                {Array.from({
+                  length: Math.round(product.rating || 0),
+                }).map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
+              </div>
             </div>
 
             <button
-              className="compare-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                goToProductPage(product);
-              }}
+              type="button"
+              className={`pgx-compare ${isCompared(product.id) ? "selected" : ""}`}
+              onClick={(e) => handleCompareClick(e, product)}
             >
-              Compare
+              {isCompared(product.id) ? "Remove" : "Compare"}
             </button>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
