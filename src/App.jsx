@@ -109,7 +109,6 @@ function App() {
     ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Bikes").slice(0, 2),
   ];
 
-
   return (
     <div className="Appjsx">
       <Navbar
