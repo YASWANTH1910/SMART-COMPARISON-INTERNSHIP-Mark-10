@@ -1,4 +1,3 @@
-// src/components/productgrid.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./productgrid.css";
@@ -14,7 +13,7 @@ export default function ProductGrid({
   const isCompared = (id) =>
     (selectedProducts || []).some((p) => p.id === id);
 
-    const handleCardClick = (product) => {
+  const handleCardClick = (product) => {
     navigate("/products", {
       state: { scrollTo: product.id }
     });
@@ -28,7 +27,6 @@ export default function ProductGrid({
       return;
     }
 
-    // DO NOTHING when parent doesn’t send handler
     console.log("Compare clicked but no onSpecClick handler.");
   };
 
@@ -72,18 +70,14 @@ export default function ProductGrid({
             <div className="pgx-meta">
               <div className="pgx-name">{product.name}</div>
               <div className="pgx-price">₹{product.price}</div>
-              <div className="pgx-rating">
-                {Array.from({
-                  length: Math.round(product.rating || 0),
-                }).map((_, i) => (
-                  <span key={i}>⭐</span>
-                ))}
-              </div>
+              <div className="pgx-rating">{product.rating?.toFixed(1)}★</div>
             </div>
 
             <button
               type="button"
-              className={`pgx-compare ${isCompared(product.id) ? "selected" : ""}`}
+              className={`pgx-compare ${
+                isCompared(product.id) ? "selected" : ""
+              }`}
               onClick={(e) => handleCompareClick(e, product)}
             >
               {isCompared(product.id) ? "Remove" : "Compare"}

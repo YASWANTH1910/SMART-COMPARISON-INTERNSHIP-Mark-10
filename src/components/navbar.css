@@ -1,30 +1,35 @@
 /* 🌐 Base Navbar */
 .navbar {
-  background-color: skyblue;
+  background-color: rgb(225, 225, 216);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
+  padding: 10px 20px 0px 20px;
   position: sticky;
   top: 0;
-  z-index: 10; /* ↓ reduced to avoid blocking page */
+  z-index: 999 !important;
 }
 
-/* Inner container */
+
+.storebar-wrapper,
+.category-wrapper,
+.category-menu {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  pointer-events: auto !important; /* allow clicks */
+  pointer-events: auto !important; 
 }
 
-/* Logo */
 .nav-logo {
   font-size: 1.4rem;
   font-weight: 600;
   display: flex;
   align-items: center;
-  color: #333;
+  color: rgb(12, 82, 157);
   cursor: pointer;
 }
 
@@ -32,7 +37,6 @@
   margin-right: 5px;
 }
 
-/* Center: Search Bar */
 .nav-center {
   flex: 1;
   display: flex;
@@ -41,7 +45,6 @@
   max-width: 400px;
 }
 
-/* Group that contains menu + right actions */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -49,7 +52,6 @@
   pointer-events: auto !important;
 }
 
-/* Menu buttons */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -61,7 +63,7 @@
 .nav-login-btn,
 .compare-btn-navbar,
 .nav-link-btn {
-  background-color: #007bff;
+  background-color: rgb(12, 82, 157);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -80,19 +82,18 @@
   background-color: #0056b3;
 }
 
-/* Right area (compare + user) */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-left: 10px;
-  pointer-events: auto !important; /* prevent blocking */
+  pointer-events: auto !important; 
 }
 
 /* Compare button */
 .compare-btn-navbar {
   position: relative;
-  background-color: #007bff;
+  background-color: rgb(12, 82, 157);
   color: white;
   border: none;
   padding: 8px 16px;
@@ -137,7 +138,7 @@
 
 .user-icon {
   font-size: 1.8rem;
-  color: #007bff;
+  color: rgb(12, 82, 157);
   transition: color 0.2s ease;
 }
 
@@ -145,12 +146,11 @@
   color: #0056b3;
 }
 
-/* Simple hover text (no box) */
 .user-dropdown {
   position: absolute;
   top: 36px;
   font-size: 0.9rem;
-  color: #007bff;
+  color: rgb(12, 82, 157);
   font-weight: 500;
   white-space: nowrap;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import "./navbar.css";
 import SearchBar from "./searchBar";
 import CategoryFilterMenu from "./categorymenu";
@@ -53,7 +53,6 @@ const Navbar = ({
         top: 0,
         zIndex: 10,
         pointerEvents: "auto",
-        // ensure no accidental overlay
       }}
     >
       <div
@@ -71,7 +70,7 @@ const Navbar = ({
           onClick={() => navigate("/")}
           style={{ cursor: "pointer", pointerEvents: "auto" }}
         >
-          <span className="logo-icon">⚡</span> QuickShop
+          <span className="logo-icon">⌬ </span> CompariSmart
         </div>
 
         {/* Center: Search */}

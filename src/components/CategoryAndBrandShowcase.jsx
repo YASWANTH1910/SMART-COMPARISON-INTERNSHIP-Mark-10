@@ -17,20 +17,20 @@ const CategoryAndBrandShowcase = ({ onCategoryClick, onBrandClick, onViewAll }) 
     {
       title: "Furniture",
       image:
-        "https://images.unsplash.com/photo-1616628188469-7d6a3a3d5f3f",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqp-yfvcN-oCMg0gS1BsfwfN9Sex-7VQHSEQ&s",
       price: "Couches from ₹9,999",
     },
     {
       title: "Automobiles",
       image:
-        "https://i.pinimg.com/736x/bd/f7/d0/bdf7d09d0e266bf59add202125b88329.jpg",
-      price: "Auto Mobile from ₹89,999",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHHdfMHIw1meU6KUQ67okl8VEi6Y0YQ3mo-Q&s",
+      price: "Cars from ₹8,99,999",
     },
     {
       title: "Skincare&Beauty",
       image:
         "https://imgs.search.brave.com/AMYlcBUhlHwEvhHKm9GdNikNePF7rptr7QMuQdkJu_E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFjK0RxTkh1OEwu/anBn",
-      price: "Facewash from ₹399",
+      price: "Facewash from ₹499",
     },
   ];
 
@@ -51,13 +51,13 @@ const CategoryAndBrandShowcase = ({ onCategoryClick, onBrandClick, onViewAll }) 
     {
       title: "TATA",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Tata_Logo.svg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3uWPRuSSkR34UuJEGDwsXB9InRg72DcJhJA&s",
       category: "Automobiles",
     },
     {
       title: "L’Oreal",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/a/a7/L%27Oreal_logo.svg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4JN44iz5RpQU-ZnXB05iDDcZW0QL5kcMQJA&s",
       category: "Skincare & Beauty",
     },
   ];

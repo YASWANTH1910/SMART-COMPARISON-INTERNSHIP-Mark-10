@@ -1,102 +1,53 @@
-/* Simple Reset */
-* {
+
+html, body, #root {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: whitesmoke;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #83878d;
-  min-height: 60vh;
-  color: #242e38;
-  line-height: 1.6;
-  position: relative;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.appjsx-main {
-  flex: 1;
-  padding: 0 !important; 
+main, .main, .main-container, .content, .page-content, .app-content {
   margin: 0 !important;
-  background: #f4f6fb; /* match comparison page bg */
+  padding: 0 !important;
 }
 
-
-.productlist-box {
-  max-width: 1200px;
-  margin: 0 auto;
- position: relative;
+.main-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
+section, div, header, footer {
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* If any element pushes content down, this kills it */
+/* *::before,
+*::after {
+  margin: 0;
+  padding: 0;
+} */
 /* Footer - FIXED to stay at bottom */
 .appjsx-footer {
   background: #334659;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: auto; /* This makes it stick to bottom */
+  padding: 7px;
+  margin-top: auto; 
   width: 100%;
-}
-
-.category-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
-/* Image Category Bar */
-.category-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 90px;
-  padding: 17px;
-  background: linear-gradient(to right, #e0f7fa, #f3e5f5);
-  border-radius: 15px;
-  width: 100%;
-}
-
-.category-item {
-  text-align: center;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-.category-item img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: white;
-  padding: 10px;
-  object-fit: contain;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-.category-item p {
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.subcategory-list button {
-  background: #f3e5f5;
-  border: none;
-  border-radius: 5px;
-  margin: 4px;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-.subcategory-list button:hover {
-  background: #ce93d8;
 }

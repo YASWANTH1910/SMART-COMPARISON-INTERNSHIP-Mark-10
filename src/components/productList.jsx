@@ -18,18 +18,21 @@ const ProductList = ({
     <div className="product-list-container">
       {products.map((product, index) => {
         const isSelected = selectedProducts.some((p) => p.id === product.id);
-        // Brand (used for display and also ensures we don't have an "assigned but unused" variable)
-        const brand = product?.features?.Brand || product?.brand || "Unknown";
 
-        // Safe numeric price and original price fallback
+        const brand =
+          product?.features?.Brand || product?.brand || "Unknown";
+
         const price = Number(product?.price) || 0;
+
         const originalPrice = product?.originalPrice
           ? Number(product.originalPrice)
           : Math.round(price * 1.25);
-        const discount =
-          originalPrice > 0 ? Math.round(((originalPrice - price) / originalPrice) * 100) : 0;
 
-        // Compose a small spec string (if features exist)
+        const discount =
+          originalPrice > 0
+            ? Math.round(((originalPrice - price) / originalPrice) * 100)
+            : 0;
+
         const specs = [
           product?.features?.Display,
           product?.features?.Processor,
@@ -40,7 +43,6 @@ const ProductList = ({
 
         const handleCompareClick = (e) => {
           e.stopPropagation();
-          // notify parent
           onSpecClick(product);
         };
 
@@ -48,8 +50,9 @@ const ProductList = ({
           <div
             key={product.id || index}
             className="list-row"
-            title="Click the Compare button to add/remove from comparison">
-            {/* LEFT: Image */}
+            title="Click Compare to add/remove"
+          >
+            {/* LEFT: IMAGE */}
             <div className="list-image">
               {product?.image ? (
                 <img src={product.image} alt={product.name} loading="lazy" />
@@ -58,14 +61,14 @@ const ProductList = ({
               )}
             </div>
 
-            {/* CENTER: Name + Brand + Specs */}
+            {/* CENTER: TEXT DETAILS */}
             <div className="list-center">
               <div className="list-name">{product.name}</div>
               <div className="list-brand">{brand}</div>
               <div className="list-specs">{specs}</div>
             </div>
 
-            {/* RIGHT: Rating + Price + Selector */}
+            {/* RIGHT: PRICE + BUTTON */}
             <div className="list-right">
               <div className="list-rating">
                 {product?.rating ? `${product.rating}★` : "No Rating"}
@@ -73,18 +76,19 @@ const ProductList = ({
 
               <div className="list-price">
                 <span className="current">
-                  {price > 0 ? `₹${price.toLocaleString()}` : "N/A"}
+                  {price ? `₹${price.toLocaleString()}` : "N/A"}
                 </span>
 
-                {discount > 0 && originalPrice > 0 && (
+                {discount > 0 && (
                   <>
-                    <span className="original">₹{originalPrice.toLocaleString()}</span>
+                    <span className="original">
+                      ₹{originalPrice.toLocaleString()}
+                    </span>
                     <span className="discount">-{discount}%</span>
                   </>
                 )}
               </div>
 
-              {/* Compare Button */}
               <button
                 className={`compare-btn ${isSelected ? "selected" : ""}`}
                 onClick={handleCompareClick}

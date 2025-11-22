@@ -24,7 +24,6 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Load products.json
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -48,18 +47,15 @@ function App() {
       .catch((err) => console.error("Error loading products:", err));
   }, []);
 
-  // Reset compare when going home
   useEffect(() => {
     if (location.pathname === "/") setSelectedProducts([]);
   }, [location]);
 
-  // Restore login state
   useEffect(() => {
     const state = localStorage.getItem("isLoggedIn");
     if (state === "true") setIsLoggedIn(true);
   }, []);
 
-  // Navigation from Navbar category dropdown
   const handleCategorySelect = (cat, sub) => {
     if (cat === "All") {
       setFilteredProducts(products);
@@ -77,7 +73,6 @@ function App() {
     setCurrentFilter({ mainItems: cat, subItems: sub });
   };
 
-  // Compare toggle
   const handleCompareToggle = (product) => {
     setSelectedProducts((prev) => {
       const exists = prev.find((p) => p.id === product.id);
@@ -98,25 +93,35 @@ function App() {
     navigate("/products", { state: { filterCategory: categoryName } });
   };
 
-  const handleBrandClick = (brandName) => {
+   const handleBrandClick = (brandName) => {
     navigate("/products", { state: { filterBrand: brandName } });
   };
 
+  // ⭐ TOP ROW (3 Mobiles + 2 Laptops)
+  const topRow = [
+    ...products.filter((p) => p.category === "Electronics" && p.subcategory === "Mobiles").slice(0, 3),
+    ...products.filter((p) => p.category === "Electronics" && p.subcategory === "Laptops").slice(0, 2),
+  ];
+
+  // ⭐ BOTTOM ROW (3 Cars + 2 Bikes)
+  const bottomRow = [
+    ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Cars").slice(0, 3),
+    ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Bikes").slice(0, 2),
+  ];
+
+
   return (
     <div className="Appjsx">
-      <header className="appjsx-header">
-        <Navbar
-          onCategorySelect={handleCategorySelect}
-          compareCount={selectedProducts.length}
-          selectedProducts={selectedProducts}
-          isLoggedIn={isLoggedIn}
-          setIsLoggedIn={setIsLoggedIn}
-        />
-      </header>
+      <Navbar
+        onCategorySelect={handleCategorySelect}
+        compareCount={selectedProducts.length}
+        selectedProducts={selectedProducts}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
 
       <main className="appjsx-main">
         <Routes>
-          {/* HOME PAGE */}
           <Route
             path="/"
             element={
@@ -130,17 +135,14 @@ function App() {
                   onViewAll={() => navigate("/products")}
                 />
 
-                <ProductGrid
-                  title="Trending Products"
-                  products={products.slice(0, 8)}
-                  onSpecClick={handleCompareToggle}
-                  selectedProducts={selectedProducts}
-                />
-              </>
-            }
+                  <ProductGrid
+                    title="Trending Products"
+                    products={[...topRow, ...bottomRow]}
+                    onSpecClick={handleCompareToggle}
+                    selectedProducts={selectedProducts}
+                  />
+              </> }
           />
-
-          {/* ALL PRODUCTS PAGE */}
           <Route
             path="/products"
             element={
@@ -156,13 +158,11 @@ function App() {
             }
           />
 
-          {/* COMPARE PAGE */}
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}
           />
 
-          {/* LOGIN */}
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         </Routes>
       </main>
