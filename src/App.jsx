@@ -8,6 +8,7 @@ import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid"; 
+import PopularComparison from "./components/PopularComparison";
 import "./App.css";
 
 function App() {
@@ -49,6 +50,17 @@ function App() {
 
   useEffect(() => {
     if (location.pathname === "/") setSelectedProducts([]);
+  }, [location]);
+
+  // If navigation to /compare included a preSelectedProducts payload, apply it
+  useEffect(() => {
+    if (
+      location.pathname === "/compare" &&
+      location.state &&
+      Array.isArray(location.state.preSelectedProducts)
+    ) {
+      setSelectedProducts(location.state.preSelectedProducts);
+    }
   }, [location]);
 
   useEffect(() => {
@@ -133,6 +145,9 @@ function App() {
                   onCategoryClick={handleIconClick}
                   onViewAll={() => navigate("/products")}
                 />
+                
+                      <PopularComparison/>
+                        
 
                   <ProductGrid
                     title="Trending Products"

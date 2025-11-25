@@ -1,0 +1,93 @@
+/* Popular comparisons - clean, table-like layout */
+.popular-comparisons {
+  padding: 16px;
+}
+
+.popular-comparisons .section-title {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.comparisons-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.comparison-card {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  cursor: pointer;
+}
+
+.comparison-card:hover,
+.comparison-card:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.phone-left,
+.phone-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.phone-left img,
+.phone-right img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background: #f6f6f6;
+}
+
+.phone-left p,
+.phone-right p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.vs {
+  text-align: center;
+  font-weight: 700;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Smaller screens: stack vertically inside each card */
+@media (max-width: 520px) {
+  .comparison-card {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    text-align: center;
+  }
+  .phone-left,
+  .phone-right {
+    justify-content: center;
+  }
+  .vs {
+    margin: 8px 0;
+  }
+}
+
+/* subtle disabled state when product pair missing (keeps grid shape) */
+.comparison-card.missing {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+/* Utility: make images responsive in other places if reused */
+.popular-comparisons img { max-width: 100%; height: auto; display: block; }
