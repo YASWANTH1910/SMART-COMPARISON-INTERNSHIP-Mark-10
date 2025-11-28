@@ -48,8 +48,9 @@ const PopularComparison = () => {
                                                                                                         { leftId: "a3", rightId: "a4" },
                                                                                                             { leftId: "h1", rightId: "h2" },
                                                                                                                 { leftId: "w1", rightId: "w2" },
-                                                                                                                    { leftId: "ha1", rightId: "ha2" },
+                                                                                                                    { leftId: "car2", rightId: "car5" },
                                                                                                                         { leftId: "bike2", rightId: "bike3" },
+                                                                                                                        { leftId: "fw1", rightId: "fw2" },
                                                                                                                           ];
 
                                                                                                                             const getProductById = (id) => products.get?.(String(id).toLowerCase());

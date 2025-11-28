@@ -1,93 +1,179 @@
-/* Popular comparisons - clean, table-like layout */
+/* PopularComparison.css - EXACT Flipkart/Amazon Style - Clean & Responsive */
+
 .popular-comparisons {
-  padding: 16px;
+  padding: 50px 0px 50px;
+  background-color: #f8f9fa;
+  text-align: start;
 }
 
-.popular-comparisons .section-title {
-  margin: 0 0 12px 0;
-  font-size: 1.25rem;
-  font-weight: 600;
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  align-items: start;
+  color: #212121;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 .comparisons-grid {
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  margin-left: 10%;
+  padding: 0 10px;
 }
 
 .comparison-card {
-  display: grid;
-  grid-template-columns: 1fr 56px 1fr;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 10px 10px;
+  display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  justify-content: space-between;
   cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-.comparison-card:hover,
-.comparison-card:focus {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+.comparison-card:hover {
+  border-color: #c0c0c0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
 }
 
 .phone-left,
 .phone-right {
+  flex: 1;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
 .phone-left img,
 .phone-right img {
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-  background: #f6f6f6;
+  width: 72px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .phone-left p,
 .phone-right p {
   margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  color: #212121;
+  line-height: 1.4;
+  max-width: 120px;
 }
 
 .vs {
-  text-align: center;
+  font-size: 20px;
   font-weight: 700;
-  color: #6b7280;
-  font-size: 0.95rem;
+  color: #2874f0;
+  padding: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Smaller screens: stack vertically inside each card */
-@media (max-width: 520px) {
-  .comparison-card {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    text-align: center;
+/* Tablet (below 900px) */
+@media (max-width: 900px) {
+  .comparisons-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
   }
+  .comparison-card {
+    padding: 20px 16px;
+  }
+}
+
+/* MOBILE: 2 HORIZONTAL CARDS PER ROW (Side-by-Side, NOT Vertical) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 23px;
+    margin-bottom: 28px;
+  }
+
+  .comparisons-grid {
+    grid-template-columns: repeat(2, 1fr);   /* 2 cards per row */
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .comparison-card {
+    flex-direction: row !important;     /* ← HORIZONTAL LAYOUT */
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10px;                 /* super short height */
+    gap: 8px;
+    border-radius: 10px;
+  }
+
+  .vs {
+    font-size: 14px !important;
+    font-weight: 800;
+    color: #2874f0;
+    padding: 0 6px;
+    flex-shrink: 0;
+  }
+
   .phone-left,
   .phone-right {
-    justify-content: center;
+    flex: 1;
+    min-width: 0;
   }
+
+  .phone-left img,
+  .phone-right img {
+    width: 52px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  .phone-left p,
+  .phone-right p {
+    margin: 4px 0 0;
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+}
+
+/* Very small phones – still 2 per row, but tighter */
+@media (max-width: 480px) {
+  .comparison-card {
+    padding: 10px 8px;
+    gap: 6px;
+  }
+
+  .phone-left img,
+  .phone-right img {
+    width: 48px;
+    height: 64px;
+  }
+
   .vs {
-    margin: 8px 0;
+    font-size: 13px;
+  }
+
+  .phone-left p,
+  .phone-right p {
+    font-size: 11.5px;
   }
 }
 
-/* subtle disabled state when product pair missing (keeps grid shape) */
-.comparison-card.missing {
-  opacity: 0.55;
-  pointer-events: none;
+/* Extreme small (iPhone SE) – fall back to 1 card if needed */
+@media (max-width: 370px) {
+  .comparisons-grid {
+    grid-template-columns: 1fr;
+  }
+  .comparison-card {
+    padding: 14px;
+  }
 }
-
-/* Utility: make images responsive in other places if reused */
-.popular-comparisons img { max-width: 100%; height: auto; display: block; }
