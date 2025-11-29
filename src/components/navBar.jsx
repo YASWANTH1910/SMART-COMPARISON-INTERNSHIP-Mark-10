@@ -68,8 +68,7 @@ const Navbar = ({
         <div
           className="nav-logo cursor-pointer"
           onClick={() => navigate("/")}
-          style={{ cursor: "pointer", pointerEvents: "auto" }}
-        >
+          style={{ cursor: "pointer", pointerEvents: "auto" }}>
           <span className="logo-icon">⌬ </span> CompariSmart
         </div>
 
