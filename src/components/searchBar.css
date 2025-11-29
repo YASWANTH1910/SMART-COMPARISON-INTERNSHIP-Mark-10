@@ -12,7 +12,7 @@ height: 30px;
 width: 350px;
 border: 10px;
 border-radius: 5px;
-border-color: white;
+border-color: rgb(25, 2, 2);
 }
 
 /* App Container */
@@ -22,64 +22,6 @@ border-color: white;
   padding: 40px 25px;
 }
 
-/* Page Heading */
-.heading {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: royalblue;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* Center Search Bar */
-.search-bar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  width: 100%;
-}
-
-/* Dropdown Suggestion Box */
-.suggestions-box {
-  position: absolute;
-  width: 100%;
-  background: white;
-  border: 1px solid lightgray;
-  border-radius: 40px;
-  margin-top: 10px;
-  padding: 0;
-  list-style: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 10;
-}
-
-.suggestion-item {
-  padding: 10px 16px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.suggestion-item:hover {
-  background: lightcyan;
-}
-
-/* Comparison Table */
-.table-container {
-  width: 90%;
-  max-width: 1000px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow-x: auto;
-}
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
 .comparison-table th {
   background: rgb(42, 108, 207);
   color: midnightblue;
@@ -87,99 +29,8 @@ border-color: white;
   padding: 14px;
 }
 
-.comparison-table td {
-  padding: 14px;
-  border-bottom: 1px solid lightgray;
-}
-
-/* Remove Button */
-.remove-btn {
-  background: crimson;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.remove-btn:hover {
-  background: darkred;
-}
-
-/* Recommendation Section */
-.recommend-container {
-  margin-top: 50px;
-  width: 90%;
-  max-width: 1000px;
-}
-
-.recommend-heading {
-  color: rgb(153, 153, 202);
-  font-size: 1.3rem;
-  margin-bottom: 16px;
-}
-
-/* Recommended Product Cards */
-.recommend-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-}
-
-.recommend-card {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.recommend-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-/* Text inside Product Cards */
-.rec-name {
-  font-weight: 600;
-  color: darkblue;
-  margin-bottom: 8px;
-}
-
-.rating {
-  color: goldenrod;
-}
-
-/* Add to Compare Button */
-.compare-btn {
-  margin-top: 10px;
-  background: royalblue;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.compare-btn:hover {
-  background: mediumblue;
-}
 .searchbar-input::placeholder {
   color: black;
-}
-
-.sug-main {
-  position: absolute;
-  top: 50px;
-  width: 250px;
-  z-index: 10000;
-  overflow-y: visible;
-  color: black;
-  background-color: white;
-  border-radius: 5px;
 }
 
 .searchbar-container {
@@ -189,7 +40,6 @@ border-color: white;
   border: none;
   outline: flexi;
   font-size: 15px;
-  
 }
 
 /* Suggestions dropdown */
@@ -214,6 +64,51 @@ border-color: white;
   cursor: pointer;
 }
 
-.suggestions-box li:hover {
-  background-color: white;
+/* 📱 Mobile Responsive (max-width: 786px) */
+@media (max-width: 786px) {
+  .searchbar-container {
+    padding: 0; /* no padding */
+    width: 100%; /* fill parent width */
+    height: 35px; /* increased for larger touch target */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* align left */
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .searchbar-input {
+    height: 32px; 
+    width: 100%; 
+    max-width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    padding: 6px 8px; /* more comfortable touch padding */
+    font-size: 13px;
+    box-sizing: border-box;
+    color: #333;
+  }
+
+  .suggestions-box {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%; /* match the input width */
+    background: rgb(255, 255, 255);
+    max-height: 160px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    padding: 0;
+    margin: 0;
+    z-index: 200;
+    box-sizing: border-box;
+  }
+
+  .suggestions-box li {
+    padding: 8px 10px;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .suggestions-box li:last-child { border-bottom: none; }
 }

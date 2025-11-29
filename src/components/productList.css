@@ -3,10 +3,28 @@
    =========================== */
 .product-list-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px; /* tighter spacing so cards fit on many widths */
+  padding: 10px;
   box-sizing: border-box;
+}
+
+/* Force 4 columns on typical laptop/desktop widths */
+@media (min-width: 1000px) {
+  .product-list-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+}
+
+/* Expand to 5 columns on very large screens */
+@media (min-width: 1400px) {
+  .product-list-container {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
 }
 
 /* ===========================

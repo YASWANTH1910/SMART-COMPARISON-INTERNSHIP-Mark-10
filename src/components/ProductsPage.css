@@ -1,12 +1,39 @@
+.all-products-wrapper {
+  width: 100%;
+}
+
+.page-title-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
+
+.page-main-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.filter-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .filters-and-list {
   display: flex;
-  padding-left: 50px;
+  width: 100%;
+  max-width: 1240px;
   margin: 0 auto;
- 
+  box-sizing: border-box;
 }
 
 .filters-sidebar {
-  width: 320px;
+  width: 240px; /* slightly reduced so the grid gets more room */
   flex-shrink: 0;
   position: sticky;
   top: 0;
@@ -22,11 +49,6 @@
   background: #f9f9f9;
   border-radius: 12px;
   min-height: 80vh;
-}
-.page-main-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-left:5%;
 }
 
 /* Mobile  */

@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  width: 90%;
+  width: 96%;
+  max-width: 1200px;
   margin: 20px auto;
 }
 
@@ -57,7 +58,7 @@
 
 .showcase-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px black(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .image-wrapper {
@@ -67,6 +68,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
+  padding: 8px; /* small inset like Flipkart cards */
 }
 
 .image-wrapper img {
@@ -93,9 +96,62 @@
   margin: 0;
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 900px) {
+/* Mobile-specific tweaks to mimic Flipkart card look */
+@media (max-width: 786px) {
+  
   .showcase-container {
     flex-direction: column;
+    width: 100%;
+    margin: 12px 0;
+    gap: 12px;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .showcase-box {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .showcase-header h2 {
+    font-size: 18px;
+  }
+
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .showcase-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    text-align: left;
+  }
+
+  .showcase-card:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .image-wrapper {
+    height: 120px;
+    padding: 6px;
+  }
+
+  .title {
+    font-size: 13px;
+    margin-top: 8px;
+    text-align: left;
+  }
+
+  .price {
+    font-size: 12px;
+    color: #16a34a; /* green label like Flipkart */
+    font-weight: 700;
+    margin-top: 6px;
+    text-align: left;
   }
 }

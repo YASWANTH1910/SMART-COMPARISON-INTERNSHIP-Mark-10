@@ -8,6 +8,7 @@ import CategoryAndBrandShowcase from "./components/CategoryAndBrandShowcase";
 import StoreBar from "./components/storeBar";
 import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid"; 
+import PopularComparison from "./components/PopularComparison";
 import "./App.css";
 
 function App() {
@@ -97,13 +98,11 @@ function App() {
     navigate("/products", { state: { filterBrand: brandName } });
   };
 
-  // ⭐ TOP ROW (3 Mobiles + 2 Laptops)
   const topRow = [
     ...products.filter((p) => p.category === "Electronics" && p.subcategory === "Mobiles").slice(0, 3),
     ...products.filter((p) => p.category === "Electronics" && p.subcategory === "Laptops").slice(0, 2),
   ];
 
-  // ⭐ BOTTOM ROW (3 Cars + 2 Bikes)
   const bottomRow = [
     ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Cars").slice(0, 3),
     ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Bikes").slice(0, 2),
@@ -133,10 +132,10 @@ function App() {
                   onCategoryClick={handleIconClick}
                   onViewAll={() => navigate("/products")}
                 />
-
+                <PopularComparison/>
                   <ProductGrid
                     title="Trending Products"
-                    products={[...topRow, ...bottomRow]}
+                    products={[...topRow, ...bottomRow].slice(0, 9)}
                     onSpecClick={handleCompareToggle}
                     selectedProducts={selectedProducts}
                   />

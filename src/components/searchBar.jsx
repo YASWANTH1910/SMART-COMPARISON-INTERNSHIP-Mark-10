@@ -62,7 +62,7 @@ const SearchBar = () => {
     <div className="searchbar-container" ref={containerRef}>
       <input
         type="text"
-        placeholder=" Search products                                               🔍"
+        placeholder=" Search products                                                        🔍"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="searchbar-input"
@@ -75,8 +75,7 @@ const SearchBar = () => {
             <li
               key={item.id}
               onMouseDown={() => handleSelect(item)} // works perfectly
-              className="suggestion-item"
-            >
+              className="suggestion-item">
               {item.name}
             </li>
           ))}

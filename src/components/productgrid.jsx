@@ -78,8 +78,7 @@ export default function ProductGrid({
               className={`pgx-compare ${
                 isCompared(product.id) ? "selected" : ""
               }`}
-              onClick={(e) => handleCompareClick(e, product)}
-            >
+              onClick={(e) => handleCompareClick(e, product)}>
               {isCompared(product.id) ? "Remove" : "Compare"}
             </button>
           </article>

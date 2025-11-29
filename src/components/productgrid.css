@@ -31,8 +31,9 @@
 .pgx-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 12px;
+  gap: 0; /* attached cards: no gap between grid items */
   width: 100%;
+  box-sizing: border-box;
 }
 
 /* -------- CARD (UNIFORM HEIGHT) -------- */
@@ -43,9 +44,9 @@
   padding: 12px;
   cursor: pointer;
   transition: 0.25s ease;
-  height: 330px;            /* ← FIX: uniform height */
   display: flex;
   flex-direction: column;
+  height: auto; /* allow content to determine height on responsive layouts */
 }
 
 .pgx-card:hover {
@@ -56,7 +57,7 @@
 /* -------- IMAGE WRAPPER (UNIFORM) -------- */
 .pgx-imgwrap {
   width: 100%;
-  height: 150px;            /* ← FIX: same image height */
+  height: 150px;            /* same image height on larger screens */
   background: #f5f5f5;
   border-radius: 10px;
   display: flex;
@@ -80,14 +81,21 @@
 .pgx-meta {
   flex-grow: 1;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* push rating to the bottom of meta */
 }
 
 .pgx-name {
   font-size: 14px;
   font-weight: 500;
-  min-height: 35px;
   margin-bottom: 5px;
   color: #222;
+  display: -webkit-box; /* clamp long names */
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .pgx-price {
@@ -105,6 +113,8 @@
   font-weight: 600;
   font-size: 0.88rem;
   color: #000;
+  margin-bottom: 6px; /* space between rating and compare button */
+  align-self: flex-start; /* prevent rating from stretching to full width */
 }
 
 /* -------- COMPARE BUTTON -------- */
@@ -117,6 +127,7 @@
   background: #eaf1ff;
   cursor: pointer;
   transition: 0.2s ease;
+  margin-top: 8px;
 }
 
 .pgx-compare.selected {
@@ -129,4 +140,43 @@
   grid-column: 1 / -1;
   text-align: center;
   padding: 20px;
+}
+
+/* ---------- Responsive breakpoints ---------- */
+@media (max-width: 1200px) {
+  .pgx-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .pgx-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0; /* attach cards */
+  }
+  .pgx-card {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .pgx-imgwrap { height: 140px; }
+}
+
+/* Mobile: keep 3 cards per row as requested, tighten gaps */
+@media (max-width: 786px) {
+  .pgx-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+  .pgx-card {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .pgx-imgwrap {
+    height: 120px; /* slightly smaller on mobile */
+    border-radius: 8px;
+  }
+  .pgx-name { font-size: 13px; min-height: 34px; }
+  .pgx-price { font-size: 14px; }
+  .pgx-rating { font-size: 0.88rem; padding: 3px 7px; }
+  .pgx-compare { padding: 6px 0; font-size: 13px; }
 }

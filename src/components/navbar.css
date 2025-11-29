@@ -8,13 +8,13 @@
   z-index: 999 !important;
 }
 
-
 .storebar-wrapper,
 .category-wrapper,
 .category-menu {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -66,7 +66,7 @@
   background-color: rgb(12, 82, 157);
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
@@ -86,7 +86,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-left: 10px;
+  margin-left: 3px;
   pointer-events: auto !important; 
 }
 
@@ -96,7 +96,7 @@
   background-color: rgb(12, 82, 157);
   color: white;
   border: none;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
@@ -109,7 +109,6 @@
   background-color: #0056b3;
 }
 
-/* compare count badge */
 .compare-count {
   position: absolute;
   top: -6px;
@@ -128,6 +127,7 @@
 
 /* User icon */
 .user-icon-container {
+  padding-right: 10px;
   position: relative;
   display: flex;
   align-items: center;
@@ -201,3 +201,186 @@
 .login-btn:hover {
   background-color: #0056b3;
 }
+
+/* 📱 Mobile Responsive (max-width: 786px) */
+@media (max-width: 786px) {
+  .navbar {
+    padding: 0;
+    background: rgb(12, 82, 157);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: center;
+    justify-content: flex-start; /* start from left, not space-between */
+    padding: 0;
+    position: relative;
+  }
+
+  .nav-logo {
+    display: none;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 0;
+  }
+
+  /* TOP ROW: hamburger | search | user icon */
+  .nav-left {
+    order: 1;
+    flex: 0 0 30px;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px; /* add gap between menu and search */
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 44px;
+  }
+
+  .nav-center {
+    order: 2;
+    flex: 0 0 auto;
+    width: 150px; 
+    padding: 0;
+    margin: 0;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; 
+  }
+
+  .searchbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .nav-actions .user-icon-container {
+    position: absolute;
+    top: -48px; 
+    right: 5px; 
+    flex: 0 0 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+    height: 48px;
+  }
+
+  /* BOTTOM ROW: nav buttons + compare button */
+  .nav-actions {
+    order: 4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 2px;
+    padding: 6px 4px; /* match top row padding (6px vertical) */
+    background: rgb(12, 82, 157);
+    border-top: 1px solid #000;
+    margin: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    position: relative;
+    height: 44px; /* match approximate top row height */
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu button,
+  .nav-login-btn,
+  .compare-btn-navbar,
+  .nav-link-btn {
+    padding: 4px 9px;
+    font-size: 0.75rem;
+    background: white;
+    color: rgb(12, 82, 157);
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-menu button:hover,
+  .compare-btn-navbar:hover,
+  .nav-link-btn:hover {
+    background-color: #f0f0f0;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin: 0;
+  }
+
+  .compare-btn-navbar {
+    padding: 4px 9px;
+    font-size: 0.75rem;
+    background: white;
+    color: rgb(12, 82, 157);
+    border: none;
+    border-radius: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .user-icon-container {
+    padding: 6px 4px 6px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .user-icon {
+    font-size: 1.35rem; /* slightly larger */
+    color: white;
+    transition: color 0.2s ease;
+  }
+
+  .user-icon:hover {
+    color: #ddd;
+  }
+
+  .navbar {
+    position: relative; /* ensure navbar is stacking context */
+  }
+
+  .login-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+

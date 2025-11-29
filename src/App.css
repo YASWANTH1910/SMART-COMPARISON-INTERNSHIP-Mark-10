@@ -1,19 +1,30 @@
 
-html, body, #root {
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-height: 100%;
-  background-color: whitesmoke;
   box-sizing: border-box;
 }
 
-main, .main, .main-container, .content, .page-content, .app-content {
+/* Make body fill screen and prevent unwanted scroll gaps */
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  background-color: whitesmoke;
+}
+/* Remove unwanted padding from all main wrappers used in project */
+main, 
+.main, 
+.main-container, 
+.content, 
+.page-content, 
+.app-content {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.main-content {
+/* Ensures your main content starts exactly below navbar */
+.main-content, 
+.appjsx-main {
   margin-top: 0 !important;
   padding-top: 0 !important;
   width: 100%;
@@ -21,33 +32,24 @@ main, .main, .main-container, .content, .page-content, .app-content {
   display: block;
 }
 
+/* Remove default spacing from structural elements */
 section, div, header, footer {
   margin: 0;
   padding: 0;
 }
 
-.app-wrapper {
+.navbar,
+.nav-container {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* If any element pushes content down, this kills it */
-/* *::before,
-*::after {
-  margin: 0;
-  padding: 0;
-} */
-/* Footer - FIXED to stay at bottom */
-.appjsx-footer {
+ .appjsx-footer {
   background: #334659;
   color: white;
   text-align: center;
   padding: 7px;
-  margin-top: auto; 
+  margin-top: auto;
   width: 100%;
-}
+} 

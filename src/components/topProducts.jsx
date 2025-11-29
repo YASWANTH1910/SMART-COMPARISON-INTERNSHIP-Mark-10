@@ -4,13 +4,12 @@ const TopProducts = () => {
   const scrollRef = useRef(null);
 
   const products = [  
-    { name: "Hyundai Creta", price: " ₹12.5 Lakh", image: "https://spn-sta.spinny.com/blog/20220228144639/Spinny-Assured-2021-Hyundai-Creta.jpg" },
-    { name: "Mahindra Scorpio-N", price: " ₹25.5 Lakh", image: "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Flarge%2Fmahindra%2Fscorpio-n%2Fmahindra-scorpio-n.jpg%3Fv%3D27&w=1600&q=75" },
-    { name: "Tata Nexon", price: " ₹11.5 Lakh", image: "https://images.carandbike.com/car-images/orig/tata/nexon/tata-nexon.jpg?v=74" },
     { name: "iPhone 17 Pro Max", price: "₹149999", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtIgDZAh57-CK8OIyaqF8QgLysjvMdGWkcJA&s" },
     { name: "ASUS ROG Phone 9 Pro", price: " ₹95999", image: "https://sc04.alicdn.com/kf/Hd2e3bdad17724a5c98ff1c28ffc26bc4J.jpg" },
+    { name: "Mahindra Scorpio-N", price: " ₹25.5 Lakh", image: "https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Flarge%2Fmahindra%2Fscorpio-n%2Fmahindra-scorpio-n.jpg%3Fv%3D27&w=1600&q=75" },
+    { name: "Tata Sierra", price: " ₹11.5 Lakh", image: "https://motomotar.com/wp-content/uploads/2024/08/Tata-Sierra-EV-1024x683.jpg" },
+    { name: "Hyundai Creta", price: " ₹12.5 Lakh", image: "https://spn-sta.spinny.com/blog/20220228144639/Spinny-Assured-2021-Hyundai-Creta.jpg" },
     { name: "Watches", price: " ₹4999", image: "https://static.helioswatchstore.com/media/catalog/product/c/e/ceciwgn0019503w_1_3.jpg" },
-    { name: "Shoes", price: " ₹2999", image: "https://offlimits.co.in/cdn/shop/files/OCM-64305_1.jpg?v=1720259294" },
     { name: "Headphones", price: " ₹7999", image: "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/JULY/30/EA7AcMUK_71d8d2941dfa4342a412402a86982cbe.jpg" },
     { name: "Backpacks", price: " ₹2999", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUYlyx_9Q9r5oqYnqwSXypb7pjq7G2HYKMXw&s" },
   ];
@@ -45,7 +44,7 @@ const TopProducts = () => {
         margin: "0 auto 18px",
         width: "90%",
         position: "relative",
-        overflow: "hidden", // ✅ back to hidden for clean edges
+        overflow: "hidden", // 
       }}>
       <h2
         style={{
@@ -54,8 +53,7 @@ const TopProducts = () => {
           fontSize: "22px",
           fontWeight: 700,
           color: "#222",
-        }}
-      >
+        }}>
         Top Products
       </h2>
 
@@ -85,15 +83,14 @@ const TopProducts = () => {
           display: "flex",
           overflowX: "auto",
           gap: "16px",
-          paddingLeft: "150px",     // ✅ minimal left padding
-          paddingRight: "30px",    // ✅ enough room for last card
+          paddingLeft: "50px",   
+          paddingRight: "30px",    
           scrollBehavior: "smooth",
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           WebkitOverflowScrolling: "touch",
-          scrollSnapType: "x mandatory", // ✅ aligns cleanly
-        }}
-      >
+          scrollSnapType: "x mandatory",
+        }}>
         {products.map((item, idx) => (
           <div
             key={idx}
@@ -101,7 +98,7 @@ const TopProducts = () => {
               flex: "0 0 160px",
               textAlign: "center",
               cursor: "pointer",
-              scrollSnapAlign: "start", // ✅ ensures clean left alignment
+              scrollSnapAlign: "start",
             }}
             onMouseEnter={(e) => {
               const img = e.currentTarget.querySelector("img");
@@ -110,8 +107,7 @@ const TopProducts = () => {
             onMouseLeave={(e) => {
               const img = e.currentTarget.querySelector("img");
               if (img) img.style.transform = "scale(1)";
-            }}
-          >
+            }} >
             <img
               src={item.image}
               alt={item.name}
