@@ -1,156 +1,157 @@
 import React, { useEffect, useState, useMemo } from "react";
 import "./comparisonPage.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import ComparisonTable from "../components/comparisonTable";
 
-
-const ComparisonPage = ({ selectedProducts }) => {
+const ComparisonPage = ({ selectedProducts: propSelectedProducts = [] }) => {
   const navigate = useNavigate();
+    const location = useLocation();
 
-  // 🧭 Redirect to home if not enough products selected
-  useEffect(() => {
-    if (!selectedProducts || selectedProducts.length < 2) {
-      navigate("/");
-    }
-  }, [selectedProducts, navigate]);
+      // This will hold the final list of products to compare
+        const [selectedProducts, setSelectedProducts] = useState(propSelectedProducts);
 
+          // Check if products were passed via navigation (from Popular Comparisons)
+            useEffect(() => {
+                const preSelected = location.state?.preSelectedProducts;
 
-  // 🎛️ Filter states
-  const [minPrice, setMinPrice] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-  const [category, setCategory] = useState("");
-  const [subCategory, setSubCategory] = useState("");
+                    if (preSelected && Array.isArray(preSelected) && preSelected.length >= 2) {
+                          // Use the pre-selected ones (from Popular Comparisons click)
+                                setSelectedProducts(preSelected);
 
-  // 🧹 Clear filters
-  const handleClearFilters = () => {
-    setMinPrice("");
-    setMaxPrice("");
-    setCategory("");
-    setSubCategory("");
-  };
+                                      // Optional: Clean the URL so back button doesn't re-trigger
+                                            navigate("/compare", { replace: true, state: {} });
+                                                } else if (propSelectedProducts.length >= 2) {
+                                                      // Use products passed via props (normal flow)
+                                                            setSelectedProducts(propSelectedProducts);
+                                                                }
+                                                                  }, [location.state, propSelectedProducts, navigate]);
 
-  // When main category changes, clear subCategory so it doesn't block results
-  useEffect(() => {
-    setSubCategory("");
-  }, [category]);
+                                                                    // Redirect if less than 2 products
+                                                                      useEffect(() => {
+                                                                          if (selectedProducts.length < 2) {
+                                                                                navigate("/");
+                                                                                    }
+                                                                                      }, [selectedProducts, navigate]);
 
-  // 🧮 Extract available categories & subcategories dynamically
-  const categories = useMemo(() => {
-    const cats = new Set(selectedProducts.map((p) => p.category || ""));
-    return Array.from(cats).filter(Boolean);
-  }, [selectedProducts]);
+                                                                                        // Filters (unchanged)
+                                                                                          const [minPrice, setMinPrice] = useState("");
+                                                                                            const [maxPrice, setMaxPrice] = useState("");
+                                                                                              const [category, setCategory] = useState("");
+                                                                                                const [subCategory, setSubCategory] = useState("");
 
-  const subCategories = useMemo(() => {
-    const subs = new Set(
-      selectedProducts.map((p) => p.subCategory || p.subcategory || "")
-    );
-    return Array.from(subs).filter(Boolean);
-  }, [selectedProducts]);
+                                                                                                  const handleClearFilters = () => {
+                                                                                                      setMinPrice("");
+                                                                                                          setMaxPrice("");
+                                                                                                              setCategory("");
+                                                                                                                  setSubCategory("");
+                                                                                                                    };
 
-  // 🔍 Apply filters
-  const filteredProducts = useMemo(() => {
-    return selectedProducts.filter((p) => {
-      const price = Number(p.price) || 0;
-      const cat = (p.category || "").toLowerCase();
-      const subCat = (p.subCategory || p.subcategory || "").toLowerCase();
+                                                                                                                      useEffect(() => {
+                                                                                                                          setSubCategory("");
+                                                                                                                            }, [category]);
 
-      const minOk = minPrice ? price >= Number(minPrice) : true;
-      const maxOk = maxPrice ? price <= Number(maxPrice) : true;
-      const catOk = category ? cat === category.toLowerCase() : true;
-      const subOk = subCategory ? subCat === subCategory.toLowerCase() : true;
+                                                                                                                              const categories = useMemo(() => {
+                                                                                                                                  const cats = new Set(selectedProducts.map((p) => p.category || ""));
+                                                                                                                                      return Array.from(cats).filter(Boolean);
+                                                                                                                                        }, [selectedProducts]);
 
-      return minOk && maxOk && catOk && subOk;
-    });
-  }, [selectedProducts, minPrice, maxPrice, category, subCategory]);
+                                                                                                                                          const subCategories = useMemo(() => {
+                                                                                                                                              const subs = new Set(selectedProducts.map((p) => p.subCategory || p.subcategory || ""));
+                                                                                                                                                  return Array.from(subs).filter(Boolean);
+                                                                                                                                                    }, [selectedProducts]);
 
-  // 🚫 Handle empty comparison
-  if (!selectedProducts || selectedProducts.length < 2) {
-    return (
-      <div className="comparison-empty">
-        <h2>⚠ Please select at least 2 products to compare.</h2>
-      </div>
-    );
-  }
+                                                                                                                                                      const filteredProducts = useMemo(() => {
+                                                                                                                                                          return selectedProducts.filter((p) => {
+                                                                                                                                                                const price = Number(p.price) || 0;
+                                                                                                                                                                      const cat = (p.category || "").toLowerCase();
+                                                                                                                                                                            const subCat = (p.subCategory || p.subcategory || "").toLowerCase();
 
-  return (
-    <div className="comparison-page">
-      {/* 🧭 Sidebar Filters */}
-      <aside className="filter-sidebar">
-        <div className="filter-header">
-          <h3>Filters</h3>
-          <span className="clear-filters-text" onClick={handleClearFilters}>
-            Clear Filters
-          </span>
-        </div>
+                                                                                                                                                                                  const minOk = minPrice ? price >= Number(minPrice) : true;
+                                                                                                                                                                                        const maxOk = maxPrice ? price <= Number(maxPrice) : true;
+                                                                                                                                                                                              const catOk = category ? cat === category.toLowerCase() : true;
+                                                                                                                                                                                                    const subOk = subCategory ? subCat === subCategory.toLowerCase() : true;
 
-        <div className="filter-group">
-          <label>Min Price</label>
-          <input
-            type="number"
-            value={minPrice}
-            onChange={(e) => setMinPrice(e.target.value)}
-            placeholder="e.g. 10000"
-          />
-        </div>
+                                                                                                                                                                                                          return minOk && maxOk && catOk && subOk;
+                                                                                                                                                                                                              });
+                                                                                                                                                                                                                }, [selectedProducts, minPrice, maxPrice, category, subCategory]);
 
-        <div className="filter-group">
-          <label>Max Price</label>
-          <input
-            type="number"
-            value={maxPrice}
-            onChange={(e) => setMaxPrice(e.target.value)}
-            placeholder="e.g. 90000"
-          />
-        </div>
+                                                                                                                                                                                                                  if (selectedProducts.length < 2) {
+                                                                                                                                                                                                                      return null; // redirecting anyway
+                                                                                                                                                                                                                        }
 
-        <div className="filter-group">
-          <label>Category</label>
-          <select value={category} onChange={(e) => setCategory(e.target.value)}>
-            <option value="">All</option>
-            {categories.map((cat) => (
-              <option key={cat} value={cat.toLowerCase()}>
-                {cat}
-              </option>
-            ))}
-          </select>
-        </div>
+                                                                                                                                                                                                                          return (
+                                                                                                                                                                                                                              <div className="comparison-page">
+                                                                                                                                                                                                                                    {/* Sidebar Filters */}
+                                                                                                                                                                                                                                          <aside className="filter-sidebar">
+                                                                                                                                                                                                                                                  <div className="filter-header">
+                                                                                                                                                                                                                                                            <h3>Filters</h3>
+                                                                                                                                                                                                                                                                      <span className="clear-filters-text" onClick={handleClearFilters}>
+                                                                                                                                                                                                                                                                                  Clear Filters
+                                                                                                                                                                                                                                                                                            </span>
+                                                                                                                                                                                                                                                                                                    </div>
 
-        {subCategories.length > 0 && (
-          <div className="filter-group">
-            <label>Sub-Category</label>
-            <select
-              value={subCategory}
-              onChange={(e) => setSubCategory(e.target.value)}
-            >
-              <option value="">All</option>
-              {subCategories.map((sub) => (
-                <option key={sub} value={sub.toLowerCase()}>
-                  {sub}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
+                                                                                                                                                                                                                                                                                                            <div className="filter-group">
+                                                                                                                                                                                                                                                                                                                      <label>Min Price</label>
+                                                                                                                                                                                                                                                                                                                                <input
+                                                                                                                                                                                                                                                                                                                                            type="number"
+                                                                                                                                                                                                                                                                                                                                                        value={minPrice}
+                                                                                                                                                                                                                                                                                                                                                                    onChange={(e) => setMinPrice(e.target.value)}
+                                                                                                                                                                                                                                                                                                                                                                                placeholder="e.g. 10000"
+                                                                                                                                                                                                                                                                                                                                                                                          />
+                                                                                                                                                                                                                                                                                                                                                                                                  </div>
 
-        <button
-          onClick={() => navigate("/products")}
-          className="add-product-btn"
-        >
-          ➕ Add Product
-        </button>
+                                                                                                                                                                                                                                                                                                                                                                                                          <div className="filter-group">
+                                                                                                                                                                                                                                                                                                                                                                                                                    <label>Max Price</label>
+                                                                                                                                                                                                                                                                                                                                                                                                                              <input
+                                                                                                                                                                                                                                                                                                                                                                                                                                          type="number"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      value={maxPrice}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  onChange={(e) => setMaxPrice(e.target.value)}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              placeholder="e.g. 90000"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
 
-        <button onClick={() => navigate("/")} className="back-btn">
-          ⬅ Back to Home
-        </button>
-      </aside>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div className="filter-group">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <label>Category</label>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <option value="">All</option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {categories.map((cat) => (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <option key={cat} value={cat.toLowerCase()}>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {cat}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ))}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </select>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </div>
 
-      {/* 📊 Comparison Table */}
-      <section className="comparison-content">
-        <h2>Product Comparison</h2>
-        <ComparisonTable selectedProducts={filteredProducts} />
-      </section>
-    </div>
-  );
-};
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      {subCategories.length > 0 && (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div className="filter-group">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <label>Sub-Category</label>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <select value={subCategory} onChange={(e) => setSubCategory(e.target.value)}>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <option value="">All</option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {subCategories.map((sub) => (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <option key={sub} value={sub.toLowerCase()}>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      {sub}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ))}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </select>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  )}
 
-export default ComparisonPage;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <button onClick={() => navigate("/products")} className="add-product-btn">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Add Product
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </button>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button onClick={() => navigate("/")} className="back-btn">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Back to Home
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </aside>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {/* Main Comparison */}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <section className="comparison-content">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <h2>Product Comparison ({filteredProducts.length} products)</h2>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <ComparisonTable selectedProducts={filteredProducts} />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </section>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    );
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    };
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    export default ComparisonPage;

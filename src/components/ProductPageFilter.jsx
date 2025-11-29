@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import "./ProductFilterPage.css";   
 
 const MAIN_CATEGORIES = [
@@ -7,7 +7,6 @@ const MAIN_CATEGORIES = [
   { value: "Furniture", label: "Furniture" },
   { value: "Automobiles", label: "Automobiles" },
   { value: "Skincare&Beauty", label: "Skincare & Beauty" },
-  
 ];
 
 const SUBCATEGORIES = {
@@ -41,7 +40,6 @@ const SUBCATEGORIES = {
     { value: "Lipsticks", label: "Lipsticks" },
     { value: "Eye Shadows", label: "Eye Shadows" },
   ],
-  
 };
 
 function ProductFilters({
@@ -57,29 +55,40 @@ function ProductFilters({
   const [minRating, setMinRating] = useState("All");
   const [sortOrder, setSortOrder] = useState("default");
 
-
   const availableBrands = useMemo(() => {
     const set = new Set();
     products.forEach((p) => p.features?.Brand && set.add(p.features.Brand));
     return Array.from(set).sort();
   }, [products]);
 
- 
   useEffect(() => {
     setCategory(currentFilter?.mainItems ?? "All");
     setSubcategory(currentFilter?.subItems ?? "All");
   }, [currentFilter]);
 
-  const handleApply = () => {
-    onApplyFilters({
+  const onApplyRef = useRef(onApplyFilters);
+
+  useEffect(() => {
+    onApplyRef.current = onApplyFilters;
+  }, [onApplyFilters]);
+
+  useEffect(() => {
+    const payload = {
       category,
       subcategory,
       brands: selectedBrand === "All" ? [] : [selectedBrand],
       priceRange,
       minRating: minRating === "All" ? 0 : Number(minRating),
       sortOrder,
-    });
-  };
+    };
+
+    const timer = setTimeout(() => {
+      // Call the latest callback from ref to avoid depending on parent inline identity
+      onApplyRef.current && onApplyRef.current(payload);
+    }, 250);
+
+    return () => clearTimeout(timer);
+  }, [category, subcategory, selectedBrand, priceRange, minRating, sortOrder]);
 
   const handleClear = () => {
     setCategory("All");
@@ -92,18 +101,14 @@ function ProductFilters({
   };
 
   const subOptions = SUBCATEGORIES[category] || [{ value: "All", label: "All" }];
-
   return (
     <div className="product-filters">
 
-      {/* TOP HEADER: Back | Title | Apply */}
+      {/* TOP HEADER: Back | Title */}
       <div className="filter-header">
+        <div className="filter-title">Filter</div>
         <button className="back-btn" onClick={handleClear}>
           Reset
-        </button>
-        <div className="filter-title">Filter</div>
-        <button className="apply-header-btn" onClick={handleApply}>
-          Apply
         </button>
       </div>
 
@@ -115,7 +120,6 @@ function ProductFilters({
             <option key={c.value} value={c.value}>{c.label}</option>
           ))}
         </select>
-       
       </div>
 
       {/* Sub-category */}

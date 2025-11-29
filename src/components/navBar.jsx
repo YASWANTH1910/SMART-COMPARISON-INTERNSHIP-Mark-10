@@ -103,8 +103,7 @@ const Navbar = ({
               type="button"
               className="compare-btn-navbar"
               onClick={handleCompareClick}
-              aria-label="Compare selected products"
-            >
+              aria-label="Compare selected products" >
               Compare
               {compareCount > 0 && (
                 <span className="compare-count">{compareCount}</span>

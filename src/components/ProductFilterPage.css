@@ -18,7 +18,7 @@
   background: linear-gradient(135deg, #e7c7f7 0%, #fcfdff 100%);
   color: rgb(0, 0, 0);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
   border-bottom: 1px solid rgba(255,255,255,0.2);
   min-height: 44px;
   box-sizing: border-box;
@@ -28,8 +28,8 @@
 .back-btn {
   background: none;
   border: none;
-  color: rgb(0, 0, 0);
-  font-size: 0.95rem;
+  color: rgb(11, 11, 11);
+  font-size: 1.2rem;
   cursor: pointer;
   padding: 8px 0;
   border-radius: 6px;
@@ -44,11 +44,10 @@
 }
 .back-btn:hover {
   background:none;
-  /* color: #ffffff; */
 }
 
 .filter-title {
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   letter-spacing: 0.1px;
   flex: 1;
   text-align: center;
@@ -59,34 +58,13 @@
   justify-content: center;
 }
 
-.apply-header-btn {
-  background: rgba(255, 37, 37, 0.877);
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 8px 0;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-  flex: 1;
-  white-space: nowrap;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.apply-header-btn:hover {
-  background: rgb(255, 0, 0);
-  color: #ffffff;
-}
-
 .filter-group {
   padding: 5px 15px;
   border-bottom: 1px solid #f0f0f0;
 }
+
 .filter-group:last-child { border-bottom: none; }
-/* 
+
 .filter-group label {
   display: block;
   font-size: 0.95rem;
@@ -94,7 +72,7 @@
   color: #333;
   margin-bottom: 8px;
   letter-spacing: 0.3px;
-} */
+} 
 
 .filter-group select {
   width: 100%;
@@ -124,11 +102,9 @@
   border-radius: 6px;
   background: #e0e0e0;
   outline: none;
-  
 }                
-/*css for webkit browser*/
-.filter-group input[type="range"]::-webkit-slider-thumb {
 
+.filter-group input[type="range"]::-webkit-slider-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;

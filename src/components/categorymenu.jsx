@@ -1,9 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./category.css";
 
-const CategoryFilterMenu = ({ onCategorySelect }) => {
+const CategoryFilterMenu = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -64,19 +66,26 @@ const CategoryFilterMenu = ({ onCategorySelect }) => {
     },
   ];
 
-  const handleCategorySelection = (mainItems, subItems) => {
-    console.log(`Filtering: ${mainItems} - ${subItems}`);
-    if (onCategorySelect) onCategorySelect(mainItems, subItems);
+  // ⬇️ UPDATED: Navigate to products page with filter
+  const handleCategorySelection = (main, sub) => {
+    navigate("/products", {
+      state: {
+        filterCategory: main,
+        filterSubcategory: sub,
+      },
+    });
     setMenuVisible(false);
   };
 
   const handleShowAll = () => {
-    console.log("Showing entire products");
-    if (onCategorySelect) onCategorySelect("All", "All");
+    navigate("/products", {
+      state: {
+        filterCategory: "All",
+        filterSubcategory: "All",
+      },
+    });
     setMenuVisible(false);
   };
-
-  console.log("Loaded Categories →", categories);
 
   return (
     <div className="main-menu">
@@ -103,31 +112,27 @@ const CategoryFilterMenu = ({ onCategorySelect }) => {
           </div>
 
           <div className="category-container">
-            {Array.isArray(categories) &&
-              categories.map((category) => (
-                <div key={category.id} className="category-section">
-                  <strong className="section-title">
-                    {String(category.name || "Unnamed")}
-                  </strong>
-                  <div className="subcategory-list">
-                    {Array.isArray(category.subcategories) &&
-                      category.subcategories.map((subItem) => (
-                        <button
-                          key={subItem.id}
-                          className="sub-category-options"
-                          onClick={() =>
-                            handleCategorySelection(
-                              String(category.name),
-                              String(subItem.name)
-                            )
-                          }
-                        >
-                          {String(subItem.name || "Unnamed")}
-                        </button>
-                      ))}
-                  </div>
+            {categories.map((category) => (
+              <div key={category.id} className="category-section">
+                <strong className="section-title">{category.name}</strong>
+
+                <div className="subcategory-list">
+                  {category.subcategories.map((subItem) => (
+                    <button
+                      key={subItem.id}
+                      className="sub-category-options"
+                      // ⬇️ navigate with main + sub
+                      onClick={() =>
+                        handleCategorySelection(category.name, subItem.name)
+                      }
+                    >
+                      {subItem.name}
+                    </button>
+                  ))}
                 </div>
-              ))}
+
+              </div>
+            ))}
           </div>
         </div>
       )}
