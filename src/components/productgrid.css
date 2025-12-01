@@ -165,7 +165,7 @@
     gap: 0; /* attach cards */
   }
   .pgx-card {
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
   }
   .pgx-imgwrap { height: 140px; }
@@ -178,11 +178,11 @@
     gap: 0;
   }
   .pgx-card {
-    padding: 8px;
+    padding: 6px;
     border-radius: 8px;
   }
   .pgx-imgwrap {
-    height: 120px; /* slightly smaller on mobile */
+    height: 100px; /* a little smaller on mobile */
     border-radius: 8px;
   }
   .pgx-name { font-size: 13px; min-height: 34px; }

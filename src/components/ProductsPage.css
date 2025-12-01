@@ -54,11 +54,18 @@
 /* Mobile  */
 @media (max-width: 768px) {
   .filters-and-list {
-    flex-direction: column;
+    flex-direction: row; /* keep left sidebar instead of top */
   }
   .filters-sidebar {
-    width: 100%;
-    height: auto;
-    position: static;
+    width: 180px; /* narrower on small screens */
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+    border-right: 1px solid #eee;
+  }
+  .products-list-area {
+    padding: 12px;
   }
 }

@@ -4,8 +4,8 @@
 .product-list-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 8px; /* tighter spacing so cards fit on many widths */
-  padding: 10px;
+  gap: 5px; /* tighter spacing so cards fit on many widths */
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 360px;
+  min-height: 320px;
 }
 
 /* allow absolutely positioned wishlist button */
@@ -61,7 +61,7 @@
    =========================== */
 .list-image {
   width: 100%;
-  height: 180px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,5 +195,22 @@
 @media (max-width: 480px) {
   .product-list-container {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Additional mobile tweaks */
+@media (max-width: 768px) {
+  .list-row { min-height: 280px; padding: 5px; }
+  .list-image { height: 120px; }
+  .list-name { font-size: 15px; }
+}
+@media (max-width: 412px) {
+  .product-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}
+@media (max-width: 380px) {
+  .product-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
