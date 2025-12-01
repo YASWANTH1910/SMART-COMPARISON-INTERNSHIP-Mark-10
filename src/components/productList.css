@@ -42,6 +42,15 @@
   min-height: 360px;
 }
 
+/* allow absolutely positioned wishlist button */
+.list-row { position: relative; }
+.list-row .wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 6;
+}
+
 .list-row:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);

@@ -1,0 +1,18 @@
+.wishlist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(0,0,0,0.03);
+  cursor: pointer;
+  padding: 4px;
+}
+.wishlist-btn.small { width: 28px; height: 28px; padding: 2px; }
+.wishlist-btn .heart-icon { width: 20px; height: 20px; fill: #666666; transition: transform .12s ease, fill .12s ease; }
+.wishlist-btn.active { background: rgba(255,59,48,0.06); border-color: rgba(255,59,48,0.12); }
+.wishlist-btn.active .heart-icon { fill: #ff3b30; transform: scale(1.05); }
+.wishlist-btn:hover .heart-icon { transform: scale(1.05); }
+.wishlist-btn:focus { outline: 2px solid rgba(0,0,0,0.08); outline-offset: 2px; }

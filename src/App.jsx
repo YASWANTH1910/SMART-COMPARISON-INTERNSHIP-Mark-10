@@ -9,6 +9,7 @@ import StoreBar from "./components/storeBar";
 import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid"; 
 import PopularComparison from "./components/PopularComparison";
+import WishlistPage from "./components/WishlistPage";
 import "./App.css";
 
 function App() {
@@ -166,7 +167,10 @@ function App() {
               />
             }
           />
-
+            <Route
+            path="/wishlist"
+            element={<WishlistPage products={products} onSpecClick={handleCompareToggle} selectedProducts={selectedProducts} />}
+          />
           <Route
             path="/compare"
             element={<ComparisonPage selectedProducts={selectedProducts} />}

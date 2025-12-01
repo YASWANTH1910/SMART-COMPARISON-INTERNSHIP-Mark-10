@@ -4,6 +4,7 @@ import "./navbar.css";
 import SearchBar from "./searchBar";
 import CategoryFilterMenu from "./categorymenu";
 import { FaUserCircle } from "react-icons/fa";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const Navbar = ({
   compareCount = 0,
@@ -14,6 +15,8 @@ const Navbar = ({
 }) => {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
+  const [wishlist = []] = useLocalStorage("wishlist", []);
+  const wishlistCount = (wishlist || []).length;
 
   // Ensure login persists after refresh
   useEffect(() => {
@@ -98,6 +101,17 @@ const Navbar = ({
 
           {/* Compare button */}
           <div className="nav-right" style={{ pointerEvents: "auto" }}>
+            <button
+              type="button"
+              className="nav-link-btn wishlist-nav-btn"
+              onClick={() => navigate("/wishlist")}
+              aria-label="Go to wishlist"
+            >
+              Wishlist
+              {wishlistCount > 0 && (
+                <span className="wishlist-count">{wishlistCount}</span>
+              )}
+            </button>
             <button
               type="button"
               className="compare-btn-navbar"

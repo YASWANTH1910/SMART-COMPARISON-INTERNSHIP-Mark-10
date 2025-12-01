@@ -1,4 +1,5 @@
 import React from "react";
+import WishlistButton from "./WishlistButton";
 import "./productList.css";
 
 const ProductList = ({
@@ -52,6 +53,8 @@ const ProductList = ({
             className="list-row"
             title="Click Compare to add/remove"
           >
+            {/* Wishlist button overlay in top-right */}
+            <WishlistButton productId={product.id} small={true} />
             {/* LEFT: IMAGE */}
             <div className="list-image">
               {product?.image ? (
@@ -89,12 +92,14 @@ const ProductList = ({
                 )}
               </div>
 
-              <button
-                className={`compare-btn ${isSelected ? "selected" : ""}`}
-                onClick={handleCompareClick}
-              >
-                {isSelected ? "Remove" : "Compare"}
-              </button>
+              <div style={{ display: "flex", gap: 8 }}>
+                <button
+                  className={`compare-btn ${isSelected ? "selected" : ""}`}
+                  onClick={handleCompareClick}
+                >
+                  {isSelected ? "Remove" : "Compare"}
+                </button>
+              </div>
             </div>
           </div>
         );
