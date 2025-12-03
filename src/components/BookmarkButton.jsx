@@ -21,15 +21,19 @@ export default function BookmarkButton({ productId, small = false }) {
 
   return (
     <button
-      className={"Bookmark-btn" + (isSaved ? " active" : "") + (small ? " small" : "")}
-      onClick={toggle}
-      aria-pressed={isSaved}
-      aria-label={isSaved ? "Remove from Bookmark" : "Add to Bookmark"}
-      title={isSaved ? "Remove from Bookmark" : "Add to Bookmark"}
-    >
-      <svg viewBox="0 0 24 24" className="heart-icon" aria-hidden="true">
-        <path d="M12 21s-7.5-4.5-9.5-7.5C-0.5 8.5 4 3 8.5 5.5 10.3 6.6 12 8.2 12 8.2s1.7-1.6 3.5-2.7C20 3 24.5 8.5 21.5 13.5 19.5 16.5 12 21 12 21z" />
-      </svg>
-    </button>
+  className={"Bookmark-btn" + (isSaved ? " active" : "") + (small ? " small" : "")}
+  onClick={toggle}
+  aria-pressed={isSaved}
+  aria-label={isSaved ? "Remove from Bookmark" : "Add to Bookmark"}
+  title={isSaved ? "Remove from Bookmark" : "Add to Bookmark"}
+>
+  <svg viewBox="0 0 24 24" className="bookmark-icon" aria-hidden="true">
+    {isSaved ? (
+      <path d="M6 2h12a2 2 0 0 1 2 2v18l-8-4-8 4V4a2 2 0 0 1 2-2z" />
+    ) : (
+      <path d="M6 4v15.17l6-3 6 3V4H6m0-2h12a2 2 0 0 1 2 2v18l-8-4-8 4V4a2 2 0 0 1 2-2z" />
+    )}
+  </svg>
+  </button>
   );
 }
