@@ -4,19 +4,16 @@ import "./navbar.css";
 import SearchBar from "./searchBar";
 import CategoryFilterMenu from "./categorymenu";
 import { FaUserCircle } from "react-icons/fa";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 const Navbar = ({
   compareCount = 0,
   onCategorySelect = () => {},
   selectedProducts = [],
-  isLoggedIn,      // <- must be provided by App.jsx
-  setIsLoggedIn,   // <- must be provided by App.jsx
+  isLoggedIn,     
+  setIsLoggedIn,  
 }) => {
   const navigate = useNavigate();
   const [showDropdown, setShowDropdown] = useState(false);
-  const [wishlist = []] = useLocalStorage("wishlist", []);
-  const wishlistCount = (wishlist || []).length;
 
   // Ensure login persists after refresh
   useEffect(() => {
@@ -68,13 +65,11 @@ const Navbar = ({
           <div className="nav-left" style={{ pointerEvents: "auto" }}>
             <CategoryFilterMenu onCategorySelect={onCategorySelect} />
           </div>
-
           {/* Center: Search */}
           <div className="nav-center" style={{ pointerEvents: "auto" }}>
             <SearchBar />
           </div>
 
-          {/* User icon - moved to top row */}
           <div
             className="user-icon-container"
             onMouseEnter={() => setShowDropdown(true)}
@@ -120,8 +115,7 @@ const Navbar = ({
                 <button
                   onClick={() => navigate("/wishlist")}
                   className="nav-link-btn"
-                  type="button"
-                >
+                  type="button">
                   Wishlist
                 </button>
               </li>
@@ -129,8 +123,7 @@ const Navbar = ({
               <button
                 type="button"
                 onClick={handleCompareClick}
-                className="nav-link-btn compare-btn-mobile"
-              >
+                className="nav-link-btn compare-btn-mobile">
                 Compare
                 {compareCount > 0 && (
                   <span className="compare-count">{compareCount}</span>
@@ -142,21 +135,9 @@ const Navbar = ({
           <div className="nav-right compare-desktop" style={{ pointerEvents: "auto" }}>
             <button
               type="button"
-              className="nav-link-btn wishlist-nav-btn"
-              onClick={() => navigate("/wishlist")}
-              aria-label="Go to wishlist"
-            >
-              Wishlist
-              {wishlistCount > 0 && (
-                <span className="wishlist-count">{wishlistCount}</span>
-              )}
-            </button>
-            <button
-              type="button"
               className="compare-btn-navbar"
               onClick={handleCompareClick}
-              aria-label="Compare selected products"
-            >
+              aria-label="Compare selected products">
               Compare
               {compareCount > 0 && (
                 <span className="compare-count">{compareCount}</span>
