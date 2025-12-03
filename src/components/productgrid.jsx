@@ -1,5 +1,7 @@
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import WishlistButton from "./WishlistButton";
 import "./productgrid.css";
 
 export default function ProductGrid({
@@ -55,6 +57,9 @@ export default function ProductGrid({
             className="pgx-card"
             onClick={() => handleCardClick(product)}
           >
+            {/* Wishlist button placed as an overlay in the top-right */}
+            <WishlistButton productId={product.id} small={true} />
+
             <div className="pgx-imgwrap">
               <img
                 src={product.image}
@@ -73,14 +78,14 @@ export default function ProductGrid({
               <div className="pgx-rating">{product.rating?.toFixed(1)}★</div>
             </div>
 
-            <button
-              type="button"
-              className={`pgx-compare ${
-                isCompared(product.id) ? "selected" : ""
-              }`}
-              onClick={(e) => handleCompareClick(e, product)}>
-              {isCompared(product.id) ? "Remove" : "Compare"}
-            </button>
+            <div style={{ display: "flex", gap: 8 }}>
+              <button
+                type="button"
+                className={`pgx-compare ${isCompared(product.id) ? "selected" : ""}`}
+                onClick={(e) => handleCompareClick(e, product)}>
+                {isCompared(product.id) ? "Remove" : "Compare"}
+              </button>
+            </div>
           </article>
         ))}
       </div>

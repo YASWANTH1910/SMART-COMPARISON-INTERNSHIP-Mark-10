@@ -126,6 +126,27 @@
   justify-content: center;
 }
 
+/* Wishlist nav button (placed next to compare) */
+.wishlist-nav-btn {
+  position: relative;
+}
+
+.wishlist-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ff3b30;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* User icon */
 .user-icon-container {
   padding-right: 10px;
@@ -176,7 +197,6 @@
   flex-direction: column;
   gap: 12px;
 }
-
 .login-input {
   padding: 10px;
   border: 1px solid black;

@@ -49,6 +49,16 @@
   height: auto; /* allow content to determine height on responsive layouts */
 }
 
+/* make room for overlayed wishlist button */
+.pgx-card { position: relative; }
+
+.pgx-card .wishlist-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+}
+
 .pgx-card:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   transform: translateY(-3px);
@@ -156,7 +166,7 @@
     gap: 0; /* attach cards */
   }
   .pgx-card {
-    padding: 10px;
+    padding: 8px;
     border-radius: 10px;
   }
   .pgx-imgwrap { height: 140px; }
@@ -169,11 +179,11 @@
     gap: 0;
   }
   .pgx-card {
-    padding: 8px;
+    padding: 6px;
     border-radius: 8px;
   }
   .pgx-imgwrap {
-    height: 120px; /* slightly smaller on mobile */
+    height: 100px; /* a little smaller on mobile */
     border-radius: 8px;
   }
   .pgx-name { font-size: 13px; min-height: 34px; }

@@ -165,7 +165,8 @@ function App() {
                 onSpecClick={handleCompareToggle}
                 selectedProducts={selectedProducts}
               />
-            }/>
+            }
+          />
 
           <Route
             path="/compare"
