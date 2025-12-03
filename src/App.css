@@ -32,6 +32,14 @@ main,
   display: block;
 }
 
+@media (max-width: 786px) {
+  /* Reserve space for the two-row mobile navbar (48px + 44px + 1px border) */
+  .appjsx-main {
+    padding-top: 93px; 
+    box-sizing: border-box;
+  }
+}
+
 /* Remove default spacing from structural elements */
 section, div, header, footer {
   margin: 0;

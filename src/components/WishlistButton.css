@@ -1,0 +1,29 @@
+ .wishlist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+}
+
+.wishlist-btn.small { width: 28px; height: 28px; padding: 2px; }
+
+.wishlist-btn .heart-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  transition: transform .12s ease, fill .12s ease;
+  stroke: #000;
+  stroke-width: 1.2;
+  /* border-radius removed to eliminate square around symbol */
+}
+
+.wishlist-btn.active .heart-icon { fill: #ff3b30; transform: scale(1.05); }
+
+.wishlist-btn:hover .heart-icon { transform: scale(1.05); }
+
+.wishlist-btn:focus { outline: 1px solid rgb(255, 255, 255); outline-offset: 1px; }

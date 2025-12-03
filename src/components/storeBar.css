@@ -67,22 +67,23 @@
 /* 📱 Mobile Responsive (max-width: 786px) */
 @media (max-width: 786px) {
   .store-bar {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     background: linear-gradient(to right, #e8f0fe, #f8e8f0);
     border-radius: 0;
-    padding: 3px 0;
-    margin: 0 !important;
-    margin-top: 44px !important; /* place below navbar (top row 44px + bottom row 44px + 1px border + some buffer) */
+    padding: 8px 6px;
     box-shadow: none;
     overflow-x: auto;
-    gap: 6px;
+    gap: 10px;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .store-item {
@@ -91,11 +92,11 @@
     align-items: center;
     justify-content: center;
     gap: 2px;
-    padding: 3px 5px;
+    padding: 4px 6px;
     border-radius: 3px;
     text-decoration: none;
     color: #333;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     font-weight: 500;
     white-space: nowrap;
     flex-shrink: 0;
@@ -103,18 +104,18 @@
   }
 
   .store-item:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
     transform: scale(1.05);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
 
   .store-logo {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   .store-bar::-webkit-scrollbar {
-    height: 2px;
+    height: 3px;
   }
 
   .store-bar::-webkit-scrollbar-thumb {

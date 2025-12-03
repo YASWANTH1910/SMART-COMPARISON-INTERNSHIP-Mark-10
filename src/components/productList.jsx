@@ -1,5 +1,6 @@
 import React from "react";
 import "./productList.css";
+import WishlistButton from "./WishlistButton";
 
 const ProductList = ({
   products = [],
@@ -59,6 +60,9 @@ const ProductList = ({
               ) : (
                 <div className="no-img">No Image</div>
               )}
+              <div className="wishlist-overlay">
+                <WishlistButton productId={product.id} small />
+              </div>
             </div>
 
             {/* CENTER: TEXT DETAILS */}

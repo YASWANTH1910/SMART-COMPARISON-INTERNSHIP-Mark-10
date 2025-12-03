@@ -9,6 +9,24 @@
   box-sizing: border-box;
 }
 
+/* 2 columns on mobile */
+@media (max-width: 768px) {
+  .product-list-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    padding: 0;
+  }
+}
+
+/* 3 columns on tablet */
+@media (min-width: 769px) and (max-width: 999px) {
+  .product-list-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
 /* Force 4 columns on typical laptop/desktop widths */
 @media (min-width: 1000px) {
   .product-list-container {
@@ -47,6 +65,15 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
+/* Mobile card sizing */
+@media (max-width: 768px) {
+  .list-row {
+    min-height: 300px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+}
+
 /* ===========================
    FIXED IMAGE BOX
    =========================== */
@@ -59,6 +86,22 @@
   background: #f8f8f8;
   padding: 10px;
   border-radius: 10px;
+  position: relative;
+}
+
+/* Mobile image sizing */
+@media (max-width: 768px) {
+  .list-image {
+    height: 140px;
+    padding: 8px;
+  }
+}
+
+.wishlist-overlay {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
 }
 
 .list-image img {
@@ -104,6 +147,19 @@
   color: #444;
 }
 
+/* Mobile text sizing */
+@media (max-width: 768px) {
+  .list-name {
+    font-size: 14px;
+  }
+  .list-brand {
+    font-size: 12px;
+  }
+  .list-specs {
+    font-size: 11px;
+  }
+}
+
 /* ===========================
    PRICE + BUTTON AREA
    =========================== */
@@ -145,6 +201,23 @@
   font-size: 14px;
   font-weight: 600;
   color: #008a00;
+}
+
+/* Mobile price sizing */
+@media (max-width: 768px) {
+  .list-rating {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+  .list-price .current {
+    font-size: 16px;
+  }
+  .list-price .original {
+    font-size: 12px;
+  }
+  .list-price .discount {
+    font-size: 12px;
+  }
 }
 
 /* ===========================

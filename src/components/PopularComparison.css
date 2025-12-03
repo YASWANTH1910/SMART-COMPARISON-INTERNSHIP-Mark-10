@@ -1,5 +1,5 @@
 .popular-comparisons {
-  padding: 0%;
+  padding: 20px 0;
   background-color: whitesmoke;
 }
 
@@ -8,14 +8,16 @@
   font-weight: 600;
   color: #212121;
   text-align: left;
+  padding: 0 5%;
+  margin-bottom: 20px;
 }
 
 .comparisons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 0px;
+  gap: 15px;
   max-width: 1200px;
-  margin: 5%;
+  margin: 0 auto;
   padding: 0 5%;
 }
 
@@ -28,7 +30,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  ;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
@@ -110,69 +111,44 @@
   flex-shrink: 0;
 }
 
-/* Tablet and mobile adjustments */
-@media (max-width: 1024px) {
-  .comparisons-grid {
-    max-width: 760px;
-    padding: 0 2%;
+/* Responsive for tablets and smaller screens <= 786px */
+@media (max-width: 786px) {
+  .section-title {
+    font-size: 18px;
+    padding: 0 4%;
   }
 
-  .comparison-card {
-    grid-template-columns: 1fr 56px 1fr;
-    padding: 10px 10px;
+  .comparisons-grid {
+    grid-template-columns: 1fr;
     gap: 10px;
-  }
-
-  .phone-left img,
-  .phone-right img {
-    width: 52px;
-    height: 72px;
-  }
-
-  .phone-left p,
-  .phone-right p {
-    font-size: 13px;
-    max-width: 110px;
-  }
-}
-
-@media (max-width: 600px) {
-  .comparisons-grid {
-    max-width: 420px;
-    padding: 0 8px;
+    padding: 0 4%;
   }
 
   .comparison-card {
-    grid-template-columns: 1fr 48px 1fr;
-    padding: 8px 8px;
+    padding: 10px 12px;
+    gap: 6px;
+    border-radius: 6px;
+  }
+
+  .phone-left,
+  .phone-right {
     gap: 8px;
-    border-radius: 0;
   }
 
   .phone-left img,
   .phone-right img {
-    width: 44px;
-    height: 64px;
+    width: 45px;
+    height: 60px;
   }
 
   .phone-left p,
   .phone-right p {
-    font-size: 12px;
-    max-width: 90px;
+    font-size: 11px;
+    max-width: 80px;
   }
 
   .vs {
-    font-size: 12px;
+    font-size: 11px;
     padding: 0 4px;
-  }
-
-  /* On very small screens, switch to stacked rows so text wraps nicely */
-  .comparison-card.stacked,
-  .comparison-card--stacked {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    align-items: center;
-    text-align: center;
   }
 }

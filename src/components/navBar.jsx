@@ -59,12 +59,36 @@ const Navbar = ({
         className="nav-container"
         style={{ position: "relative", zIndex: 11, pointerEvents: "auto" }}
       >
-        {/* Left: Category Menu */}
-        <div className="nav-left" style={{ pointerEvents: "auto" }}>
-          <CategoryFilterMenu onCategorySelect={onCategorySelect} />
+        {/* TOP ROW: Hamburger | Search | User Icon */}
+        <div className="nav-top-row" style={{ pointerEvents: "auto" }}>
+          {/* Left: Category Menu */}
+          <div className="nav-left" style={{ pointerEvents: "auto" }}>
+            <CategoryFilterMenu onCategorySelect={onCategorySelect} />
+          </div>
+
+          {/* Center: Search */}
+          <div className="nav-center" style={{ pointerEvents: "auto" }}>
+            <SearchBar />
+          </div>
+
+          {/* User icon - moved to top row */}
+          <div
+            className="user-icon-container"
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+            onClick={handleLoginLogout}
+            style={{ pointerEvents: "auto", position: "relative" }}
+          >
+            <FaUserCircle className="user-icon" />
+            {showDropdown && (
+              <div className="user-dropdown" style={{ pointerEvents: "auto" }}>
+                {isLoggedIn ? "Logout" : "Login"}
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Logo */}
+        {/* Logo (hidden on mobile, shown on desktop) */}
         <div
           className="nav-logo cursor-pointer"
           onClick={() => navigate("/")}
@@ -72,12 +96,7 @@ const Navbar = ({
           <span className="logo-icon">⌬ </span> CompariSmart
         </div>
 
-        {/* Center: Search */}
-        <div className="nav-center" style={{ pointerEvents: "auto" }}>
-          <SearchBar />
-        </div>
-
-        {/* Main buttons */}
+        {/* BOTTOM ROW: Main buttons */}
         <div className="nav-actions" style={{ pointerEvents: "auto" }}>
           <ul className="nav-menu">
             <li>
@@ -94,36 +113,41 @@ const Navbar = ({
                 Products
               </button>
             </li>
+            <li>
+                <button
+                  onClick={() => navigate("/wishlist")}
+                  className="nav-link-btn"
+                  type="button"
+                >
+                  Wishlist
+                </button>
+              </li>
+            <li>
+              <button
+                type="button"
+                onClick={handleCompareClick}
+                className="nav-link-btn compare-btn-mobile"
+              >
+                Compare
+                {compareCount > 0 && (
+                  <span className="compare-count">{compareCount}</span>
+                )}
+              </button>
+            </li>
           </ul>
-
-          {/* Compare button */}
-          <div className="nav-right" style={{ pointerEvents: "auto" }}>
+          {/* Desktop Compare (show on desktop, hidden on mobile via CSS) */}
+          <div className="nav-right compare-desktop" style={{ pointerEvents: "auto" }}>
             <button
               type="button"
               className="compare-btn-navbar"
               onClick={handleCompareClick}
-              aria-label="Compare selected products" >
+              aria-label="Compare selected products"
+            >
               Compare
               {compareCount > 0 && (
                 <span className="compare-count">{compareCount}</span>
               )}
             </button>
-
-            {/* User icon with dropdown */}
-            <div
-              className="user-icon-container"
-              onMouseEnter={() => setShowDropdown(true)}
-              onMouseLeave={() => setShowDropdown(false)}
-              onClick={handleLoginLogout}
-              style={{ pointerEvents: "auto", position: "relative" }}
-            >
-              <FaUserCircle className="user-icon" />
-              {showDropdown && (
-                <div className="user-dropdown" style={{ pointerEvents: "auto" }}>
-                  {isLoggedIn ? "Logout" : "Login"}
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </div>

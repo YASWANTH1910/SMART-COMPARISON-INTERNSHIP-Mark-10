@@ -1,6 +1,6 @@
 /* 🌐 Base Navbar */
 .navbar {
-  background-color: rgb(225, 225, 216);
+  background-color: rgb(12, 82, 157);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 10px 20px 0px 20px;
   position: sticky;
@@ -29,7 +29,7 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  color: rgb(12, 82, 157);
+  color: white;
   cursor: pointer;
 }
 
@@ -94,9 +94,10 @@
 .compare-btn-navbar {
   position: relative;
   background-color: rgb(12, 82, 157);
+  margin-left: 0px !important;
   color: white;
   border: none;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
@@ -138,12 +139,8 @@
 
 .user-icon {
   font-size: 1.8rem;
-  color: rgb(12, 82, 157);
+  color: white;
   transition: color 0.2s ease;
-}
-
-.user-icon:hover {
-  color: #0056b3;
 }
 
 .user-dropdown {
@@ -215,11 +212,10 @@
 
   .nav-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0;
-    align-items: center;
-    justify-content: flex-start; /* start from left, not space-between */
+    align-items: stretch;
+    justify-content: flex-start;
     padding: 0;
     position: relative;
   }
@@ -233,12 +229,22 @@
   }
 
   /* TOP ROW: hamburger | search | user icon */
+  .nav-top-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background: rgb(12, 82, 157);
+    padding: 0 6px;
+    box-sizing: border-box;
+    gap: 5px;
+  }
+
   .nav-left {
-    order: 1;
     flex: 0 0 30px;
     padding: 0;
     margin: 0;
-    margin-right: 5px; /* add gap between menu and search */
     display: flex;
     align-items: center;
     gap: 0;
@@ -246,16 +252,14 @@
   }
 
   .nav-center {
-    order: 2;
-    flex: 0 0 auto;
-    width: 150px; 
+    flex: 1 1 auto;
+    min-width: 0;
     padding: 0;
     margin: 0;
-    min-width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 48px; 
+    height: 44px;
   }
 
   .searchbar-container {
@@ -265,54 +269,54 @@
     height: 100%;
     width: 100%;
   }
+
   .nav-actions .user-icon-container {
-    position: absolute;
-    top: -48px; 
-    right: 5px; 
-    flex: 0 0 48px;
+    flex: 0 0 auto;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 15;
-    height: 48px;
+    height: 44px;
+    position: static;
+    margin-left: 0;
   }
 
   /* BOTTOM ROW: nav buttons + compare button */
   .nav-actions {
-    order: 4;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 2px;
-    padding: 6px 4px; /* match top row padding (6px vertical) */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 4px;
     background: rgb(12, 82, 157);
     border-top: 1px solid #000;
     margin: 0;
     margin-top: 0;
     box-sizing: border-box;
     position: relative;
-    height: 44px; /* match approximate top row height */
+    min-height: 44px;
   }
 
   .nav-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 0 0 auto;
   }
 
   .nav-menu button,
   .nav-login-btn,
   .compare-btn-navbar,
   .nav-link-btn {
-    padding: 4px 9px;
-    font-size: 0.75rem;
+    padding: 6px 12px;
+    font-size: 0.8rem;
     background: white;
     color: rgb(12, 82, 157);
     border-radius: 14px;
@@ -331,14 +335,15 @@
 
   .nav-right {
     display: flex;
-    gap: 3px;
+    gap: 0;
     align-items: center;
     margin: 0;
+    flex: 0 0 auto;
   }
 
   .compare-btn-navbar {
-    padding: 4px 9px;
-    font-size: 0.75rem;
+    padding: 6px 12px;
+    font-size: 0.8rem;
     background: white;
     color: rgb(12, 82, 157);
     border: none;
@@ -348,6 +353,27 @@
     flex-shrink: 0;
   }
 
+  .nav-menu .compare-btn-mobile {
+    position: relative;
+    padding: 6px 12px;
+    background: white;
+    color: rgb(12, 82, 157);
+    border-radius: 14px;
+    border: none;
+    font-weight: 600;
+  }
+
+  /* Default: desktop view - hide mobile copy */
+  .nav-menu .compare-btn-mobile {
+    display: none;
+  }
+
+  /* Ensure desktop compare shows by default */
+  .compare-desktop {
+    display: flex;
+    align-items: center;
+  }
+
   .user-icon-container {
     padding: 6px 4px 6px 2px;
     display: flex;
@@ -355,10 +381,11 @@
     justify-content: center;
     cursor: pointer;
     position: relative;
+    margin-left: 5px; /* small gap from search bar */
   }
 
   .user-icon {
-    font-size: 1.35rem; /* slightly larger */
+    font-size: 1.35rem;
     color: white;
     transition: color 0.2s ease;
   }
@@ -368,7 +395,7 @@
   }
 
   .navbar {
-    position: relative; /* ensure navbar is stacking context */
+    position: relative;
   }
 
   .login-container {
@@ -376,9 +403,49 @@
     margin: 50px auto;
     padding: 20px;
   }
+
+  /* Mobile overrides: show mobile compare and hide desktop compare */
+  .nav-menu .compare-btn-mobile {
+    display: inline-flex;
+  }
+
+  .compare-desktop {
+    display: none;
+  }
 }
 
+/* Desktop / Laptop: restore original horizontal navbar layout */
+@media (min-width: 787px) {
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 20px 0 20px;
+  }
 
+  /* Let children of .nav-top-row participate directly in the container flow */
+  .nav-top-row {
+    display: contents;
+  }
+
+  .nav-left { order: 1; }
+  .nav-logo { order: 2; display: flex; }
+  .nav-center { order: 3; flex: 1 1 400px; display: flex; justify-content: center; }
+  .nav-actions { order: 4; flex: 0 0 auto; display: flex; align-items: center; }
+
+  /* Put user icon to the right of nav actions */
+  .user-icon-container { order: 5; margin-left: 12px; }
+
+  /* Desktop: show desktop compare, hide mobile copy */
+  .compare-desktop { display: flex; }
+  .nav-menu .compare-btn-mobile { display: none; }
+
+  /* Ensure nav menu buttons look like original desktop styles */
+  .nav-menu { gap: 15px; }
+  .nav-menu button, .nav-link-btn { padding: 6px 12px; font-size: 0.95rem; border-radius: 8px; }
+}
 
 
 

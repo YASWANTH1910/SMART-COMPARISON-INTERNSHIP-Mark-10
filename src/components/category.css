@@ -116,19 +116,20 @@
 
   .menu-btn:focus { outline: none; }
 
-  /* when opened, dropdown becomes a full-screen fixed panel, scrollable */
+  /* when opened, dropdown becomes a half-screen fixed panel, scrollable */
   .category-dropdown {
     position: fixed;
-    top: 0;
+    top: 96px;
     left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
+    width: 50vw;
+    height: 50vh;
     background: #ffffff;
-    padding: 16px 16px 24px 16px;
+    border-radius: 8px;
+    padding: 16px 12px 24px 12px;
     z-index: 4000;
     overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
   }
 
   .panel-header h3 {

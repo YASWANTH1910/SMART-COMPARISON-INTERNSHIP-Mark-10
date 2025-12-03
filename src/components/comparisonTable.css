@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -65,4 +65,42 @@
 
 body {
   overflow-x: hidden !important;
+}
+
+/* ============================
+   RESPONSIVE (max-width: 786px)
+=============================== */
+@media (max-width: 786px) {
+
+  .comparison-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;               /* remove padding so table hits edges */
+    border-radius: 0;         /* optional: remove rounded corners */
+    max-height: 100vh;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+
+  .comparison-table {
+    width: 100%;
+    margin: 0;                /* remove spacing */
+  }
+
+  .comparison-table table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 8px;
+    font-size: 14px;
+    word-wrap: break-word;
+  }
 }

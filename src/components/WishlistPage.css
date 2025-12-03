@@ -1,0 +1,102 @@
+.wishlist-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.wishlist-main {
+  flex: 1;
+  padding: 40px 30px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist-header {
+  margin-bottom: 24px;
+}
+
+.wishlist-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #212121;
+  margin: 0;
+}
+
+.wishlist-empty {
+  background: #fff;
+  border-radius: 8px;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.wishlist-empty p {
+  font-size: 18px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.wishlist-empty-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.wishlist-empty-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #2874f0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.wishlist-empty-link:hover {
+  background: #0050ff;
+}
+
+.wishlist-count {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Mobile */
+@media (max-width: 786px) {
+  .wishlist-main {
+    padding: 16px 8px;
+    margin-top: 200px;
+  }
+
+  .wishlist-header h2 {
+    font-size: 20px;
+  }
+
+  .wishlist-empty {
+    padding: 30px 12px;
+    border-radius: 6px;
+  }
+
+  .wishlist-empty p {
+    font-size: 14px;
+  }
+
+  .wishlist-empty-icon {
+    font-size: 36px;
+  }
+
+  .wishlist-empty-link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

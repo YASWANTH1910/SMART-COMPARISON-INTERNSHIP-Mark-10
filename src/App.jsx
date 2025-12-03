@@ -9,6 +9,7 @@ import StoreBar from "./components/storeBar";
 import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid"; 
 import PopularComparison from "./components/PopularComparison";
+import Wishlistpage from "./components/WishlistPage";
 import "./App.css";
 
 function App() {
@@ -116,7 +117,7 @@ function App() {
 
   const bottomRow = [
     ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Cars").slice(0, 3),
-    ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Bikes").slice(0, 2),
+    ...products.filter((p) => p.category === "Automobiles" && p.subcategory === "Bikes").slice(0, 3),
   ];
 
   return (
@@ -146,7 +147,7 @@ function App() {
                 <PopularComparison/>
                   <ProductGrid
                     title="Trending Products"
-                    products={[...topRow, ...bottomRow].slice(0, 9)}
+                    products={[...topRow, ...bottomRow].slice(0, 10)}
                     onSpecClick={handleCompareToggle}
                     selectedProducts={selectedProducts}
                   />
@@ -164,15 +165,16 @@ function App() {
                 onSpecClick={handleCompareToggle}
                 selectedProducts={selectedProducts}
               />
-            }
-          />
+            }/>
 
           <Route
             path="/compare"
-            element={<ComparisonPage selectedProducts={selectedProducts} />}
-          />
-
+            element={<ComparisonPage selectedProducts={selectedProducts} />}/>
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+          <Route
+            path="/wishlist"
+            element={<Wishlistpage products={products} onSpecClick={handleCompareToggle} selectedProducts={selectedProducts} />}
+          />
         </Routes>
       </main>
 

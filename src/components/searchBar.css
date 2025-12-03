@@ -66,16 +66,16 @@ border-color: rgb(25, 2, 2);
 
 /* 📱 Mobile Responsive (max-width: 786px) */
 @media (max-width: 786px) {
-  .searchbar-container {
-    padding: 0; /* no padding */
-    width: 100%; /* fill parent width */
-    height: 35px; /* increased for larger touch target */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* align left */
-    position: relative;
-    box-sizing: border-box;
-  }
+    .searchbar-container {
+      padding: 0;
+      width: 100%;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+    }
 
   .searchbar-input {
     height: 32px; 

@@ -51,14 +51,42 @@
   min-height: 80vh;
 }
 
-/* Mobile  */
+/* Mobile: Stack filters and products vertically, collapsible filters */
 @media (max-width: 768px) {
+  .page-title-box {
+    padding: 12px 0;
+    margin-top: 45px;
+  }
+
+  .page-main-title {
+    font-size: 20px;
+  }
+
   .filters-and-list {
     flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
+
   .filters-sidebar {
     width: 100%;
     height: auto;
-    position: static;
+    position: relative;
+    top: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    overflow-y: visible;
+    background: #f5f5f5;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+
+  .products-list-area {
+    flex: 1;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 0;
+    min-height: auto;
+    margin-top: 0;
   }
 }
