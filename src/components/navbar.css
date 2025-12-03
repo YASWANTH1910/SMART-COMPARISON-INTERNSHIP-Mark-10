@@ -126,12 +126,12 @@
   justify-content: center;
 }
 
-/* Wishlist nav button (placed next to compare) */
-.wishlist-nav-btn {
+/* Bookmark nav button (placed next to compare) */
+.Bookmark-nav-btn {
   position: relative;
 }
 
-.wishlist-count {
+.Bookmark-count {
   position: absolute;
   top: -6px;
   right: -8px;

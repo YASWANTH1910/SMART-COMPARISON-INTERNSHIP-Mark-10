@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import WishlistButton from "./WishlistButton";
+import BookmarkButton from "./BookmarkButton";
 import "./productgrid.css";
 
 export default function ProductGrid({
@@ -57,8 +57,8 @@ export default function ProductGrid({
             className="pgx-card"
             onClick={() => handleCardClick(product)}
           >
-            {/* Wishlist button placed as an overlay in the top-right */}
-            <WishlistButton productId={product.id} small={true} />
+            {/* Bookmark button placed as an overlay in the top-right */}
+            <BookmarkButton productId={product.id} small={true} />
 
             <div className="pgx-imgwrap">
               <img

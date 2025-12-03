@@ -113,10 +113,10 @@ const Navbar = ({
             </li>
             <li>
                 <button
-                  onClick={() => navigate("/wishlist")}
+                  onClick={() => navigate("/Bookmark")}
                   className="nav-link-btn"
                   type="button">
-                  Wishlist
+                  Bookmark
                 </button>
               </li>
             <li>

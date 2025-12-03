@@ -1,5 +1,5 @@
 import React from "react";
-import WishlistButton from "./WishlistButton";
+import BookmarkButton from "./BookmarkButton";
 import "./productList.css";
 
 const ProductList = ({
@@ -53,8 +53,8 @@ const ProductList = ({
             className="list-row"
             title="Click Compare to add/remove"
           >
-            {/* Wishlist button overlay in top-right */}
-            <WishlistButton productId={product.id} small={true} />
+            {/* Bookmark button overlay in top-right */}
+            <BookmarkButton productId={product.id} small={true} />
             {/* LEFT: IMAGE */}
             <div className="list-image">
               {product?.image ? (

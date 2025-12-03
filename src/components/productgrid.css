@@ -49,10 +49,10 @@
   height: auto; /* allow content to determine height on responsive layouts */
 }
 
-/* make room for overlayed wishlist button */
+/* make room for overlayed Bookmark button */
 .pgx-card { position: relative; }
 
-.pgx-card .wishlist-btn {
+.pgx-card .Bookmark-btn {
   position: absolute;
   top: 8px;
   right: 8px;

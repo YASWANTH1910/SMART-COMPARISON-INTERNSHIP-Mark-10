@@ -9,7 +9,7 @@ import StoreBar from "./components/storeBar";
 import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid"; 
 import PopularComparison from "./components/PopularComparison";
-import Wishlistpage from "./components/WishlistPage";
+import Bookmarkpage from "./components/BookmarkPage";
 import "./App.css";
 
 function App() {
@@ -173,8 +173,8 @@ function App() {
             element={<ComparisonPage selectedProducts={selectedProducts} />}/>
           <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
           <Route
-            path="/wishlist"
-            element={<Wishlistpage products={products} onSpecClick={handleCompareToggle} selectedProducts={selectedProducts} />}
+            path="/Bookmark"
+            element={<Bookmarkpage products={products} onSpecClick={handleCompareToggle} selectedProducts={selectedProducts} />}
           />
         </Routes>
       </main>

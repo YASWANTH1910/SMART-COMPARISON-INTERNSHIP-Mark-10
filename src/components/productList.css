@@ -60,9 +60,9 @@
   min-height: 320px;
 }
 
-/* allow absolutely positioned wishlist button */
+/* allow absolutely positioned Bookmark button */
 .list-row { position: relative; }
-.list-row .wishlist-btn {
+.list-row .Bookmark-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -106,7 +106,7 @@
   }
 }
 
-.wishlist-overlay {
+.Bookmark-overlay {
   position: absolute;
   top: 4px;
   right: 4px;
