@@ -1,0 +1,345 @@
+/* ========== Container ========== */
+.pdp-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f9f9f9;
+  min-height: 80vh;
+}
+
+/* ========== Back Button ========== */
+.pdp-back-btn {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.pdp-back-btn:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
+
+/* ========== Main Content Grid ========== */
+.pdp-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== Image Section ========== */
+.pdp-image-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdp-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdp-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.pdp-wishlist-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+}
+
+/* ========== Details Section ========== */
+.pdp-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Header ---- */
+.pdp-header {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+
+.pdp-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.pdp-brand {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.pdp-rating {
+  font-size: 14px;
+  background: #ffe794;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ---- Price Section ---- */
+.pdp-price-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pdp-price-current {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e60023;
+}
+
+.pdp-price-original {
+  font-size: 18px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pdp-price-discount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #008a00;
+}
+
+/* ---- Specifications Grid ---- */
+.pdp-specs-section {
+  padding: 15px 0;
+}
+
+.pdp-specs-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 15px 0;
+}
+
+.pdp-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.pdp-spec-item {
+  background: #f8f8f8;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #1976d2;
+}
+
+.pdp-spec-label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.pdp-spec-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ---- Action Buttons ---- */
+.pdp-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+
+/* Big Add to Bookmarks button */
+.pdp-bookmark-btn {
+  width: 100%;
+  max-width: 340px;
+  padding: 18px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08);
+  cursor: pointer;
+  margin: 0 auto;
+  transition: background 0.2s, transform 0.15s;
+  display: block;
+  letter-spacing: 0.5px;
+}
+.pdp-bookmark-btn:hover, .pdp-bookmark-btn:focus {
+  background: #1251a3;
+  transform: translateY(-2px) scale(1.03);
+}
+.pdp-bookmark-btn.bookmarked {
+  background: #00ff77;
+  color: #0037ff;
+}
+.pdp-swipe-feedback{
+    font-size: 19px;
+    color: #ff9d00;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* ---- Info Section ---- */
+.pdp-info {
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #1976d2;
+}
+
+.pdp-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* ========== Error States ========== */
+.pdp-loading,
+.pdp-not-found {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.pdp-not-found h2 {
+  margin-bottom: 20px;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .pdp-container {
+    padding: 12px;
+  }
+
+  .pdp-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .pdp-name {
+    font-size: 22px;
+  }
+
+  .pdp-price-current {
+    font-size: 26px;
+  }
+
+  .pdp-specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdp-spec-item {
+    padding: 10px;
+  }
+
+  .pdp-actions {
+    flex-direction: column;
+  }
+
+  .pdp-compare-btn,
+  .pdp-cart-btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .pdp-image-wrapper {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .pdp-header {
+    padding-bottom: 15px;
+  }
+
+  .pdp-price-section {
+    padding: 12px 0;
+  }
+}
+
+/* ========== EXTRA SMALL DEVICES ========== */
+@media (max-width: 480px) {
+  .pdp-container {
+    padding: 10px;
+    min-height: auto;
+  }
+
+  .pdp-content {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .pdp-name {
+    font-size: 18px;
+  }
+
+  .pdp-brand {
+    font-size: 14px;
+  }
+
+  .pdp-price-current {
+    font-size: 22px;
+  }
+
+  .pdp-image-wrapper {
+    height: 250px;
+  }
+
+  .pdp-spec-label {
+    font-size: 11px;
+  }
+
+  .pdp-spec-value {
+    font-size: 13px;
+  }
+
+  .pdp-info {
+    padding: 12px;
+  }
+
+  .pdp-info p {
+    font-size: 12px;
+  }
+}

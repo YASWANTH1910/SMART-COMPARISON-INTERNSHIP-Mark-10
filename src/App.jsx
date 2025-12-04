@@ -10,6 +10,7 @@ import AllProductsPage from "./components/ProductsPage";
 import ProductGrid from "./components/productgrid"; 
 import PopularComparison from "./components/PopularComparison";
 import Bookmarkpage from "./components/BookmarkPage";
+import ProductDetailsPage from "./components/ProductDetailsPage";
 import "./App.css";
 
 function App() {
@@ -175,6 +176,10 @@ function App() {
           <Route
             path="/Bookmark"
             element={<Bookmarkpage products={products} onSpecClick={handleCompareToggle} selectedProducts={selectedProducts} />}
+          />
+          <Route
+            path="/product/:productId"
+            element={<ProductDetailsPage products={products} onSpecClick={handleCompareToggle} />}
           />
         </Routes>
       </main>

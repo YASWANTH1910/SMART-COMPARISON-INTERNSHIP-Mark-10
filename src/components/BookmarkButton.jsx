@@ -2,19 +2,22 @@ import React from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 import "./BookmarkButton.css";
 
-// Props: productId (string), small (boolean)
+// Props: productId (string|number), small (boolean)
 export default function BookmarkButton({ productId, small = false }) {
   const [Bookmark = [], setBookmark] = useLocalStorage("Bookmark", []);
 
-  const isSaved = Bookmark.includes(productId);
+  // normalize stored ids to strings for consistent comparison
+  const bookmarkStr = (Bookmark || []).map((id) => String(id));
+  const pid = String(productId);
+  const isSaved = bookmarkStr.includes(pid);
 
   function toggle(e) {
     e.stopPropagation();
     let next;
     if (isSaved) {
-      next = Bookmark.filter((id) => id !== productId);
+      next = (Bookmark || []).filter((id) => String(id) !== pid);
     } else {
-      next = [...Bookmark, productId];
+      next = [...(Bookmark || []), pid];
     }
     setBookmark(next);
   }

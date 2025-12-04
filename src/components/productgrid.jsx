@@ -16,9 +16,8 @@ export default function ProductGrid({
     (selectedProducts || []).some((p) => p.id === id);
 
   const handleCardClick = (product) => {
-    navigate("/products", {
-      state: { scrollTo: product.id }
-    });
+    // navigate to product details page for the clicked product
+    navigate(`/product/${product.id}`);
   };
 
   const handleCompareClick = (e, product) => {

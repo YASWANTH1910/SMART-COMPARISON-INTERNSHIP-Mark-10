@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import BookmarkButton from "./BookmarkButton";
 import "./productList.css";
 
@@ -7,6 +8,7 @@ const ProductList = ({
   onSpecClick = () => {},
   selectedProducts = [],
 }) => {
+  const navigate = useNavigate();
   if (!Array.isArray(products) || products.length === 0) {
     return (
       <div className="list-empty">
@@ -51,7 +53,8 @@ const ProductList = ({
           <div
             key={product.id || index}
             className="list-row"
-            title="Click Compare to add/remove"
+            title="Click to view product details"
+            onClick={() => navigate(`/product/${product.id}`)}
           >
             {/* Bookmark button overlay in top-right */}
             <BookmarkButton productId={product.id} small={true} />
