@@ -253,6 +253,10 @@
     padding: 12px;
   }
 
+  .pdp-back-btn{
+    margin-top: 40px;
+  }
+
   .pdp-content {
     grid-template-columns: 1fr;
     gap: 20px;
