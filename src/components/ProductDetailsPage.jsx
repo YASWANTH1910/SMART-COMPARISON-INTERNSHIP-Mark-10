@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import WishlistButton from "./BookmarkButton";
 import useLocalStorage from "../hooks/useLocalStorage";
@@ -10,11 +10,10 @@ export default function ProductDetailsPage({ products = [], onSpecClick = () => 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [bookmark, setBookmark] = useLocalStorage("Bookmark", []);
-  const longPressTimer = useRef(null);
+  // const longPressTimer = useRef(null);
   const [swipeMessage, setSwipeMessage] = useState("");
 
   useEffect(() => {
-    // Find product by id
     const found = products.find((p) => String(p.id) === String(productId));
     setProduct(found);
     setLoading(false);
